@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo Profissional – Vini Amaral</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f6f8fa;
+      color: #1f2328;
+      line-height: 1.5;
+      padding: 30px 15px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .actions-bar {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid #d0d7de;
+      background: #ffffff;
+      color: #1f2328;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: #f6f8fa;
+    }
+
+    .btn-primary {
+      background: #1f883d;
+      color: #ffffff;
+      border-color: rgba(31,35,40,0.15);
+    }
+
+    .btn-primary:hover {
+      background: #1a7f37;
+    }
+
+    .btn-blue {
+      background: #0969da;
+      color: #ffffff;
+      border-color: rgba(31,35,40,0.15);
+    }
+
+    .btn-blue:hover {
+      background: #085cc0;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border-bottom: 2px solid #0969da;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .profile-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid #d0d7de;
+      flex-shrink: 0;
+    }
+
+    .header-info h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1f2328;
+      letter-spacing: -0.5px;
+    }
+
+    .header-info .title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #0969da;
+      margin-top: 2px;
+    }
+
+    .contact-line {
+      font-size: 12px;
+      color: #57606a;
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .section {
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #1f2328;
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 13px;
+      color: #1f2328;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      font-size: 13px;
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 6px;
+    }
+
+    li::before {
+      content: "•";
+      color: #0969da;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .exp-item {
+      margin-bottom: 16px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .exp-role {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #1f2328;
+    }
+
+    .exp-period {
+      font-size: 11.5px;
+      color: #57606a;
+      font-family: monospace;
+    }
+
+    .exp-type {
+      font-size: 12px;
+      color: #0969da;
+      margin-bottom: 6px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .edu-card {
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      padding: 12px;
+      border-radius: 6px;
+    }
+
+    .edu-card h4 {
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .edu-card .status {
+      font-size: 11px;
+      color: #0969da;
+      margin-bottom: 4px;
+    }
+
+    .edu-card p {
+      font-size: 11.5px;
+      color: #57606a;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .actions-bar {
+        display: none !important;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="actions-bar">
+    <a href="/" class="btn">← Voltar ao Site / Portfólio</a>
+    <div style="display: flex; gap: 8px;">
+      <a href="/curriculo-vini-amaral.pdf" download="Curriculo-Vini-Amaral.pdf" class="btn btn-blue">
+        📥 Baixar Arquivo PDF
+      </a>
+      <button onclick="window.print()" class="btn btn-primary">
+        🖨️ Imprimir / Salvar em PDF
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header-top">
+      <img src="/eu.JPG" onerror="this.src='/vini-amaral.jpg'" alt="Vini Amaral" class="profile-photo">
+      <div class="header-info">
+        <h1>MARCOS VINÍCIUS (VINI AMARAL)</h1>
+        <div class="title">Cargos Operacionais, Administrativos e de Controladoria Jurídica</div>
+        <div class="contact-line">
+          <span>📍 Rua Miguel Bauer, 2237, Taquara - RS</span>
+          <span>•</span>
+          <span>📱 WhatsApp: (51) 98144-6019</span>
+          <span>•</span>
+          <span>✉️ viniamaral2026@gmail.com</span>
+        </div>
+        <div class="contact-line" style="margin-top: 4px;">
+          <span>💼 Disponibilidade: Home Office ou Presencial</span>
+          <span>•</span>
+          <span>🐙 GitHub: github.com/viniamaral2026-cpu</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Resumo Profissional -->
+    <div class="section">
+      <h2 class="section-title">1. Resumo Profissional</h2>
+      <p>
+        Profissional autodidata com forte domínio tecnológico, dedicado a trazer eficiência e organização para rotinas administrativas e operacionais. Une raciocínio analítico e capacidade de resolução de problemas ao uso estratégico de inteligência artificial e ferramentas digitais para acelerar pesquisas, redigir e revisar documentos e estruturar informações complexas. Perfil proativo, que aprende sistemas novos com rapidez e assume a responsabilidade de destravar processos, reduzir retrabalho e manter arquivos e dados organizados — o suporte técnico e operacional que libera tempo para o que realmente exige atenção especializada.
+      </p>
+    </div>
+
+    <!-- 2. Competências -->
+    <div class="section">
+      <h2 class="section-title">2. Competências Principais & Domínio Técnico</h2>
+      <ul>
+        <li>Gestão e organização de arquivos digitais (PDFs, nuvem, backups e nomenclatura de dossiês)</li>
+        <li>Pesquisa avançada, cruzamento de informações e diagnóstico de problemas</li>
+        <li>Uso de Inteligência Artificial generativa para automação de tarefas, redação e análise de dados</li>
+        <li>Digitação, formatação e revisão de documentos com padrão profissional</li>
+        <li>Conhecimento sólido em sistemas operacionais e resolução de falhas técnicas do dia a dia</li>
+        <li>Organização de rotinas e priorização de demandas com foco em prazos</li>
+      </ul>
+    </div>
+
+    <!-- 3. Experiência -->
+    <div class="section">
+      <h2 class="section-title">3. Experiência Profissional & Resolução de Problemas</h2>
+      
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Gestão Administrativa e Suporte Operacional Multidisciplinar</div>
+          <div class="exp-period">Atuação recente</div>
+        </div>
+        <div class="exp-type">Projetos próprios e prestação de serviços — Taquara/RS</div>
+        <ul>
+          <li>Suporte operacional em rotinas administrativas, incluindo triagem, organização e acompanhamento de demandas do dia a dia.</li>
+          <li>Organização de dossiês digitais e gestão de dados, separando com clareza documentos, evidências e informações de apoio.</li>
+          <li>Gestão de diagnósticos técnicos em sistemas e ferramentas digitais, identificando falhas e propondo soluções rápidas.</li>
+          <li>Otimização de rotinas através de ferramentas digitais e de Inteligência Artificial, reduzindo tempo gasto em tarefas repetitivas de pesquisa e redação.</li>
+          <li>Elaboração e formatação de relatórios, textos e materiais com padrão visual profissional.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-role">Projetos de Organização e Estruturação de Processos</div>
+          <div class="exp-period">Atuação contínua</div>
+        </div>
+        <div class="exp-type">Iniciativas autônomas — Taquara/RS</div>
+        <ul>
+          <li>Estruturação de fluxos de trabalho do zero, definindo etapas, responsáveis e prazos para ganho de eficiência.</li>
+          <li>Diagnóstico e resolução de problemas técnicos e operacionais em diferentes contextos de trabalho.</li>
+          <li>Aplicação de ferramentas de IA para acelerar pesquisa, análise e produção de conteúdo escrito.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. Formação -->
+    <div class="section">
+      <h2 class="section-title">4. Formação & Aprendizado Contínuo</h2>
+      <div class="grid-2">
+        <div class="edu-card">
+          <h4>Ensino Médio</h4>
+          <div class="status">Em curso / aprendizado autodidata</div>
+          <p>Comprometimento contínuo com evolução pessoal e disciplinas fundamentais.</p>
+        </div>
+        <div class="edu-card">
+          <h4>Formação Continuada em Tecnologias Digitais</h4>
+          <div class="status">Estudo autônomo constante</div>
+          <p>Programação, ferramentas de IA e sistemas operacionais aplicados diretamente na resolução de problemas práticos.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
