@@ -1,14 +1,14 @@
-# 📄 Marcos Vinícius (Vini Amaral) — Portfólio Interativo & Currículo Profissional
+# 📄 Vini Amaral | Modernização da Defesa do Consumidor & Soluções Financeiras
 
 [![React](https://img.shields.io/badge/React-19.0-61dafb?style=flat&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178c6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-6.2-646cff?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![PWA](https://img.shields.io/badge/PWA-Multi--Platform-38bdf8?style=flat&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)
-[![Location](https://img.shields.io/badge/Atua%C3%A7%C3%A3o-Remoto%20%7C%20Brasil-2ea44f?style=flat)](https://wa.me/5551981446019)
+[![Atuação](https://img.shields.io/badge/Atua%C3%A7%C3%A3o-Remoto%20%7C%20Brasil-2ea44f?style=flat)](https://wa.me/5551981446019)
 [![Status](https://img.shields.io/badge/Disponibilidade-Home%20Office%20%7C%20Presencial-0969da?style=flat)](https://wa.me/5551981446019)
 
-> **Dossiê Profissional e Plataforma Web Interativa** de Marcos Vinícius (Vini Amaral), estruturado no estilo editorial enciclopédico (Wikipedia / GitHub Classic UI) e desenhado especificamente para processos seletivos e contratações em **Cargos Operacionais, Administrativos, Controladoria Jurídica, Suporte de TI e Automação de Processos com Inteligência Artificial**.
+> **Dossiê Profissional, Proposta Legislativa & Plataforma Web Interativa** de Marcos Vinícius (Vini Amaral), estruturado no estilo editorial enciclopédico (Wikipedia / GitHub Classic UI) e desenhado para processos seletivos, prestação de serviços da **DEEVO Soluções Financeiras** e engajamento cívico na **Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)**.
 
 ---
 
@@ -17,13 +17,14 @@
 1. [Sobre o Projeto](#-sobre-o-projeto)
 2. [Objetivo Profissional](#-objetivo-profissional)
 3. [Funcionalidades e Módulos da Aplicação](#-funcionalidades-e-módulos-da-aplicação)
-4. [Áreas de Atuação e Serviços](#-áreas-de-atuação-e-serviços)
-5. [Simulador Interativo de Diagnóstico](#-simulador-interativo-de-diagnóstico)
-6. [Currículo e Arquivos Prontos para Download](#-currículo-e-arquivos-prontos-para-download)
-7. [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-8. [Estrutura de Arquivos](#-estrutura-de-arquivos)
-9. [Como Executar Localmente](#-como-executar-localmente)
-10. [Contato e Redes](#-contato-e-redes)
+4. [Projetos de Lei & Causas Cidadãs (Lei do Canal Direto)](#-projetos-de-lei-abaixo-assinados--causas-cidadãs)
+5. [DEEVO Soluções Financeiras (Atuação PJ)](#-deevo-soluções-financeiras-atuação-pj)
+6. [Simulador Interativo de Diagnóstico](#-simulador-interativo-de-diagnóstico)
+7. [Metadados, SEO & Compartilhamento Social](#-metadados-seo--redes-sociais)
+8. [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+9. [Estrutura de Arquivos](#-estrutura-de-arquivos)
+10. [Como Executar Localmente](#-como-executar-localmente)
+11. [Contato e Redes](#-contato-e-redes)
 
 ---
 
@@ -34,7 +35,7 @@ Este projeto foi construído para ir além do currículo tradicional em papel, o
 Inspirado na precisão e clareza visual dos artigos enciclopédicos da **Wikipedia** combinada com a sobriedade dos sistemas de design modernos:
 - **Tipografia editorial:** Combinação de fontes Serifadas nos títulos, Sans-serif nas descrições técnicas e Mono nos dados de contato e códigos.
 - **Rigor Informacional:** Tabelas de dados técnicos, citações indexadas, caixas de notas laterais e validações estruturadas.
-- **Interatividade Real:** Simulador dinâmico de triagem técnica e operacional, modais explicativos, filtros por categoria e exportação direta de currículo.
+- **Interatividade Real:** Simulador dinâmico de triagem técnica e operacional, visualizador jurídico da minuta de lei, modais explicativos, filtros por categoria e exportação direta de currículo.
 
 ---
 
@@ -56,24 +57,21 @@ Inspirado na precisão e clareza visual dos artigos enciclopédicos da **Wikiped
 
 ### 2. Infobox Lateral (Wikipedia Style Profile)
 - Foto oficial de perfil em alta resolução (`/public/eu.JPG`) com links diretos para visualização e download.
-- Tabela resumida de dados pessoais, endereço, estado civil, nacionalidade e disponibilidade.
+- Tabela resumida de dados profissionais, modalidades de atuação e disponibilidade.
 - Lista rápida de canais de contato direto (WhatsApp, E-mail, LinkedIn, GitHub).
 - Botão de download rápido do arquivo PDF do currículo.
 
-### 3. Sumário Dinâmico de Conteúdo (Table of Contents)
-- Navegação rápida em âncoras para todas as seções do dossiê:
-  - Resumo Profissional
-  - Competências Principais
-  - Experiência Profissional & Resolução de Problemas
-  - Formação & Aprendizado Contínuo
-  - Serviços & Áreas de Atuação
-  - Projetos & Metodologias
-  - Matriz de Habilidades Técnicas
-  - Simulador de Diagnóstico Interativo
-  - Diferenciais Competitivos
-  - Contato & Contratação
+### 3. Minuta de Projeto de Lei & Abaixo-Assinado Cívico (`CivicPetitionsWiki`)
+- **Ação Rápida:** Destaque para apoio ao abaixo-assinado no Change.org e mobilização no WhatsApp.
+- **Visualizador Jurídico:** Minuta estruturada (Capítulos I a V, Artigos 1º a 9º e Justificativa) com botão para copiar texto integral e versão para impressão/PDF.
+- **Área para Imprensa & Parlamentares:** Canais de atendimento para mandatos legislativos e veículos de comunicação.
+- **Compartilhamento Social:** Botões integrados para WhatsApp, X (Twitter), Facebook e LinkedIn.
 
-### 4. Simulador Interativo de Diagnóstico Operacional e de TI
+### 4. Modal / Pop-up de Apoio Cidadão (`PetitionModalPopup`)
+- Notificação não-intrusiva convidando o visitante a apoiar a petição pública ou navegar diretamente até a minuta legislativa.
+- Gatilho flutuante minimizado no rodapé inferior para reabertura a qualquer momento.
+
+### 5. Simulador Interativo de Diagnóstico Operacional e de TI
 - Ferramenta interativa onde recrutadores e clientes podem selecionar cenários reais de problemas:
   - *Dossiês e PDFs desorganizados ou pesados para tribunais*
   - *Lentidão em estações de trabalho, conflitos de software ou certificados digitais*
@@ -81,39 +79,63 @@ Inspirado na precisão e clareza visual dos artigos enciclopédicos da **Wikiped
   - *Criação de páginas web, formulários ou portfólios sob medida*
 - O simulador gera na hora o **diagnóstico preliminar**, as **etapas de solução recomendadas**, o **tempo médio estimado** e um botão com mensagem pré-formatada para o WhatsApp.
 
-### 5. Botão Flutuante de WhatsApp
+### 6. Botão Flutuante de WhatsApp
 - Fixado no canto inferior com indicador de disponibilidade online.
 - Ao clicar, abre conversa direta no WhatsApp já com mensagem contextualizada.
 
 ---
 
-## 🛠️ Áreas de Atuação e Serviços
+## ⚖️ Projetos de Lei, Abaixo-Assinados & Causas Cidadãs
 
-| Área | Descrição | Principais Entregáveis |
-| :--- | :--- | :--- |
-| **Controladoria & Gestão Documental** | Estruturação de acervos digitais e conformidade processual. | Padronização e nomenclatura de pastas, unificação e compressão com OCR de PDFs, montagem e conferência minuciosa de dossiês. |
-| **Suporte Operacional & TI** | Resolução ágil de falhas em sistemas, redes e periféricos. | Diagnóstico de lentidão/travamentos, configuração de Windows/Linux, instalação de certificados digitais/tokens, rotinas de backup. |
-| **Automação com IA & Processos** | Aplicação estratégica de Inteligência Artificial generativa. | Engenharia de prompts para análise documental, aceleração de pesquisas, digitação, formatação e revisão técnica de relatórios. |
-| **Desenvolvimento Web & Digital** | Criação de soluções digitais e documentação técnica. | Desenvolvimento de interfaces web responsivas (React, TypeScript, Tailwind), manuais operacionais claros e utilitários open-source. |
+### 📢 Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)
+Iniciativa cidadã pública pela modernização tecnológica, celeridade e transparência nos órgãos de defesa do consumidor (Senacon, Ministério da Justiça e Assembleias Legislativas).
 
----
-
-## 🧪 Projetos em Destaque
-
-1. **CodeForge** — Iniciativa open-source com repositórios, snippets e utilitários reutilizáveis focados em produtividade no desenvolvimento ([github.com/viniamaral2026-cpu](https://github.com/viniamaral2026-cpu)).
-2. **DocFlow & Dossiês Eletrônicos** — Metodologia e esteira operacional de higienização de arquivos, OCR em lote e indexação sistemática de documentos e evidências.
-3. **AutoSupport Hub** — Fluxo ágil de pré-diagnóstico de falhas operacionais e de TI para triagem rápida em estações de trabalho.
-4. **Tech Insights & Guias Técnicos** — Compilação de manuais operacionais e documentações didáticas para capacitação em ferramentas digitais.
+- **O Problema:** Morosidade, burocracia excessiva e falta de retorno ágil ao cidadão diante de abusos de consumo, contrariando as garantias constitucionais e os dados do Sistema Nacional de Defesa do Consumidor (SNDC).
+- **A Proposta (Canal Único Integrado):**
+  1. Criação do **Canal Único Integrado de Denúncias do Consumidor** com registro simplificado e acompanhamento em tempo real.
+  2. **Triagem Automatizada por Inteligência Artificial** com encaminhamento simultâneo aos órgãos competentes (PROCONs, Ministério Público, Agências Reguladoras).
+  3. **Prazo Máximo de 15 dias úteis** para apuração em casos de risco à saúde, segurança ou patrimônio.
+  4. **Campanhas Educativas Populares** e **Capacitação Técnica Contínua** de servidores.
+- ✍️ **Assinar Petição Online (Change.org):** [https://c.org/6j7TF9ktMT](https://c.org/6j7TF9ktMT)
+- 📲 **Apoiar e Compartilhar via WhatsApp:** [https://c.org/hMV6T2Q8DH](https://c.org/hMV6T2Q8DH)
 
 ---
 
-## 📑 Currículo e Arquivos Prontos para Download
+## 🏢 DEEVO Soluções Financeiras (Atuação PJ)
 
-O projeto conta com arquivos gerados e integrados para consulta e download:
+> **"DEEVO Soluções Financeiras: Crédito Inteligente, Tecnologia e Eficiência Operacional."**  
+> *Oferecemos soluções financeiras completas como correspondente bancário, aliadas a suporte tecnológico avançado, gestão de dados e otimização de rotinas administrativas para você e sua empresa.*
 
-- **Currículo em PDF Oficial:** `public/curriculo-vini-amaral.pdf`
-- **Versão Web para Impressão:** `public/curriculo.html` (formatado com CSS `@media print` para salvar em PDF pelo próprio navegador)
-- **Foto de Perfil Original:** `public/eu.JPG` (e cópias sincronizadas em `public/vini-amaral.jpg` e `public/foto.jpg`)
+A **DEEVO Soluções Financeiras LTDA** (CNPJ: `63.187.175/0001-70`) possui uma estrutura empresarial ampla e estratégica, com atividades que abrangem Correspondente Bancário, Tecnologia da Informação, Tratamento de Dados e Serviços Administrativos. Essa combinação amplia sua capacidade de atuação e sustenta um portfólio integrado, organizado em três pilares estratégicos:
+
+### 1. Soluções Financeiras e Correspondência Bancária (CNAE 66.19-3-02)
+- **Antecipação de Saque-Aniversário FGTS:** Liberação de crédito rápido com desconto direto do saldo.
+- **Consignado e Empréstimos (CLT, Pessoal e Portabilidade):** Intermediação de crédito e redução de taxas em parcerias bancárias.
+- **Crédito com Garantia:** Operações de crédito com garantia de veículo ou imóvel.
+- **Cobrança e Análise Cadastral:** Gestão de informações cadastrais e recuperação de crédito para parceiros.
+
+### 2. Tecnologia, Suporte de TI e Tratamento de Dados (CNAE 62.09-1-00 e 63.11-9-00)
+- **Diagnóstico e Suporte Técnico de TI:** Resolução de falhas em sistemas operacionais, aplicativos e dispositivos.
+- **Tratamento e Gestão de Dados:** Higienização de bases de dados, organização de cadastros e hospedagem/serviços de aplicação.
+- **Automação com Inteligência Artificial:** Criação de fluxos inteligentes para acelerar pesquisas, análises e atendimento ao cliente.
+
+### 3. Gestão Documental e Apoio Administrativo (CNAE 82.11-3-00 e 82.19-9-99)
+- **Controladoria e Dossiês Digitais:** Padronização, conversão (PDF) e estruturação de documentos para empresas e escritórios.
+- **Serviços Combinados de Escritório:** Suporte operacional para otimização de rotinas internas e digitação de documentos.
+- **BPO Operacional:** Terceirização de rotinas administrativas para liberar tempo produtivo da equipe principal.
+
+🌐 **Website Oficial:** [https://www.deevofinanceiras.com.br/](https://www.deevofinanceiras.com.br/)
+
+---
+
+## 🌐 Metadados, SEO & Redes Sociais
+
+A plataforma está totalmente configurada com metadados para indexação e compartilhamento rico:
+- **Title:** `Vini Amaral | Modernização da Defesa do Consumidor & Soluções Financeiras`
+- **Meta Description:** Otimizada para motores de busca (Google, Bing).
+- **Open Graph Protocol:** Suporte visual para compartilhamento no WhatsApp, Facebook, Instagram e LinkedIn.
+- **Twitter Cards:** Formato `summary_large_image` para o X (Twitter).
+- **Favicons & PWA:** Ícones responsivos para navegadores desktop e instalação como Web App (PWA).
 
 ---
 
@@ -125,6 +147,7 @@ O projeto conta com arquivos gerados e integrados para consulta e download:
 - **Bundler & Build Tool:** Vite 6
 - **Ícones:** Lucide React
 - **Animações:** Motion (`motion/react`)
+- **PWA & Offline:** Service Worker e Web App Manifest
 - **Gerador de PDF:** jsPDF (via script de compilação `generate-pdf.js`)
 
 ---
@@ -139,7 +162,9 @@ O projeto conta com arquivos gerados e integrados para consulta e download:
 │   ├── curriculo-vini-amaral.pdf      # Currículo compilado em PDF
 │   ├── curriculo.pdf                  # Cópia para download direto
 │   ├── curriculo.html                 # Versão web para impressão e visualização
-│   └── curriculo-vini-amaral.html     # Cópia sincronizada da versão web
+│   ├── curriculo-vini-amaral.html     # Cópia sincronizada da versão web
+│   ├── manifest.json                  # Manifesto PWA
+│   └── sw.js                          # Service Worker para suporte offline
 ├── src/
 │   ├── assets/
 │   │   └── images/                    # Imagens e referências do projeto
@@ -148,6 +173,8 @@ O projeto conta com arquivos gerados e integrados para consulta e download:
 │   │   ├── WikipediaInfobox.tsx       # Infobox lateral com foto e fatos rápidos
 │   │   ├── TableOfContents.tsx        # Sumário dinâmico de navegação
 │   │   ├── ArticleHero.tsx            # Título, metadados e badges de disponibilidade
+│   │   ├── CivicPetitionsWiki.tsx     # Minuta de Projeto de Lei, Abaixo-Assinado & Imprensa
+│   │   ├── PetitionModalPopup.tsx     # Pop-up de engajamento e apoio cidadão
 │   │   ├── AboutWiki.tsx              # Resumo profissional e trajetória
 │   │   ├── ServicesWiki.tsx           # Seção de áreas de atuação e serviços
 │   │   ├── ProjectsWiki.tsx           # Seção de projetos e iniciativas técnicas
@@ -215,55 +242,12 @@ O projeto conta com arquivos gerados e integrados para consulta e download:
 
 ---
 
-## 🏢 DEEVO Soluções Financeiras (Atuação PJ)
-
-> **"DEEVO Soluções Financeiras: Crédito Inteligente, Tecnologia e Eficiência Operacional."**  
-> *Oferecemos soluções financeiras completas como correspondente bancário, aliadas a suporte tecnológico avançado, gestão de dados e otimização de rotinas administrativas para você e sua empresa.*
-
-A **DEEVO Soluções Financeiras LTDA** (CNPJ: `63.187.175/0001-70`) possui uma estrutura empresarial ampla e estratégica, com atividades que abrangem Correspondente Bancário, Tecnologia da Informação, Tratamento de Dados e Serviços Administrativos. Essa combinação amplia sua capacidade de atuação e sustenta um portfólio integrado, organizado em três pilares estratégicos:
-
-### 1. Soluções Financeiras e Correspondência Bancária (CNAE 66.19-3-02)
-- **Antecipação de Saque-Aniversário FGTS:** Liberação de crédito rápido com desconto direto do saldo.
-- **Consignado e Empréstimos (CLT, Pessoal e Portabilidade):** Intermediação de crédito e redução de taxas em parcerias bancárias.
-- **Crédito com Garantia:** Operações de crédito com garantia de veículo ou imóvel.
-- **Cobrança e Análise Cadastral:** Gestão de informações cadastrais e recuperação de crédito para parceiros.
-
-### 2. Tecnologia, Suporte de TI e Tratamento de Dados (CNAE 62.09-1-00 e 63.11-9-00)
-- **Diagnóstico e Suporte Técnico de TI:** Resolução de falhas em sistemas operacionais, aplicativos e dispositivos.
-- **Tratamento e Gestão de Dados:** Higienização de bases de dados, organização de cadastros e hospedagem/serviços de aplicação.
-- **Automação com Inteligência Artificial:** Criação de fluxos inteligentes para acelerar pesquisas, análises e atendimento ao cliente.
-
-### 3. Gestão Documental e Apoio Administrativo (CNAE 82.11-3-00 e 82.19-9-99)
-- **Controladoria e Dossiês Digitais:** Padronização, conversão (PDF) e estruturação de documentos para empresas e escritórios.
-- **Serviços Combinados de Escritório:** Suporte operacional para otimização de rotinas internas e digitação de documentos.
-- **BPO Operacional:** Terceirização de rotinas administrativas para liberar tempo produtivo da equipe principal.
-
-🌐 **Website Oficial:** [https://www.deevofinanceiras.com.br/](https://www.deevofinanceiras.com.br/)
-
----
-
-## ⚖️ Projetos de Lei, Abaixo-Assinados & Causas Cidadãs
-
-### 📢 Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)
-Iniciativa cidadã pública pela modernização tecnológica, celeridade e transparência nos órgãos de defesa do consumidor (Senacon, Ministério da Justiça e Assembleias Legislativas).
-
-- **O Problema:** Morosidade, burocracia excessiva e falta de retorno ágil ao cidadão diante de abusos de consumo, contrariando as garantias constitucionais e os dados do Sistema Nacional de Defesa do Consumidor (SNDC).
-- **A Proposta:**
-  1. Criação de **Plataforma Digital Integrada** com registro e acompanhamento de denúncias em tempo real.
-  2. **Cooperação Interinstitucional** entre Ministério da Justiça, Senacon e Assembleias Legislativas.
-  3. **Campanhas Educativas Populares** massivas sobre direitos e canais de denúncia.
-  4. **Capacitação Técnica Contínua** para agentes e servidores do sistema de proteção ao consumidor.
-- ✍️ **Assinar Petição Online (Change.org):** [https://c.org/6j7TF9ktMT](https://c.org/6j7TF9ktMT)
-- 📲 **Apoiar e Compartilhar via WhatsApp:** [https://c.org/hMV6T2Q8DH](https://c.org/hMV6T2Q8DH)
-
----
-
 ## 📬 Contato & Redes
 
 - **Nome Profissional:** Marcos Vinícius (Vini Amaral)
 - **Empresa PJ:** DEEVO Soluções Financeiras LTDA (CNPJ: 63.187.175/0001-70)
 - **Website:** [www.deevofinanceiras.com.br](https://www.deevofinanceiras.com.br/)
-- **Localização:** Taquara - RS (Atendimento Presencial e Remoto em todo o Brasil)
+- **Atuação:** Atendimento Remoto / Home Office e Presencial em todo o Brasil
 - **WhatsApp:** [(51) 98144-6019](https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar!)
 - **E-mail:** [viniamaral2026@gmail.com](mailto:viniamaral2026@gmail.com)
 - **GitHub:** [github.com/viniamaral2026-cpu](https://github.com/viniamaral2026-cpu)
