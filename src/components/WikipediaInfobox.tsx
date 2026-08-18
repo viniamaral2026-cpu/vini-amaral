@@ -19,10 +19,10 @@ export const WikipediaInfobox: React.FC = () => {
   return (
     <aside 
       id="wikipedia-infobox"
-      className="w-full lg:w-[320px] xl:w-[340px] shrink-0 wiki-infobox rounded-md overflow-hidden text-xs text-[#1f2328]"
+      className="w-full wiki-infobox rounded-md overflow-hidden text-xs text-[#1f2328] lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto custom-scrollbar shadow-xs"
     >
       {/* Infobox Header */}
-      <div className="bg-[#f6f8fa] border-b border-[#d0d7de] p-3 text-center">
+      <div className="bg-[#f6f8fa] border-b border-[#d0d7de] p-3 text-center sticky top-0 z-10">
         <h3 className="font-bold text-sm text-[#1f2328] wiki-serif tracking-tight">
           {PERSONAL_DATA.name}
         </h3>
@@ -37,7 +37,7 @@ export const WikipediaInfobox: React.FC = () => {
           <img 
             src="/eu.JPG" 
             alt="Marcos Vinícius (Vini Amaral)" 
-            className="w-full h-auto object-cover rounded aspect-square shadow-2xs"
+            className="w-full h-48 sm:h-52 lg:h-48 xl:h-52 object-cover object-top rounded shadow-2xs"
             referrerPolicy="no-referrer"
             onError={(e) => {
               const target = e.currentTarget;
@@ -49,7 +49,7 @@ export const WikipediaInfobox: React.FC = () => {
             }}
           />
         </div>
-        <p className="text-[10px] text-[#656d76] text-center mt-1.5 italic">
+        <p className="text-[10.5px] text-[#656d76] text-center mt-1.5 italic font-medium">
           Vini Amaral — Suporte Operacional, Controladoria &amp; Automação em Taquara - RS.
         </p>
         <div className="flex items-center justify-center gap-2 mt-1 text-[10px]">

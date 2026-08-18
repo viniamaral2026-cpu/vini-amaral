@@ -82,7 +82,7 @@ export function App() {
           </article>
 
           {/* Wikipedia Infobox (Right on Desktop, Top-aligned & Sticky on scroll) */}
-          <div className="w-full lg:w-auto shrink-0 order-first lg:order-last lg:sticky lg:top-24">
+          <div className="w-full lg:w-[320px] xl:w-[340px] shrink-0 order-first lg:order-last lg:sticky lg:top-24 lg:self-start z-20">
             <WikipediaInfobox />
           </div>
 
