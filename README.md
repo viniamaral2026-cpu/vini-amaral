@@ -5,7 +5,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38bdf8?style=flat&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-6.2-646cff?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![PWA](https://img.shields.io/badge/PWA-Multi--Platform-38bdf8?style=flat&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)
-[![Location](https://img.shields.io/badge/Localiza%C3%A7%C3%A3o-Taquara--RS-2ea44f?style=flat)](https://wa.me/5551981446019)
+[![Location](https://img.shields.io/badge/Atua%C3%A7%C3%A3o-Remoto%20%7C%20Brasil-2ea44f?style=flat)](https://wa.me/5551981446019)
 [![Status](https://img.shields.io/badge/Disponibilidade-Home%20Office%20%7C%20Presencial-0969da?style=flat)](https://wa.me/5551981446019)
 
 > **Dossiê Profissional e Plataforma Web Interativa** de Marcos Vinícius (Vini Amaral), estruturado no estilo editorial enciclopédico (Wikipedia / GitHub Classic UI) e desenhado especificamente para processos seletivos e contratações em **Cargos Operacionais, Administrativos, Controladoria Jurídica, Suporte de TI e Automação de Processos com Inteligência Artificial**.
@@ -42,7 +42,7 @@ Inspirado na precisão e clareza visual dos artigos enciclopédicos da **Wikiped
 
 - **Cargo Alvo:** Cargos Operacionais, Administrativos e de Controladoria Jurídica.
 - **Especialidades Complementares:** Gestão e Organização Documental, Suporte Operacional de TI, Automação de Tarefas com IA Generativa e Desenvolvimento de Soluções Web.
-- **Localização:** Taquara - Rio Grande do Sul (disponível para atuação Presencial ou Remota / Home Office).
+- **Disponibilidade:** Atendimento Remoto / Home Office e Presencial em todo o Brasil.
 
 ---
 
@@ -220,7 +220,7 @@ O projeto conta com arquivos gerados e integrados para consulta e download:
 > **"DEEVO Soluções Financeiras: Crédito Inteligente, Tecnologia e Eficiência Operacional."**  
 > *Oferecemos soluções financeiras completas como correspondente bancário, aliadas a suporte tecnológico avançado, gestão de dados e otimização de rotinas administrativas para você e sua empresa.*
 
-Como a **DEEVO Soluções Financeiras LTDA** (CNPJ: `63.187.175/0001-70`) possui um objeto social e CNPJ muito amplo e estratégico — cobrindo desde Correspondente Bancário até Suporte de TI, Tratamento de Dados e Serviços Administrativos —, a sua esteira de serviços é dividida em três pilares principais:
+A **DEEVO Soluções Financeiras LTDA** (CNPJ: `63.187.175/0001-70`) possui uma estrutura empresarial ampla e estratégica, com atividades que abrangem Correspondente Bancário, Tecnologia da Informação, Tratamento de Dados e Serviços Administrativos. Essa combinação amplia sua capacidade de atuação e sustenta um portfólio integrado, organizado em três pilares estratégicos:
 
 ### 1. Soluções Financeiras e Correspondência Bancária (CNAE 66.19-3-02)
 - **Antecipação de Saque-Aniversário FGTS:** Liberação de crédito rápido com desconto direto do saldo.
@@ -239,6 +239,22 @@ Como a **DEEVO Soluções Financeiras LTDA** (CNPJ: `63.187.175/0001-70`) possui
 - **BPO Operacional:** Terceirização de rotinas administrativas para liberar tempo produtivo da equipe principal.
 
 🌐 **Website Oficial:** [https://www.deevofinanceiras.com.br/](https://www.deevofinanceiras.com.br/)
+
+---
+
+## ⚖️ Projetos de Lei, Abaixo-Assinados & Causas Cidadãs
+
+### 📢 Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)
+Iniciativa cidadã pública pela modernização tecnológica, celeridade e transparência nos órgãos de defesa do consumidor (Senacon, Ministério da Justiça e Assembleias Legislativas).
+
+- **O Problema:** Morosidade, burocracia excessiva e falta de retorno ágil ao cidadão diante de abusos de consumo, contrariando as garantias constitucionais e os dados do Sistema Nacional de Defesa do Consumidor (SNDC).
+- **A Proposta:**
+  1. Criação de **Plataforma Digital Integrada** com registro e acompanhamento de denúncias em tempo real.
+  2. **Cooperação Interinstitucional** entre Ministério da Justiça, Senacon e Assembleias Legislativas.
+  3. **Campanhas Educativas Populares** massivas sobre direitos e canais de denúncia.
+  4. **Capacitação Técnica Contínua** para agentes e servidores do sistema de proteção ao consumidor.
+- ✍️ **Assinar Petição Online (Change.org):** [https://c.org/6j7TF9ktMT](https://c.org/6j7TF9ktMT)
+- 📲 **Apoiar e Compartilhar via WhatsApp:** [https://c.org/hMV6T2Q8DH](https://c.org/hMV6T2Q8DH)
 
 ---
 

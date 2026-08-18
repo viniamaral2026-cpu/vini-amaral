@@ -93,19 +93,15 @@ export const DeevoFinanceirasWiki: React.FC = () => {
         <p className="text-sm leading-relaxed text-[#1f2328] wiki-serif">
           {COMPANY_DATA.description}
         </p>
-
-        <p className="text-xs text-[#57606a] italic">
-          {COMPANY_DATA.structureNote}
-        </p>
       </div>
 
       {/* 3 Strategic Pillars Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {COMPANY_DATA.pillars.map((pillar, index) => {
           const getPillarIcon = () => {
-            if (index === 0) return <Landmark className="w-5 h-5 text-[#0969da]" />;
-            if (index === 1) return <Cpu className="w-5 h-5 text-[#1a7f37]" />;
-            return <FileCheck className="w-5 h-5 text-[#8250df]" />;
+            if (index === 0) return <Landmark className="w-4 h-4 text-[#0969da]" />;
+            if (index === 1) return <Cpu className="w-4 h-4 text-[#1a7f37]" />;
+            return <FileCheck className="w-4 h-4 text-[#8250df]" />;
           };
 
           return (
@@ -115,27 +111,27 @@ export const DeevoFinanceirasWiki: React.FC = () => {
             >
               <div className="space-y-3">
                 {/* Pillar Header */}
-                <div className="flex items-start justify-between gap-2 border-b border-[#eaeef2] pb-2.5">
-                  <div className="flex items-center gap-2">
-                    <div className="p-1.5 rounded bg-[#f6f8fa] border border-[#d0d7de]">
-                      {getPillarIcon()}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-xs text-[#1f2328] leading-tight">
-                        {pillar.title}
-                      </h4>
-                      <span className="text-[10.5px] font-mono text-[#0969da] font-medium block mt-0.5">
+                <div className="border-b border-[#eaeef2] pb-2.5 space-y-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <div className="p-1.5 rounded bg-[#f6f8fa] border border-[#d0d7de] shrink-0">
+                        {getPillarIcon()}
+                      </div>
+                      <span className="text-[10.5px] font-mono text-[#0969da] font-semibold truncate">
                         {pillar.cnae}
                       </span>
                     </div>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#f6f8fa] text-[#57606a] border border-[#d0d7de] shrink-0 whitespace-nowrap">
+                      {pillar.badge}
+                    </span>
                   </div>
-                  <span className="text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#f6f8fa] text-[#57606a] border border-[#d0d7de] shrink-0">
-                    {pillar.badge}
-                  </span>
+                  <h4 className="font-bold text-xs sm:text-[13px] text-[#1f2328] leading-tight">
+                    {pillar.title}
+                  </h4>
                 </div>
 
                 {/* Pillar Itemized Deliverables */}
-                <ul className="space-y-2.5 text-xs text-[#1f2328]">
+                <ul className="space-y-2 text-xs text-[#1f2328]">
                   {pillar.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0969da] shrink-0 mt-1.5" />
@@ -154,10 +150,10 @@ export const DeevoFinanceirasWiki: React.FC = () => {
                   href={`https://wa.me/${PERSONAL_DATA.whatsappNumber}?text=${encodeURIComponent(`Olá Vini! Gostaria de saber mais sobre os serviços da DEEVO Financeiras na área de ${pillar.title}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#0969da] hover:underline"
+                  className="w-full flex items-center justify-between p-2 rounded-md bg-[#f6f8fa] hover:bg-[#ddf4ff] border border-[#d0d7de] hover:border-[#54aeff] text-[#0969da] text-xs font-semibold transition-colors group shadow-2xs"
                 >
-                  <span>Solicitar Atendimento deste Pilar</span>
-                  <ArrowRight className="w-3 h-3" />
+                  <span className="truncate">Solicitar Atendimento</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform shrink-0" />
                 </a>
               </div>
             </div>

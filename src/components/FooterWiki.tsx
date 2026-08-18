@@ -59,7 +59,7 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
 
             <p className="text-[11.5px] text-[#656d76] flex items-center gap-1 pt-1 font-medium">
               <MapPin className="w-3.5 h-3.5 text-[#0969da] shrink-0" />
-              <span>Taquara - RS (Atendimento Presencial e Remoto em todo o Brasil)</span>
+              <span>Atendimento Remoto e Nacional em todo o Brasil (Home Office &amp; Presencial)</span>
             </p>
           </div>
 

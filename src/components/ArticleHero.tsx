@@ -55,11 +55,6 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({ onNavigate }) => {
             <span>[ˈvi.ni a.maˈɾaw]</span>
             <span>•</span>
             <span className="text-[#0969da] font-medium">{PERSONAL_DATA.objective}</span>
-            <span>•</span>
-            <span className="inline-flex items-center gap-1 text-[#1f2328]">
-              <MapPin className="w-3 h-3 text-[#0969da]" />
-              {PERSONAL_DATA.location}
-            </span>
           </p>
         </div>
 
@@ -92,7 +87,7 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({ onNavigate }) => {
 
       {/* Wikipedia Lead Paragraph */}
       <p className="text-base leading-relaxed text-[#1f2328] wiki-serif">
-        <strong className="font-bold text-[#1f2328]">{PERSONAL_DATA.name}</strong> é um profissional autodidata brasileiro com forte domínio tecnológico, residente em <strong className="font-semibold text-[#1f2328]">Taquara - RS</strong>, com atuação voltada para{' '}
+        <strong className="font-bold text-[#1f2328]">{PERSONAL_DATA.name}</strong> é um profissional autodidata brasileiro com forte domínio tecnológico, com atuação voltada para{' '}
         <span className="text-[#0969da] font-semibold">Cargos Operacionais, Administrativos e de Controladoria Jurídica</span>. Destaca-se pela união entre raciocínio analítico, resolução prática de problemas e uso estratégico de <strong className="font-semibold text-[#1f2328]">Inteligência Artificial</strong> e ferramentas digitais para acelerar pesquisas, redigir e revisar documentos e estruturar fluxos complexos de informação.
       </p>
 

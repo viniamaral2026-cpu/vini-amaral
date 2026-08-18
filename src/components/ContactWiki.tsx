@@ -111,7 +111,7 @@ export const ContactWiki: React.FC = () => {
               href={COMPANY_DATA.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-xs font-semibold text-white bg-[#0969da] hover:bg-[#085cc0] transition-colors shrink-0"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold text-white bg-[#0969da] hover:bg-[#085cc0] transition-colors shrink-0 whitespace-nowrap self-start sm:self-auto shadow-2xs"
             >
               <span>Site da Empresa</span>
               <ExternalLink className="w-3 h-3" />

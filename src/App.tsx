@@ -8,6 +8,7 @@ import { AboutWiki } from './components/AboutWiki';
 import { ExperienceWiki } from './components/ExperienceWiki';
 import { ServicesWiki } from './components/ServicesWiki';
 import { DeevoFinanceirasWiki } from './components/DeevoFinanceirasWiki';
+import { CivicPetitionsWiki } from './components/CivicPetitionsWiki';
 import { ProjectsWiki } from './components/ProjectsWiki';
 import { SkillsWikiTable } from './components/SkillsWikiTable';
 import { DiagnosticSimulatorWiki } from './components/DiagnosticSimulatorWiki';
@@ -15,6 +16,7 @@ import { DifferentialsWiki } from './components/DifferentialsWiki';
 import { ContactWiki } from './components/ContactWiki';
 import { FooterWiki } from './components/FooterWiki';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
+import { PetitionModalPopup } from './components/PetitionModalPopup';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('inicio');
@@ -64,7 +66,10 @@ export function App() {
             {/* 4. DEEVO Soluções Financeiras (Atuação PJ) */}
             <DeevoFinanceirasWiki />
 
-            {/* 5. Repositórios e Projetos */}
+            {/* 5. Projetos de Lei, Abaixo-Assinados & Causas Cidadãs */}
+            <CivicPetitionsWiki />
+
+            {/* 6. Repositórios e Projetos */}
             <ProjectsWiki />
 
             {/* 5. Competências & Matriz Técnica */}
@@ -95,6 +100,9 @@ export function App() {
 
       {/* Direct Floating WhatsApp Contact Button */}
       <WhatsAppFloatingButton />
+
+      {/* Closable Civic Petition Popup */}
+      <PetitionModalPopup onNavigateToSection={handleNavigate} />
     </div>
   );
 }

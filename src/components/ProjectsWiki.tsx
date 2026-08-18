@@ -86,20 +86,20 @@ export const ProjectsWiki: React.FC = () => {
             <div className="space-y-3">
               {/* Header */}
               <div className="flex items-start justify-between gap-2">
-                <div className="flex items-center gap-2">
-                  <FolderGit2 className="w-4 h-4 text-[#656d76]" />
+                <div className="flex items-center gap-2 min-w-0">
+                  <FolderGit2 className="w-4 h-4 text-[#656d76] shrink-0" />
                   <a
                     href={proj.githubUrl || PERSONAL_DATA.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-sm text-[#0969da] hover:underline font-mono"
+                    className="font-bold text-sm text-[#0969da] hover:underline font-mono truncate"
                   >
                     {proj.title}
                   </a>
                 </div>
 
                 {proj.badge && (
-                  <span className="px-2 py-0.5 rounded-full text-[10.5px] font-medium bg-[#ddf4ff] text-[#0969da] border border-[#54aeff]">
+                  <span className="px-2 py-0.5 rounded-full text-[10.5px] font-semibold bg-[#ddf4ff] text-[#0969da] border border-[#54aeff] shrink-0 whitespace-nowrap">
                     {proj.badge}
                   </span>
                 )}
@@ -127,14 +127,14 @@ export const ProjectsWiki: React.FC = () => {
             </div>
 
             {/* Footer Tech Stack & Links */}
-            <div className="pt-3 mt-3 border-t border-[#eaeef2] flex flex-wrap items-center justify-between gap-2 text-xs">
+            <div className="pt-3 mt-3 border-t border-[#eaeef2] flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs">
               <div className="flex flex-wrap items-center gap-1.5">
                 {proj.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1 text-[11px] text-[#656d76] font-mono"
+                    className="inline-flex items-center gap-1 text-[11px] text-[#656d76] font-mono px-1.5 py-0.5 rounded bg-[#f6f8fa] border border-[#eaeef2]"
                   >
-                    <span className="w-2 h-2 rounded-full bg-[#0969da]/70 inline-block"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0969da]/70 inline-block"></span>
                     <span>{tech}</span>
                   </span>
                 ))}
@@ -144,7 +144,7 @@ export const ProjectsWiki: React.FC = () => {
                 href={proj.githubUrl || PERSONAL_DATA.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs font-semibold text-[#0969da] hover:underline"
+                className="inline-flex items-center justify-center gap-1.5 px-2.5 py-1 rounded bg-[#f6f8fa] hover:bg-[#eaeef2] border border-[#d0d7de] text-[#1f2328] hover:text-[#0969da] text-xs font-semibold transition-colors shrink-0 shadow-2xs whitespace-nowrap self-start sm:self-auto"
               >
                 <Github className="w-3.5 h-3.5 text-[#1f2328]" />
                 <span>{proj.linkText || 'Ver Repositório'}</span>

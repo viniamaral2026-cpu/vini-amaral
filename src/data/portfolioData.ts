@@ -5,8 +5,8 @@ export const PERSONAL_DATA = {
   fullName: "Marcos Vinícius (Vini Amaral)",
   roleTitle: "Cargos Operacionais, Administrativos e de Controladoria Jurídica",
   secondaryTitle: "Suporte de TI, Gestão Documental & Automação com IA",
-  address: "Taquara - RS (Disponível Home Office & Presencial)",
-  location: "Taquara - RS",
+  address: "Brasil (Atendimento Remoto / Home Office & Nacional)",
+  location: "Brasil (Remoto & Nacional)",
   availability: "Home Office ou Presencial",
   email: "viniamaral2026@gmail.com",
   phoneDisplay: "(51) 98144-6019",
@@ -40,8 +40,8 @@ export const COMPANY_DATA = {
   copyright: "© 2026 DEEVO Soluções Financeiras LTDA — CNPJ: 63.187.175/0001-70. Todos os direitos reservados.",
   headline: "DEEVO Soluções Financeiras: Crédito Inteligente, Tecnologia e Eficiência Operacional.",
   pitch: "Oferecemos soluções financeiras completas como correspondente bancário, aliadas a suporte tecnológico avançado, gestão de dados e otimização de rotinas administrativas para você e sua empresa.",
-  description: "Como a DEEVO Soluções Financeiras possui um CNPJ muito amplo e estratégico — cobrindo desde Correspondente Bancário até Suporte de TI, Tratamento de Dados e Serviços Administrativos —, o seu portfólio de serviços pode ser dividido em três pilares principais.",
-  structureNote: "Essa estrutura mostra que a sua empresa entrega tanto a parte financeira quanto a infraestrutura tecnológica e operacional:",
+  description: "A DEEVO Soluções Financeiras possui uma estrutura empresarial ampla e estratégica, com atividades que abrangem Correspondente Bancário, Tecnologia da Informação, Tratamento de Dados e Serviços Administrativos. Essa combinação amplia sua capacidade de atuação e sustenta um portfólio integrado, organizado em três pilares estratégicos:",
+  structureNote: "Essa estrutura consolida tanto a esteira de soluções financeiras quanto a infraestrutura tecnológica e operacional:",
   pillars: [
     {
       id: "pilar-financeiro",
@@ -334,3 +334,134 @@ export const PROJECTS_DATA: ProjectItem[] = [
     badge: "Documentação",
   }
 ];
+
+export const PETITIONS_DATA = [
+  {
+    id: "reforma-defesa-consumidor",
+    title: "Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)",
+    tagline: "Modernização tecnológica, transparência e agilidade na resolução de conflitos de consumo",
+    category: "Iniciativa Cidadã / Abaixo-Assinado & Projeto de Lei",
+    status: "Petição Pública Ativa",
+    signatureUrl: "https://c.org/6j7TF9ktMT",
+    whatsappShareUrl: "https://c.org/hMV6T2Q8DH",
+    targetEntities: [
+      "Ministério da Justiça e Segurança Pública",
+      "Secretaria Nacional do Consumidor (Senacon)",
+      "Assembleias Legislativas Estaduais",
+      "Câmara dos Deputados e Senado Federal"
+    ],
+    quickAction: {
+      title: "Apoie a Lei da Modernização e Transparência na Proteção ao Consumidor",
+      shortText: "A burocracia não pode impedir a defesa do cidadão. Assine a petição da Lei do Canal Direto e nos ajude a pressionar as autoridades por um sistema mais rápido e eficiente.",
+      ctaLabel: "Assinar o Abaixo-Assinado na Change.org"
+    },
+    problemTitle: "O Problema no Cenário Atual",
+    problemText: `Já passei por situações de desrespeito ao consumidor em que, ao tentar denunciar, não obtive retorno ágil. É frustrante ver empresas descumprindo leis enquanto a burocracia impede que os órgãos de fiscalização ajudem o cidadão no momento em que ele mais precisa. Esta não é apenas a minha realidade, mas a de muitos brasileiros que se veem impotentes diante de abusos de consumo, sem uma resposta eficiente e justa dos órgãos responsáveis.
+
+A proteção dos direitos do consumidor é garantida pela Constituição Brasileira, mas, na prática, vemos que os processos são frequentemente engessados por burocracia e pela ineficiência dos sistemas de resolução de conflitos. Conforme o Relatório de Atividades do Sistema Nacional de Defesa do Consumidor (SNDC/Senacon), inúmeros casos permanecem sem solução, e os prazos para análise e decisão tornam-se cada vez mais extensos, prejudicando o cidadão e favorecendo o infrator. Precisamos mudar isso urgentemente.`,
+    proposalTitle: "Propostas de Reforma e Transformação Digital",
+    proposalPoints: [
+      {
+        title: "Cooperação Interinstitucional Integrada",
+        desc: "Cooperação formal entre o Ministério da Justiça e Segurança Pública, a Senacon e as Assembleias Legislativas para reformular, desburocratizar e agilizar os procedimentos de fiscalização e aplicação de penalidades."
+      },
+      {
+        title: "Plataforma Digital em Tempo Real com Tecnologia Moderna",
+        desc: "Desenvolvimento de plataforma digital integrada com rastreamento de denúncias em tempo real, inteligência de triagem, transparência pública e canais simplificados e acessíveis para todo cidadão."
+      },
+      {
+        title: "Campanhas Educativas Massivas",
+        desc: "Investimento sério em campanhas educativas de alcance nacional para informar a população sobre seus direitos, prevenção contra golpes e os meios corretos de denúncia formal."
+      },
+      {
+        title: "Formação e Capacitação Contínua",
+        desc: "Capacitação contínua e atualização técnica para os profissionais e servidores dos órgãos de defesa do consumidor, garantindo atendimento humanizado, ágil e especializado."
+      }
+    ],
+    billDraft: {
+      title: "Minuta do Projeto de Lei",
+      subtitle: "Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)",
+      header: "MINUTA DE PROJETO DE LEI Nº ____, DE 2026",
+      ementa: "Dispõe sobre a modernização e a transparência no Sistema Nacional de Defesa do Consumidor (Lei do Canal Direto), cria o Canal Único Integrado de Denúncias do Consumidor e estabelece diretrizes para o acionamento automático dos órgãos de fiscalização e controle.",
+      decree: "O CONGRESSO NACIONAL decreta:",
+      chapters: [
+        {
+          chapter: "CAPÍTULO I – DAS DISPOSIÇÕES PRELIMINARES",
+          articles: [
+            {
+              article: "Art. 1º",
+              text: "Esta Lei altera e complementa a legislação do Sistema Nacional de Defesa do Consumidor (SNDC), com o objetivo de garantir celeridade, eficiência e transparência no atendimento, na triagem e no encaminhamento de denúncias e reclamações de consumidores em todo o território nacional."
+            }
+          ]
+        },
+        {
+          chapter: "CAPÍTULO II – DO CANAL ÚNICO INTEGRADO DE DENÚNCIAS",
+          articles: [
+            {
+              article: "Art. 2º",
+              text: "Fica instituído o Canal Único Integrado de Denúncias do Consumidor, plataforma digital pública centralizada, sob a coordenação da Secretaria Nacional do Consumidor (Senacon)."
+            },
+            {
+              article: "Art. 3º",
+              text: "A plataforma terá as seguintes funcionalidades obrigatórias:",
+              items: [
+                "I – Registro simplificado e acompanhamento em tempo real das denúncias pelos cidadãos;",
+                "II – Triagem automatizada por inteligência artificial e categorização de ilícitos de consumo;",
+                "III – Envio imediato e simultâneo das denúncias aos órgãos competentes (PROCONs regionais, Vigilância Sanitária, Agências Reguladoras e Ministério Público);",
+                "IV – Painel público de transparência, exibindo indicadores de tempo de resposta das empresas e dos órgãos públicos."
+              ]
+            }
+          ]
+        },
+        {
+          chapter: "CAPÍTULO III – DA INTEGRAÇÃO E AGILIDADE NAS FISCALIZAÇÕES",
+          articles: [
+            {
+              article: "Art. 4º",
+              text: "O recebimento da denúncia pelo Canal Único implicará o acionamento direto do PROCON e demais órgãos competentes da jurisdição onde ocorreu o fato."
+            },
+            {
+              article: "Art. 5º",
+              text: "Fica estabelecido o prazo máximo de 15 (quinze) dias úteis para que os órgãos fiscalizadores emitam parecer inicial ou iniciem a apuração sobre denúncias que configurem risco iminente à saúde, à segurança ou ao patrimônio coletivo dos consumidores."
+            }
+          ]
+        },
+        {
+          chapter: "CAPÍTULO IV – DA CAPACITAÇÃO E EDUCAÇÃO AO CONSUMIDOR",
+          articles: [
+            {
+              article: "Art. 6º",
+              text: "O Poder Público promoverá campanhas permanentes de conscientização sobre os direitos do consumidor e o uso correto dos meios de denúncia digital."
+            },
+            {
+              article: "Art. 7º",
+              text: "Fica instituído o Programa de Capacitação Contínua para servidores e agentes que atuam na defesa e fiscalização dos direitos do consumidor."
+            }
+          ]
+        },
+        {
+          chapter: "CAPÍTULO V – DAS DISPOSIÇÕES FINAIS",
+          articles: [
+            {
+              article: "Art. 8º",
+              text: "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
+            },
+            {
+              article: "Art. 9º",
+              text: "Esta Lei entra em vigor após decorridos 180 (cento e oitenta) dias de sua publicação oficial."
+            }
+          ]
+        }
+      ],
+      justificativa: `O presente Projeto de Lei atende a uma demanda urgente da sociedade brasileira por um sistema de defesa do consumidor moderno e eficiente. Atualmente, os processos burocráticos e a falta de integração entre os órgãos de fiscalização geram morosidade, deixando o cidadão sem respostas ágeis diante de abusos cometidos por fornecedores de produtos e serviços.
+
+Com o avanço das tecnologias de informação, é indispensável a criação de um canal digital integrado que permita ao cidadão registrar sua denúncia e acionar automaticamente os órgãos competentes. A medida garante maior transparência, otimiza o uso dos recursos públicos e fortalece a proteção ao consumidor garantida no artigo 5º, XXXII, da Constituição Federal.
+
+Pelas razões expostas, contamos com o apoio dos ilustres pares e da sociedade civil para a aprovação e tramitação desta importante proposta.`
+    },
+    closingMessage: `Esta reforma não é apenas necessária, é possível. Ao unir esforços entre governo e sociedade, podemos construir um sistema de proteção ao consumidor que funcione para todos, promovendo a justiça e cumprindo o direito do cidadão ao acesso a serviços de qualidade e a uma proteção eficaz contra abusos.
+
+É hora de exigir mudanças concretas para aprimorar nosso sistema. Assine esta petição para juntos pressionarmos as autoridades competentes a transformar a defesa do consumidor no Brasil, assegurando um sistema justo e eficiente. Sua assinatura é essencial para essa transformação.`
+  }
+];
+

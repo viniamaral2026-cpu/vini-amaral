@@ -50,7 +50,7 @@ export const WikipediaInfobox: React.FC = () => {
           />
         </div>
         <p className="text-[10.5px] text-[#656d76] text-center mt-1.5 italic font-medium">
-          Vini Amaral — Suporte Operacional, Controladoria &amp; Automação em Taquara - RS.
+          Vini Amaral — Suporte Operacional, Controladoria &amp; Automação.
         </p>
         <div className="flex items-center justify-center gap-2 mt-1 text-[10px]">
           <a 
@@ -87,11 +87,11 @@ export const WikipediaInfobox: React.FC = () => {
             </tr>
 
             <tr className="border-b border-[#eaeef2]">
-              <th className="py-1.5 pr-2 font-semibold text-[#656d76] align-top">Localização</th>
+              <th className="py-1.5 pr-2 font-semibold text-[#656d76] align-top">Atuação</th>
               <td className="py-1.5 text-[#1f2328]">
                 <div className="flex items-start gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-[#0969da] shrink-0 mt-0.5" />
-                  <span>{PERSONAL_DATA.location} (RS)</span>
+                  <Home className="w-3.5 h-3.5 text-[#0969da] shrink-0 mt-0.5" />
+                  <span>Remoto / Home Office &amp; Nacional</span>
                 </div>
               </td>
             </tr>

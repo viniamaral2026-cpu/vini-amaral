@@ -17,7 +17,8 @@ import {
   Briefcase,
   Github,
   Check,
-  Building2
+  Building2,
+  Scale
 } from 'lucide-react';
 import { PERSONAL_DATA, COMPANY_DATA } from '../data/portfolioData';
 
@@ -43,10 +44,11 @@ export const Header: React.FC<HeaderWikiProps> = ({ activeSection, onNavigate })
     { id: 'experiencia', label: '2. Experiência', icon: Briefcase },
     { id: 'servicos', label: '3. Serviços', icon: Layers },
     { id: 'deevo-financeiras', label: '4. DEEVO Financeiras', icon: Building2 },
-    { id: 'projetos', label: '5. Projetos', icon: FolderGit2 },
-    { id: 'competencias', label: '6. Competências', icon: Code2 },
-    { id: 'diagnostico', label: '7. Simulador', icon: Sparkles },
-    { id: 'contato', label: '8. Contato', icon: Mail },
+    { id: 'projetos-lei', label: '5. Projetos de Lei & Petições', icon: Scale },
+    { id: 'projetos', label: '6. Projetos & Repos', icon: FolderGit2 },
+    { id: 'competencias', label: '7. Competências', icon: Code2 },
+    { id: 'diagnostico', label: '8. Simulador', icon: Sparkles },
+    { id: 'contato', label: '9. Contato', icon: Mail },
   ];
 
   return (

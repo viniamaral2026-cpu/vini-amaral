@@ -50,33 +50,42 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ onNavigate }) 
       ],
     },
     {
-      id: 'projetos',
+      id: 'projetos-lei',
       number: '5',
+      title: 'Projetos de Lei, Abaixo-Assinados & Causas Cidadãs',
+      subsections: [
+        { id: 'projetos-lei', number: '5.1', title: 'Abaixo-Assinado (Lei do Canal Direto)' },
+        { id: 'minuta-projeto-de-lei', number: '5.2', title: 'Minuta: Lei da Modernização e Transparência na Proteção ao Consumidor' },
+      ],
+    },
+    {
+      id: 'projetos',
+      number: '6',
       title: 'Repositórios & Projetos em Destaque',
       subsections: [
-        { id: 'proj-codeforge', number: '5.1', title: 'CodeForge (Iniciativa Open Source)' },
-        { id: 'proj-docflow-juridico', number: '5.2', title: 'DocFlow & Dossiês Eletrônicos' },
-        { id: 'proj-autosupport-hub', number: '5.3', title: 'AutoSupport & Triagem de TI' },
+        { id: 'proj-codeforge', number: '6.1', title: 'CodeForge (Iniciativa Open Source)' },
+        { id: 'proj-docflow-juridico', number: '6.2', title: 'DocFlow & Dossiês Eletrônicos' },
+        { id: 'proj-autosupport-hub', number: '6.3', title: 'AutoSupport & Triagem de TI' },
       ],
     },
     {
       id: 'competencias',
-      number: '6',
+      number: '7',
       title: 'Competências & Matriz Técnica',
     },
     {
       id: 'diagnostico',
-      number: '7',
+      number: '8',
       title: 'Simulador Interativo de Diagnóstico Operacional',
     },
     {
       id: 'diferenciais',
-      number: '8',
+      number: '9',
       title: 'Diferenciais Competitivos',
     },
     {
       id: 'contato',
-      number: '9',
+      number: '10',
       title: 'Informações de Contato & Conexões',
     },
   ];
