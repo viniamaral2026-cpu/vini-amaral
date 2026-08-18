@@ -7,6 +7,7 @@ import { ArticleHero } from './components/ArticleHero';
 import { AboutWiki } from './components/AboutWiki';
 import { ExperienceWiki } from './components/ExperienceWiki';
 import { ServicesWiki } from './components/ServicesWiki';
+import { DeevoFinanceirasWiki } from './components/DeevoFinanceirasWiki';
 import { ProjectsWiki } from './components/ProjectsWiki';
 import { SkillsWikiTable } from './components/SkillsWikiTable';
 import { DiagnosticSimulatorWiki } from './components/DiagnosticSimulatorWiki';
@@ -60,7 +61,10 @@ export function App() {
             {/* 3. Serviços e Soluções */}
             <ServicesWiki />
 
-            {/* 4. Repositórios e Projetos */}
+            {/* 4. DEEVO Soluções Financeiras (Atuação PJ) */}
+            <DeevoFinanceirasWiki />
+
+            {/* 5. Repositórios e Projetos */}
             <ProjectsWiki />
 
             {/* 5. Competências & Matriz Técnica */}

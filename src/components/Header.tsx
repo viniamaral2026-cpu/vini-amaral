@@ -16,9 +16,10 @@ import {
   FileText,
   Briefcase,
   Github,
-  Check
+  Check,
+  Building2
 } from 'lucide-react';
-import { PERSONAL_DATA } from '../data/portfolioData';
+import { PERSONAL_DATA, COMPANY_DATA } from '../data/portfolioData';
 
 interface HeaderWikiProps {
   activeSection: string;
@@ -38,13 +39,14 @@ export const Header: React.FC<HeaderWikiProps> = ({ activeSection, onNavigate })
 
   const navTabs = [
     { id: 'inicio', label: 'README.md', icon: FileText },
-    { id: 'sobre', label: '1. Resumo Profissional', icon: BookOpen },
-    { id: 'experiencia', label: '2. Experiência & Formação', icon: Briefcase },
+    { id: 'sobre', label: '1. Resumo', icon: BookOpen },
+    { id: 'experiencia', label: '2. Experiência', icon: Briefcase },
     { id: 'servicos', label: '3. Serviços', icon: Layers },
-    { id: 'projetos', label: '4. Repositórios & Projetos', icon: FolderGit2 },
-    { id: 'competencias', label: '5. Competências', icon: Code2 },
-    { id: 'diagnostico', label: '6. Simulador', icon: Sparkles },
-    { id: 'contato', label: '7. Contato', icon: Mail },
+    { id: 'deevo-financeiras', label: '4. DEEVO Financeiras', icon: Building2 },
+    { id: 'projetos', label: '5. Projetos', icon: FolderGit2 },
+    { id: 'competencias', label: '6. Competências', icon: Code2 },
+    { id: 'diagnostico', label: '7. Simulador', icon: Sparkles },
+    { id: 'contato', label: '8. Contato', icon: Mail },
   ];
 
   return (

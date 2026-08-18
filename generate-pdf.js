@@ -36,9 +36,9 @@ y += 5;
 doc.setFont('helvetica', 'normal');
 doc.setFontSize(9);
 doc.setTextColor(87, 96, 106);
-doc.text('Rua Miguel Bauer, 2237, Taquara - RS | WhatsApp: (51) 98144-6019 | viniamaral2026@gmail.com', margin, y);
+doc.text('Taquara - RS | WhatsApp: (51) 98144-6019 | viniamaral2026@gmail.com', margin, y);
 y += 4;
-doc.text('Disponibilidade: Home Office ou Presencial | GitHub: github.com/viniamaral2026-cpu | LinkedIn: /in/dev-vini-amaral', margin, y);
+doc.text('DEEVO Soluções Financeiras LTDA (CNPJ: 63.187.175/0001-70) | www.deevofinanceiras.com.br', margin, y);
 y += 6;
 
 // Divider line

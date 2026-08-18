@@ -5,7 +5,7 @@ export const PERSONAL_DATA = {
   fullName: "Marcos Vinícius (Vini Amaral)",
   roleTitle: "Cargos Operacionais, Administrativos e de Controladoria Jurídica",
   secondaryTitle: "Suporte de TI, Gestão Documental & Automação com IA",
-  address: "Rua Miguel Bauer, 2237, Taquara - RS",
+  address: "Taquara - RS (Disponível Home Office & Presencial)",
   location: "Taquara - RS",
   availability: "Home Office ou Presencial",
   email: "viniamaral2026@gmail.com",
@@ -21,12 +21,96 @@ export const PERSONAL_DATA = {
   photoUrl: "/eu.JPG",
   status: "Disponível para Home Office & Presencial",
   objective: "Cargos Operacionais, Administrativos e de Controladoria Jurídica",
+  companyName: "DEEVO Soluções Financeiras LTDA",
+  companyCnpj: "63.187.175/0001-70",
+  companyUrl: "https://www.deevofinanceiras.com.br/",
   
   summary: "Profissional autodidata com forte domínio tecnológico, dedicado a trazer eficiência e organização para rotinas administrativas e operacionais. Une raciocínio analítico e capacidade de resolução de problemas ao uso estratégico de inteligência artificial e ferramentas digitais para acelerar pesquisas, redigir e revisar documentos e estruturar informações complexas. Perfil proativo, que aprende sistemas novos com rapidez e assume a responsabilidade de destravar processos, reduzir retrabalho e manter arquivos e dados organizados — o suporte técnico e operacional que libera tempo para o que realmente exige atenção especializada.",
 
   bioParagraph1: "Profissional autodidata com forte domínio tecnológico, dedicado a trazer eficiência e organização para rotinas administrativas e operacionais.",
   bioParagraph2: "Une raciocínio analítico e capacidade de resolução de problemas ao uso estratégico de inteligência artificial e ferramentas digitais para acelerar pesquisas, redigir e revisar documentos e estruturar informações complexas.",
   bioParagraph3: "Perfil proativo, que aprende sistemas novos com rapidez e assume a responsabilidade de destravar processos, reduzir retrabalho e manter arquivos e dados organizados — o suporte técnico e operacional que libera tempo para o que realmente exige atenção especializada.",
+};
+
+export const COMPANY_DATA = {
+  name: "DEEVO Soluções Financeiras LTDA",
+  shortName: "DEEVO Soluções Financeiras",
+  cnpj: "63.187.175/0001-70",
+  website: "https://www.deevofinanceiras.com.br/",
+  copyright: "© 2026 DEEVO Soluções Financeiras LTDA — CNPJ: 63.187.175/0001-70. Todos os direitos reservados.",
+  headline: "DEEVO Soluções Financeiras: Crédito Inteligente, Tecnologia e Eficiência Operacional.",
+  pitch: "Oferecemos soluções financeiras completas como correspondente bancário, aliadas a suporte tecnológico avançado, gestão de dados e otimização de rotinas administrativas para você e sua empresa.",
+  description: "Como a DEEVO Soluções Financeiras possui um CNPJ muito amplo e estratégico — cobrindo desde Correspondente Bancário até Suporte de TI, Tratamento de Dados e Serviços Administrativos —, o seu portfólio de serviços pode ser dividido em três pilares principais.",
+  structureNote: "Essa estrutura mostra que a sua empresa entrega tanto a parte financeira quanto a infraestrutura tecnológica e operacional:",
+  pillars: [
+    {
+      id: "pilar-financeiro",
+      title: "1. Soluções Financeiras e Correspondência Bancária",
+      cnae: "CNAE 66.19-3-02",
+      badge: "Crédito & Correspondente",
+      color: "#0969da",
+      items: [
+        {
+          name: "Antecipação de Saque-Aniversário FGTS",
+          desc: "Liberação de crédito rápido com desconto direto do saldo."
+        },
+        {
+          name: "Consignado e Empréstimos (CLT, Pessoal e Portabilidade)",
+          desc: "Intermediação de crédito e redução de taxas em parcerias bancárias."
+        },
+        {
+          name: "Crédito com Garantia",
+          desc: "Operações de crédito com garantia de veículo ou imóvel."
+        },
+        {
+          name: "Cobrança e Análise Cadastral",
+          desc: "Gestão de informações cadastrais e recuperação de crédito para parceiros."
+        }
+      ]
+    },
+    {
+      id: "pilar-tecnologia",
+      title: "2. Tecnologia, Suporte de TI e Tratamento de Dados",
+      cnae: "CNAE 62.09-1-00 e 63.11-9-00",
+      badge: "Suporte TI & IA",
+      color: "#1a7f37",
+      items: [
+        {
+          name: "Diagnóstico e Suporte Técnico de TI",
+          desc: "Resolução de falhas em sistemas operacionais, aplicativos e dispositivos."
+        },
+        {
+          name: "Tratamento e Gestão de Dados",
+          desc: "Higienização de bases de dados, organização de cadastros e hospedagem/serviços de aplicação."
+        },
+        {
+          name: "Automação com Inteligência Artificial",
+          desc: "Criação de fluxos inteligentes para acelerar pesquisas, análises e atendimento ao cliente."
+        }
+      ]
+    },
+    {
+      id: "pilar-gestao",
+      title: "3. Gestão Documental e Apoio Administrativo",
+      cnae: "CNAE 82.11-3-00 e 82.19-9-99",
+      badge: "Controladoria & BPO",
+      color: "#8250df",
+      items: [
+        {
+          name: "Controladoria e Dossiês Digitais",
+          desc: "Padronização, conversão (PDF) e estruturação de documentos para empresas e escritórios."
+        },
+        {
+          name: "Serviços Combinados de Escritório",
+          desc: "Suporte operacional para otimização de rotinas internas e digitação de documentos."
+        },
+        {
+          name: "BPO Operacional",
+          desc: "Terceirização de rotinas administrativas para liberar tempo produtivo da equipe principal."
+        }
+      ]
+    }
+  ]
 };
 
 export const RESUME_COMPETENCIES = [

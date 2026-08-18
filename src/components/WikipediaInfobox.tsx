@@ -87,12 +87,27 @@ export const WikipediaInfobox: React.FC = () => {
             </tr>
 
             <tr className="border-b border-[#eaeef2]">
-              <th className="py-1.5 pr-2 font-semibold text-[#656d76] align-top">Endereço</th>
+              <th className="py-1.5 pr-2 font-semibold text-[#656d76] align-top">Localização</th>
               <td className="py-1.5 text-[#1f2328]">
                 <div className="flex items-start gap-1">
                   <MapPin className="w-3.5 h-3.5 text-[#0969da] shrink-0 mt-0.5" />
-                  <span>{PERSONAL_DATA.address}</span>
+                  <span>{PERSONAL_DATA.location} (RS)</span>
                 </div>
+              </td>
+            </tr>
+
+            <tr className="border-b border-[#eaeef2]">
+              <th className="py-1.5 pr-2 font-semibold text-[#656d76] align-top">Empresa PJ</th>
+              <td className="py-1.5 text-[#1f2328]">
+                <a 
+                  href={PERSONAL_DATA.companyUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#0969da] hover:underline font-semibold text-[10.5px] block leading-tight"
+                >
+                  {PERSONAL_DATA.companyName}
+                </a>
+                <span className="text-[10px] text-[#656d76] font-mono block">CNPJ: {PERSONAL_DATA.companyCnpj}</span>
               </td>
             </tr>
 

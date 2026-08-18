@@ -6,10 +6,11 @@ import {
   MessageCircle, 
   ArrowUp, 
   MapPin, 
-  Heart,
+  Building2,
+  ExternalLink,
   FileText
 } from 'lucide-react';
-import { PERSONAL_DATA } from '../data/portfolioData';
+import { PERSONAL_DATA, COMPANY_DATA } from '../data/portfolioData';
 
 interface FooterWikiProps {
   onNavigate: (sectionId: string) => void;
@@ -25,17 +26,40 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Col 1: Vini Amaral Info */}
-          <div className="space-y-2 md:col-span-2">
+          {/* Col 1: Vini Amaral Info & Company */}
+          <div className="space-y-2.5 md:col-span-2">
             <div className="flex items-center gap-2 text-sm font-bold text-[#1f2328]">
               <span>{PERSONAL_DATA.name}</span>
+              <span className="text-xs font-normal text-[#656d76]">({PERSONAL_DATA.fullName})</span>
             </div>
             <p className="text-xs text-[#656d76] leading-relaxed max-w-md">
-              {PERSONAL_DATA.objective} • Suporte Operacional, Controladoria &amp; Automação com Inteligência Artificial em Taquara - RS.
+              {PERSONAL_DATA.objective} • Suporte Operacional, Controladoria Jurídica &amp; Automação com Inteligência Artificial.
             </p>
-            <p className="text-[11px] text-[#656d76] flex items-center gap-1 pt-1">
-              <MapPin className="w-3.5 h-3.5 text-[#0969da]" />
-              <span>{PERSONAL_DATA.address}</span>
+            
+            <div className="p-2.5 rounded bg-white border border-[#d0d7de] max-w-md space-y-1">
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-bold text-[#1f2328] text-xs flex items-center gap-1.5">
+                  <Building2 className="w-3.5 h-3.5 text-[#0969da]" />
+                  <span>{COMPANY_DATA.name}</span>
+                </span>
+                <a
+                  href={COMPANY_DATA.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[11px] font-semibold text-[#0969da] hover:underline inline-flex items-center gap-0.5"
+                >
+                  <span>Site Oficial</span>
+                  <ExternalLink className="w-2.5 h-2.5" />
+                </a>
+              </div>
+              <p className="text-[11px] text-[#57606a] font-mono">
+                CNPJ: {COMPANY_DATA.cnpj}
+              </p>
+            </div>
+
+            <p className="text-[11.5px] text-[#656d76] flex items-center gap-1 pt-1 font-medium">
+              <MapPin className="w-3.5 h-3.5 text-[#0969da] shrink-0" />
+              <span>Taquara - RS (Atendimento Presencial e Remoto em todo o Brasil)</span>
             </p>
           </div>
 
@@ -61,18 +85,23 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
                 </a>
               </li>
               <li>
+                <a href="#deevo-financeiras" onClick={() => onNavigate('deevo-financeiras')} className="text-[#0969da] font-semibold hover:underline flex items-center gap-1">
+                  <span>4. DEEVO Soluções Financeiras</span>
+                </a>
+              </li>
+              <li>
                 <a href="#projetos" onClick={() => onNavigate('projetos')} className="text-[#0969da] hover:underline">
-                  4. Projetos &amp; Repositórios
+                  5. Projetos &amp; Repositórios
                 </a>
               </li>
               <li>
                 <a href="#competencias" onClick={() => onNavigate('competencias')} className="text-[#0969da] hover:underline">
-                  5. Competências
+                  6. Competências
                 </a>
               </li>
               <li>
                 <a href="#contato" onClick={() => onNavigate('contato')} className="text-[#0969da] hover:underline">
-                  6. Contato
+                  7. Contato
                 </a>
               </li>
             </ul>
@@ -103,6 +132,16 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
               </a>
 
               <a
+                href={COMPANY_DATA.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs text-[#0969da] hover:underline"
+              >
+                <Building2 className="w-4 h-4 text-[#656d76]" />
+                <span>deevofinanceiras.com.br</span>
+              </a>
+
+              <a
                 href={PERSONAL_DATA.github}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -127,14 +166,14 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
 
         {/* Bottom bar */}
         <div className="pt-6 border-t border-[#d0d7de] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
-          <div className="flex items-center gap-1 text-[#656d76]">
-            <span>© {new Date().getFullYear()} Vini Amaral. Currículo e Portfólio Profissional.</span>
+          <div className="flex flex-col sm:flex-row items-center gap-1 text-[#656d76] text-center sm:text-left">
+            <span>© 2026 DEEVO Soluções Financeiras LTDA — CNPJ: 63.187.175/0001-70. Todos os direitos reservados.</span>
           </div>
 
           <button
             type="button"
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1 px-3 py-1.5 rounded border border-[#d0d7de] bg-white hover:bg-[#eaeef2] text-[#1f2328] font-medium transition-colors"
+            className="inline-flex items-center gap-1 px-3 py-1.5 rounded border border-[#d0d7de] bg-white hover:bg-[#eaeef2] text-[#1f2328] font-medium transition-colors shrink-0"
           >
             <span>Voltar ao topo</span>
             <ArrowUp className="w-3 h-3" />

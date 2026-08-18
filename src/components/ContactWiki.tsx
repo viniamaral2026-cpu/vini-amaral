@@ -10,9 +10,10 @@ import {
   Send, 
   ExternalLink,
   Clock,
-  Briefcase
+  Briefcase,
+  Building2
 } from 'lucide-react';
-import { PERSONAL_DATA } from '../data/portfolioData';
+import { PERSONAL_DATA, COMPANY_DATA } from '../data/portfolioData';
 
 export const ContactWiki: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -46,13 +47,13 @@ export const ContactWiki: React.FC = () => {
       {/* Section Title */}
       <div className="border-b border-[#d0d7de] pb-1">
         <h2 className="text-xl sm:text-2xl font-normal text-[#1f2328] wiki-serif tracking-tight flex items-center justify-between">
-          <span>8. Informações de Contato &amp; Conexões</span>
+          <span>9. Informações de Contato &amp; Conexões</span>
           <span className="text-xs font-mono text-[#656d76]">[contato]</span>
         </h2>
       </div>
 
       <p className="text-sm leading-relaxed text-[#1f2328] wiki-serif">
-        Disponível para contratação profissional, prestação de serviços operacionais, consultoria em organização documental e suporte tecnológico:
+        Disponível para contratação profissional CLT/PJ, prestação de serviços operacionais e consultoria pela <strong>{COMPANY_DATA.name}</strong>:
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -91,6 +92,30 @@ export const ContactWiki: React.FC = () => {
                 {copiedPhone ? <Check className="w-4 h-4 text-[#1a7f37]" /> : <Copy className="w-4 h-4 text-[#656d76]" />}
               </button>
             </div>
+          </div>
+
+          {/* Company PJ Card */}
+          <div className="p-3.5 rounded-md border border-[#0969da]/40 bg-[#ddf4ff]/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-[#0969da] text-white flex items-center justify-center shrink-0 font-bold">
+                <Building2 className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-bold text-xs text-[#1f2328]">{COMPANY_DATA.name}</h3>
+                <p className="text-[11px] text-[#57606a] font-mono">CNPJ: {COMPANY_DATA.cnpj}</p>
+                <span className="text-[11px] text-[#0969da] font-medium">Emissão de NF &amp; Serviços PJ</span>
+              </div>
+            </div>
+
+            <a
+              href={COMPANY_DATA.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-xs font-semibold text-white bg-[#0969da] hover:bg-[#085cc0] transition-colors shrink-0"
+            >
+              <span>Site da Empresa</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
 
           {/* Email Card */}
@@ -160,7 +185,7 @@ export const ContactWiki: React.FC = () => {
               <span>Localização &amp; Disponibilidade:</span>
             </div>
             <p className="text-[#656d76] pl-6 text-[11.5px]">
-              {PERSONAL_DATA.address} • <strong>{PERSONAL_DATA.availability}</strong>
+              {PERSONAL_DATA.location} • <strong>{PERSONAL_DATA.availability}</strong>
             </p>
             
             <div className="pt-2 border-t border-[#d0d7de] flex flex-wrap items-center gap-2 pl-6">

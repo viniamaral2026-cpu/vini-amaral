@@ -215,10 +215,39 @@ O projeto conta com arquivos gerados e integrados para consulta e download:
 
 ---
 
+## 🏢 DEEVO Soluções Financeiras (Atuação PJ)
+
+> **"DEEVO Soluções Financeiras: Crédito Inteligente, Tecnologia e Eficiência Operacional."**  
+> *Oferecemos soluções financeiras completas como correspondente bancário, aliadas a suporte tecnológico avançado, gestão de dados e otimização de rotinas administrativas para você e sua empresa.*
+
+Como a **DEEVO Soluções Financeiras LTDA** (CNPJ: `63.187.175/0001-70`) possui um objeto social e CNPJ muito amplo e estratégico — cobrindo desde Correspondente Bancário até Suporte de TI, Tratamento de Dados e Serviços Administrativos —, a sua esteira de serviços é dividida em três pilares principais:
+
+### 1. Soluções Financeiras e Correspondência Bancária (CNAE 66.19-3-02)
+- **Antecipação de Saque-Aniversário FGTS:** Liberação de crédito rápido com desconto direto do saldo.
+- **Consignado e Empréstimos (CLT, Pessoal e Portabilidade):** Intermediação de crédito e redução de taxas em parcerias bancárias.
+- **Crédito com Garantia:** Operações de crédito com garantia de veículo ou imóvel.
+- **Cobrança e Análise Cadastral:** Gestão de informações cadastrais e recuperação de crédito para parceiros.
+
+### 2. Tecnologia, Suporte de TI e Tratamento de Dados (CNAE 62.09-1-00 e 63.11-9-00)
+- **Diagnóstico e Suporte Técnico de TI:** Resolução de falhas em sistemas operacionais, aplicativos e dispositivos.
+- **Tratamento e Gestão de Dados:** Higienização de bases de dados, organização de cadastros e hospedagem/serviços de aplicação.
+- **Automação com Inteligência Artificial:** Criação de fluxos inteligentes para acelerar pesquisas, análises e atendimento ao cliente.
+
+### 3. Gestão Documental e Apoio Administrativo (CNAE 82.11-3-00 e 82.19-9-99)
+- **Controladoria e Dossiês Digitais:** Padronização, conversão (PDF) e estruturação de documentos para empresas e escritórios.
+- **Serviços Combinados de Escritório:** Suporte operacional para otimização de rotinas internas e digitação de documentos.
+- **BPO Operacional:** Terceirização de rotinas administrativas para liberar tempo produtivo da equipe principal.
+
+🌐 **Website Oficial:** [https://www.deevofinanceiras.com.br/](https://www.deevofinanceiras.com.br/)
+
+---
+
 ## 📬 Contato & Redes
 
-- **Nome Completo:** Marcos Vinícius (Vini Amaral)
-- **Localização:** Rua Miguel Bauer, 2237, Taquara - RS
+- **Nome Profissional:** Marcos Vinícius (Vini Amaral)
+- **Empresa PJ:** DEEVO Soluções Financeiras LTDA (CNPJ: 63.187.175/0001-70)
+- **Website:** [www.deevofinanceiras.com.br](https://www.deevofinanceiras.com.br/)
+- **Localização:** Taquara - RS (Atendimento Presencial e Remoto em todo o Brasil)
 - **WhatsApp:** [(51) 98144-6019](https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar!)
 - **E-mail:** [viniamaral2026@gmail.com](mailto:viniamaral2026@gmail.com)
 - **GitHub:** [github.com/viniamaral2026-cpu](https://github.com/viniamaral2026-cpu)
@@ -226,4 +255,4 @@ O projeto conta com arquivos gerados e integrados para consulta e download:
 
 ---
 
-*Desenvolvido com foco em excelência operacional, rigor documental e alta performance por Vini Amaral.*
+*© 2026 DEEVO Soluções Financeiras LTDA — CNPJ: 63.187.175/0001-70. Todos os direitos reservados.*

@@ -40,33 +40,43 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ onNavigate }) 
       ],
     },
     {
-      id: 'projetos',
+      id: 'deevo-financeiras',
       number: '4',
+      title: 'DEEVO Soluções Financeiras (Atuação PJ)',
+      subsections: [
+        { id: 'pilar-financeiro', number: '4.1', title: 'Soluções Financeiras & Correspondente Bancário' },
+        { id: 'pilar-tecnologia', number: '4.2', title: 'Tecnologia, Suporte de TI & Dados' },
+        { id: 'pilar-gestao', number: '4.3', title: 'Gestão Documental & Apoio Administrativo' },
+      ],
+    },
+    {
+      id: 'projetos',
+      number: '5',
       title: 'Repositórios & Projetos em Destaque',
       subsections: [
-        { id: 'proj-codeforge', number: '4.1', title: 'CodeForge (Iniciativa Open Source)' },
-        { id: 'proj-docflow-juridico', number: '4.2', title: 'DocFlow & Dossiês Eletrônicos' },
-        { id: 'proj-autosupport-hub', number: '4.3', title: 'AutoSupport & Triagem de TI' },
+        { id: 'proj-codeforge', number: '5.1', title: 'CodeForge (Iniciativa Open Source)' },
+        { id: 'proj-docflow-juridico', number: '5.2', title: 'DocFlow & Dossiês Eletrônicos' },
+        { id: 'proj-autosupport-hub', number: '5.3', title: 'AutoSupport & Triagem de TI' },
       ],
     },
     {
       id: 'competencias',
-      number: '5',
+      number: '6',
       title: 'Competências & Matriz Técnica',
     },
     {
       id: 'diagnostico',
-      number: '6',
+      number: '7',
       title: 'Simulador Interativo de Diagnóstico Operacional',
     },
     {
       id: 'diferenciais',
-      number: '7',
+      number: '8',
       title: 'Diferenciais Competitivos',
     },
     {
       id: 'contato',
-      number: '8',
+      number: '9',
       title: 'Informações de Contato & Conexões',
     },
   ];
