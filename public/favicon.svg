@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="blueGradFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0969da" />
+      <stop offset="100%" stop-color="#054da7" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#blueGradFav)" />
+  <path d="M160 120 H300 L360 180 V370 C360 381 351 390 340 390 H160 C149 390 140 381 140 370 V140 C140 129 149 120 160 120 Z" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="14" stroke-linejoin="round" />
+  <path d="M300 120 V180 H360" fill="none" stroke="#ffffff" stroke-width="14" stroke-linejoin="round" />
+  <text x="256" y="305" font-family="'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="145" font-weight="800" fill="#ffffff" text-anchor="middle">VA</text>
+</svg>

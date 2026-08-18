@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="blueGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0969da" />
+      <stop offset="100%" stop-color="#054da7" />
+    </linearGradient>
+  </defs>
+  <!-- Full bleed for maskable icon -->
+  <rect width="512" height="512" fill="url(#blueGradM)" />
+  
+  <!-- Safe Zone content (within 80% circle) -->
+  <g transform="translate(0, 0)">
+    <path d="M175 140 H295 L345 190 V350 C345 360 337 368 327 368 H175 C165 368 157 360 157 350 V158 C157 148 165 140 175 140 Z" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" />
+    <path d="M295 140 V190 H345" fill="none" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" />
+    <text x="256" y="295" font-family="'IBM Plex Sans', sans-serif" font-size="120" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-3">VA</text>
+    <circle cx="216" cy="325" r="6" fill="#54aeff" />
+    <circle cx="256" cy="325" r="6" fill="#ffffff" />
+    <circle cx="296" cy="325" r="6" fill="#54aeff" />
+  </g>
+</svg>

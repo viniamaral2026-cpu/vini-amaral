@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
+import { PWAInstallBanner } from './components/PWAInstallBanner';
 import { WikipediaInfobox } from './components/WikipediaInfobox';
 import { TableOfContents } from './components/TableOfContents';
 import { ArticleHero } from './components/ArticleHero';
@@ -29,6 +30,9 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#f6f8fa] text-[#1f2328] flex flex-col selection:bg-[#ddf4ff] selection:text-[#0969da]">
+      {/* PWA Multi-Platform Install Banner */}
+      <PWAInstallBanner />
+
       {/* GitHub / Wikipedia Unified Navigation Header */}
       <Header activeSection={activeSection} onNavigate={handleNavigate} />
 

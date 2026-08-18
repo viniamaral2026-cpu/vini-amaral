@@ -1,0 +1,58 @@
+{
+  "name": "Vini Amaral – Currículo & Portfólio Profissional",
+  "short_name": "Vini Amaral",
+  "description": "Portfólio e Currículo Profissional de Marcos Vinícius (Vini Amaral) - Cargos Operacionais, Administrativos, Controladoria Jurídica e Suporte de TI em Taquara - RS.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#f6f8fa",
+  "theme_color": "#0969da",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "monochrome"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Baixar Currículo PDF",
+      "short_name": "Baixar CV",
+      "description": "Download direto do currículo oficial em PDF",
+      "url": "/curriculo-vini-amaral.pdf",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Falar no WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Iniciar conversa direta no WhatsApp",
+      "url": "https://wa.me/5551981446019",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Simulador de Diagnóstico",
+      "short_name": "Diagnóstico",
+      "description": "Abrir simulador interativo de triagem operacional",
+      "url": "/#diagnostico",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "192x192" }]
+    }
+  ]
+}
