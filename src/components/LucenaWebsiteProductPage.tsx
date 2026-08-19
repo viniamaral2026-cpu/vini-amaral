@@ -332,7 +332,160 @@ export const LucenaWebsiteProductPage: React.FC<LucenaWebsiteProductPageProps> =
         </div>
       </section>
 
-      {/* 7. CTA Final de Venda e Contratação */}
+      {/* 7. Seção Comercial de Preço do Template */}
+      <section id="preco-template-advocacia" className="space-y-4 scroll-mt-20">
+        <div className="border-b border-[#d0d7de] pb-2 flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h2 className="text-xl font-bold text-[#1f2328] wiki-serif flex items-center gap-2">
+              <Award className="w-5 h-5 text-[#0969da]" />
+              <span>4. Licenciamento Comercial &amp; Preço do Template</span>
+            </h2>
+            <p className="text-xs text-[#656d76] mt-0.5">
+              Adquira a licença de uso do template completo desenvolvido em React + WordPress.
+            </p>
+          </div>
+
+          <span className="text-[11px] font-semibold text-[#0969da] bg-[#ddf4ff] border border-[#54aeff]/40 px-2.5 py-0.5 rounded-full font-mono">
+            Tecnologia: {LUCENA_WEBSITE_PRODUCT_DATA.pricing.technology}
+          </span>
+        </div>
+
+        {/* Pricing Card Wrapper */}
+        <div className="rounded-lg border-2 border-[#0969da]/40 bg-white shadow-xs overflow-hidden">
+          
+          {/* Card Top Banner */}
+          <div className="bg-gradient-to-r from-[#0969da] to-[#054da7] text-white px-6 py-3 flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-[#ffd700]" />
+              <span className="text-xs font-bold uppercase tracking-wider font-mono">
+                {LUCENA_WEBSITE_PRODUCT_DATA.pricing.productName}
+              </span>
+            </div>
+            <span className="text-[11px] font-semibold bg-white/20 backdrop-blur-xs px-2.5 py-0.5 rounded text-white font-mono">
+              {LUCENA_WEBSITE_PRODUCT_DATA.pricing.licenseType}
+            </span>
+          </div>
+
+          {/* Card Main Body: 2 Columns on Desktop */}
+          <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Column: Price & Action Buttons */}
+            <div className="lg:col-span-5 space-y-6 text-center lg:text-left border-b lg:border-b-0 lg:border-r border-[#d0d7de] pb-6 lg:pb-0 lg:pr-8">
+              
+              <div className="space-y-1">
+                <span className="inline-block text-xs font-bold uppercase tracking-wider font-mono text-[#0969da] bg-[#ddf4ff] px-2.5 py-1 rounded">
+                  {LUCENA_WEBSITE_PRODUCT_DATA.pricing.licenseType}
+                </span>
+                <p className="text-xs text-[#57606a] pt-1">
+                  Pagamento único com acesso integral ao código-fonte e estrutura.
+                </p>
+              </div>
+
+              {/* Price Tag Display */}
+              <div className="py-2">
+                <div className="flex items-baseline justify-center lg:justify-start gap-1">
+                  <span className="text-xl sm:text-2xl font-bold text-[#1f2328] font-mono">
+                    {LUCENA_WEBSITE_PRODUCT_DATA.pricing.currency}
+                  </span>
+                  <span className="text-4xl sm:text-5xl font-extrabold text-[#1f2328] tracking-tight font-mono">
+                    {LUCENA_WEBSITE_PRODUCT_DATA.pricing.priceValue}
+                  </span>
+                  <span className="text-sm font-semibold text-[#57606a] font-mono">
+                    ,00
+                  </span>
+                  <span className="text-sm font-semibold text-[#0969da] ml-1.5 font-mono">
+                    {LUCENA_WEBSITE_PRODUCT_DATA.pricing.licenseShort}
+                  </span>
+                </div>
+                <p className="text-[11px] text-[#1a7f37] font-semibold mt-1 flex items-center justify-center lg:justify-start gap-1">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>Sem mensalidades obrigatórias de licença</span>
+                </p>
+              </div>
+
+              {/* Purchase and Demo Buttons */}
+              <div className="space-y-2.5 pt-1">
+                <a
+                  href={LUCENA_WEBSITE_PRODUCT_DATA.pricing.buyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="btn-comprar-template-advocacia"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-[#1f883d] hover:bg-[#1a7f37] text-white text-sm font-bold shadow-xs transition-colors"
+                >
+                  <span>COMPRAR AGORA</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+
+                <a
+                  href={LUCENA_WEBSITE_PRODUCT_DATA.pricing.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="btn-ver-demo-preco"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md border border-[#d0d7de] bg-[#f6f8fa] hover:bg-[#eaeef2] text-[#1f2328] text-xs font-semibold shadow-2xs transition-colors"
+                >
+                  <Laptop className="w-3.5 h-3.5 text-[#0969da]" />
+                  <span>VER DEMONSTRAÇÃO</span>
+                  <ExternalLink className="w-3 h-3 text-[#656d76]" />
+                </a>
+              </div>
+
+              {/* Disclaimer Note */}
+              <div className="p-3 rounded bg-[#f6f8fa] border border-[#d0d7de] text-left">
+                <p className="text-[11px] text-[#57606a] leading-relaxed">
+                  <strong>Observação:</strong> {LUCENA_WEBSITE_PRODUCT_DATA.pricing.disclaimer}
+                </p>
+              </div>
+
+            </div>
+
+            {/* Right Column: Benefits Checklist & Technical Highlights */}
+            <div className="lg:col-span-7 space-y-5">
+              
+              <div>
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#1f2328] font-mono border-b border-[#d0d7de] pb-1.5 flex items-center justify-between">
+                  <span>Recursos Inclusos na Licença</span>
+                  <span className="text-[10px] text-[#1a7f37] font-semibold bg-[#dafbe1] px-2 py-0.5 rounded border border-[#4ac26b]/30">
+                    10 Benefícios Essenciais
+                  </span>
+                </h3>
+
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-3">
+                  {LUCENA_WEBSITE_PRODUCT_DATA.pricing.benefits.map((benefit, bIdx) => (
+                    <li key={bIdx} className="flex items-start gap-2 text-xs text-[#1f2328]">
+                      <span className="p-0.5 rounded bg-[#dafbe1] text-[#1a7f37] shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="font-medium leading-tight">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Architectural Highlights */}
+              <div className="pt-2 border-t border-[#eaeef2] space-y-2">
+                <h4 className="text-[11px] font-semibold uppercase text-[#57606a] font-mono">
+                  Destaques da Arquitetura:
+                </h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {LUCENA_WEBSITE_PRODUCT_DATA.pricing.technicalHighlights.map((tech, tIdx) => (
+                    <span 
+                      key={tIdx}
+                      className="inline-flex items-center px-2 py-0.5 rounded text-[10.5px] font-mono bg-[#f6f8fa] text-[#57606a] border border-[#d0d7de]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* 8. CTA Final de Venda e Contratação */}
       <section className="rounded-md border border-[#0969da]/40 bg-gradient-to-br from-[#ffffff] via-[#f6f8fa] to-[#ddf4ff]/50 p-6 sm:p-8 shadow-sm space-y-6 text-center">
         <div className="max-w-2xl mx-auto space-y-3">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0969da] text-white">

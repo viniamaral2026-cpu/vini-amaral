@@ -704,7 +704,43 @@ export const LUCENA_WEBSITE_PRODUCT_DATA = {
       desc: "Demonstração clara das frentes de atuação, bio dos sócios, formulário de contato e integração com WhatsApp.",
       image: "/src/assets/images/lucena_mobile_preview_1787134734085.jpg"
     }
-  ]
+  ],
+  pricing: {
+    productName: "Template Premium para Escritórios de Advocacia",
+    technology: "React + WordPress",
+    priceFormatted: "R$ 597,00",
+    priceValue: "597",
+    currency: "R$",
+    licenseType: "LICENÇA PARA 1 SITE",
+    licenseShort: "/ licença",
+    buyUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20quero%20comprar%20a%20licen%C3%A7a%20do%20Template%20Lucena%20%26%20Associados%20(R$%20597,00)!",
+    demoUrl: "https://arriving-rattler.monstersites.io/",
+    benefits: [
+      "Uso em 1 site",
+      "Layout totalmente responsivo",
+      "Estrutura React + WordPress",
+      "Blog integrado",
+      "Módulos jurídicos",
+      "Formulário de contato",
+      "Recursos preparados para LGPD",
+      "SEO otimizado",
+      "Suporte à navegação mobile",
+      "Código organizado e reutilizável"
+    ],
+    technicalHighlights: [
+      "Design profissional para advocacia",
+      "Estrutura institucional completa",
+      "Módulos jurídicos e áreas de atuação",
+      "Blog e artigos integrados",
+      "Formulário de contato preparado para LGPD",
+      "Popup de contato e gatilho de WhatsApp",
+      "SEO otimizado para Google",
+      "Layout responsivo e veloz",
+      "Componentes reutilizáveis",
+      "Navegação desktop e mobile"
+    ],
+    disclaimer: "Licença para utilização em um único site. Personalizações, instalação, hospedagem e serviços adicionais podem ser contratados separadamente."
+  }
 };
 
 

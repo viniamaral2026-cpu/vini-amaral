@@ -144,6 +144,9 @@ export const ServicesWiki: React.FC<ServicesWikiProps> = ({ onNavigateToLucenaWe
             <span className="text-xs font-bold text-[#1f2328] wiki-serif">
               Site para Advocacia: {LUCENA_WEBSITE_PRODUCT_DATA.modelName}
             </span>
+            <span className="text-[11px] font-bold text-[#1f883d] bg-[#dafbe1] px-2 py-0.5 rounded font-mono border border-[#4ac26b]/30">
+              R$ 597 (Licença)
+            </span>
           </div>
 
           <span className="text-[11px] font-medium text-[#1a7f37] bg-[#dafbe1] px-2 py-0.5 rounded border border-[#4ac26b]/30">
