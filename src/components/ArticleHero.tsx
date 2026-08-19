@@ -104,7 +104,7 @@ export const ArticleHero: React.FC<ArticleHeroProps> = ({ onNavigate }) => {
 
         <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-[#f6f8fa] text-[#1f2328] border border-[#d0d7de]">
           <MapPin className="w-3 h-3 text-[#656d76]" />
-          Rua Miguel Bauer, 2237, Taquara - RS
+          Atuação Remota &amp; Nacional
         </span>
 
         <a

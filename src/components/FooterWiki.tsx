@@ -100,8 +100,18 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
                 </a>
               </li>
               <li>
+                <a href="#projetos-lei" onClick={() => onNavigate('projetos-lei')} className="text-[#0969da] hover:underline">
+                  <span>5. Projetos de Lei &amp; Petições</span>
+                </a>
+              </li>
+              <li>
+                <a href="#causa-canal-direto" onClick={() => onNavigate('causa-canal-direto')} className="text-[#0969da] font-medium hover:underline flex items-center gap-1">
+                  <span>📜 Minuta da Lei (Canal Direto)</span>
+                </a>
+              </li>
+              <li>
                 <a href="#projetos" onClick={() => onNavigate('projetos')} className="text-[#0969da] hover:underline">
-                  5. Projetos &amp; Repositórios
+                  6. Projetos &amp; Repositórios
                 </a>
               </li>
               <li>

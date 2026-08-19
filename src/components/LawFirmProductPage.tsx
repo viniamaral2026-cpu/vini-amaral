@@ -24,9 +24,15 @@ import {
   Building2,
   FolderGit2,
   Eye,
-  Key
+  Key,
+  Award,
+  Zap,
+  HelpCircle,
+  ChevronDown,
+  ChevronUp,
+  Settings
 } from 'lucide-react';
-import { LAW_FIRM_PRODUCT_DATA, PERSONAL_DATA } from '../data/portfolioData';
+import { LAW_FIRM_PRODUCT_DATA, LAW_FIRM_PRICING_DATA, PERSONAL_DATA } from '../data/portfolioData';
 
 interface LawFirmProductPageProps {
   onBackToHome: () => void;
@@ -34,8 +40,14 @@ interface LawFirmProductPageProps {
 
 export const LawFirmProductPage: React.FC<LawFirmProductPageProps> = ({ onBackToHome }) => {
   const [activeTabId, setActiveTabId] = useState<'dashboard' | 'processos' | 'financeiro'>('dashboard');
+  const [billingCycle, setBillingCycle] = useState<'mensal' | 'anual'>('mensal');
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const currentTab = LAW_FIRM_PRODUCT_DATA.demoScreens.find(s => s.id === activeTabId) || LAW_FIRM_PRODUCT_DATA.demoScreens[0];
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
 
   return (
     <div className="space-y-10 animate-fade-in">
@@ -383,7 +395,255 @@ export const LawFirmProductPage: React.FC<LawFirmProductPageProps> = ({ onBackTo
         </div>
       </section>
 
-      {/* 8. CTA Final Premium */}
+      {/* 8. Seção de Planos & Preços (SaaS Jurídico) */}
+      <section id="planos-precos" className="space-y-6 scroll-mt-20">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-2.5">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#ddf4ff] text-[#0969da] border border-[#54aeff]/40">
+            <Award className="w-3.5 h-3.5" />
+            <span>SaaS Jurídico • Estrutura Escalável</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2328] wiki-serif tracking-tight">
+            {LAW_FIRM_PRICING_DATA.sectionTitle}
+          </h2>
+
+          <p className="text-xs sm:text-sm text-[#57606a] leading-relaxed wiki-serif">
+            {LAW_FIRM_PRICING_DATA.sectionSubtitle}
+          </p>
+
+          {/* Billing Cycle Switcher */}
+          <div className="pt-3 flex items-center justify-center">
+            <div className="inline-flex items-center p-1 bg-[#f6f8fa] border border-[#d0d7de] rounded-lg shadow-2xs">
+              <button
+                type="button"
+                onClick={() => setBillingCycle('mensal')}
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all cursor-pointer ${
+                  billingCycle === 'mensal'
+                    ? 'bg-white text-[#0969da] shadow-xs border border-[#d0d7de]'
+                    : 'text-[#57606a] hover:text-[#1f2328]'
+                }`}
+              >
+                <span>MENSAL</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setBillingCycle('anual')}
+                className={`px-4 py-1.5 rounded-md text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                  billingCycle === 'anual'
+                    ? 'bg-[#0969da] text-white shadow-xs'
+                    : 'text-[#57606a] hover:text-[#1f2328]'
+                }`}
+              >
+                <span>ANUAL</span>
+                <span className={`text-[10px] px-1.5 py-0.2 rounded font-mono ${
+                  billingCycle === 'anual' ? 'bg-white/20 text-white' : 'bg-[#dafbe1] text-[#1a7f37]'
+                }`}>
+                  Economize
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* 4 Plans Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 items-stretch pt-2">
+          {LAW_FIRM_PRICING_DATA.plans.map((plan) => {
+            const isProfessional = plan.id === 'profissional';
+            const priceObj = billingCycle === 'anual' && plan.annualPrice.value !== null 
+              ? plan.annualPrice 
+              : plan.monthlyPrice;
+
+            return (
+              <div
+                key={plan.id}
+                id={`card-plano-${plan.id}`}
+                className={`flex flex-col justify-between rounded-lg transition-all duration-200 ${
+                  isProfessional
+                    ? 'border-2 border-[#0969da] bg-white shadow-md ring-1 ring-[#0969da]/30 relative'
+                    : 'border border-[#d0d7de] bg-[#ffffff] hover:border-[#0969da]/40 shadow-2xs'
+                }`}
+              >
+                {/* Popular Highlight Badge */}
+                {plan.recommendedBadge && (
+                  <div className="bg-[#0969da] text-white text-[10.5px] font-bold uppercase tracking-wider text-center py-1 rounded-t-[6px] font-mono flex items-center justify-center gap-1">
+                    <Sparkles className="w-3 h-3 text-[#ffd700]" />
+                    <span>{plan.recommendedBadge}</span>
+                  </div>
+                )}
+
+                {/* Plan Header */}
+                <div className="p-5 space-y-4">
+                  <div className="space-y-1">
+                    <div className="flex items-center justify-between gap-1">
+                      <h3 className="text-base font-bold text-[#1f2328] wiki-serif">
+                        {plan.name}
+                      </h3>
+                      <span className="text-[10.5px] font-mono font-semibold text-[#0969da] bg-[#ddf4ff] px-2 py-0.5 rounded">
+                        {plan.usersLimit}
+                      </span>
+                    </div>
+
+                    <p className="text-[11.5px] text-[#57606a] leading-tight min-h-[34px]">
+                      {plan.targetAudience}
+                    </p>
+                  </div>
+
+                  {/* Price Tag */}
+                  <div className="pt-2 pb-2 border-y border-[#eaeef2]">
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-2xl sm:text-3xl font-extrabold text-[#1f2328] font-mono tracking-tight">
+                        {priceObj.formatted}
+                      </span>
+                      <span className="text-xs font-semibold text-[#57606a] font-mono">
+                        {priceObj.period}
+                      </span>
+                    </div>
+
+                    {billingCycle === 'anual' && plan.annualPrice.value !== null ? (
+                      <p className="text-[10.5px] text-[#1a7f37] font-semibold mt-1">
+                        {plan.annualPrice.savingsText}
+                      </p>
+                    ) : (
+                      <p className="text-[10.5px] text-[#656d76] mt-1">
+                        {plan.monthlyPrice.note}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Features List */}
+                  <div className="space-y-2 pt-1">
+                    <span className="text-[10.5px] font-bold uppercase tracking-wider text-[#656d76] font-mono block">
+                      Recursos Inclusos:
+                    </span>
+
+                    <ul className="space-y-1.5">
+                      {plan.features.map((feat, fIdx) => (
+                        <li key={fIdx} className="flex items-start gap-1.5 text-xs text-[#1f2328]">
+                          <Check className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${
+                            isProfessional ? 'text-[#0969da]' : 'text-[#1a7f37]'
+                          }`} />
+                          <span className="leading-tight">{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Card CTA Action Button */}
+                <div className="p-5 pt-0 mt-4">
+                  <a
+                    href={plan.ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md text-xs font-bold transition-colors shadow-2xs ${
+                      isProfessional
+                        ? 'bg-[#0969da] hover:bg-[#085cc0] text-white'
+                        : 'bg-[#f6f8fa] hover:bg-[#eaeef2] text-[#1f2328] border border-[#d0d7de]'
+                    }`}
+                  >
+                    <span>{plan.ctaText}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Implantação Setup Box */}
+        <div className="rounded-lg border border-[#d0d7de] bg-[#f6f8fa] p-5 sm:p-6 shadow-2xs space-y-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#d0d7de] pb-3">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded bg-[#0969da]/10 text-[#0969da] flex items-center justify-center shrink-0">
+                <Settings className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-[#1f2328] uppercase tracking-wide">
+                  {LAW_FIRM_PRICING_DATA.setup.title}
+                </h3>
+                <span className="text-[11px] font-mono text-[#0969da] font-semibold">
+                  {LAW_FIRM_PRICING_DATA.setup.startingPrice} • {LAW_FIRM_PRICING_DATA.setup.badge}
+                </span>
+              </div>
+            </div>
+
+            <span className="text-[11px] font-semibold text-[#1a7f37] bg-[#dafbe1] px-2.5 py-1 rounded border border-[#4ac26b]/30 self-start sm:self-auto">
+              Cobrança Única • Não é mensalidade
+            </span>
+          </div>
+
+          <p className="text-xs sm:text-sm text-[#1f2328] leading-relaxed wiki-serif">
+            {LAW_FIRM_PRICING_DATA.setup.description}
+          </p>
+
+          <p className="text-[11.5px] text-[#57606a] leading-relaxed">
+            {LAW_FIRM_PRICING_DATA.setup.clarification}
+          </p>
+        </div>
+
+        {/* Destaque Comercial: Comece pelo Plano que Faz Sentido */}
+        <div className="rounded-lg border border-[#0969da]/30 bg-gradient-to-r from-[#ddf4ff]/40 via-[#ffffff] to-[#dafbe1]/30 p-5 sm:p-6 space-y-2">
+          <div className="flex items-center gap-2 text-[#0969da]">
+            <Zap className="w-4 h-4 shrink-0 text-[#0969da]" />
+            <h3 className="text-xs sm:text-sm font-bold text-[#1f2328] uppercase tracking-wider font-mono">
+              {LAW_FIRM_PRICING_DATA.commercialHighlight.title}
+            </h3>
+          </div>
+          <p className="text-xs sm:text-sm text-[#57606a] leading-relaxed wiki-serif">
+            {LAW_FIRM_PRICING_DATA.commercialHighlight.description}
+          </p>
+        </div>
+
+        {/* FAQ de Preços & Contratação */}
+        <div className="space-y-4 pt-4">
+          <div className="border-b border-[#d0d7de] pb-2 flex items-center justify-between">
+            <h3 className="text-lg font-bold text-[#1f2328] wiki-serif flex items-center gap-2">
+              <HelpCircle className="w-4.5 h-4.5 text-[#0969da]" />
+              <span>Perguntas Frequentes sobre Planos &amp; Contratação</span>
+            </h3>
+            <span className="text-xs font-mono text-[#656d76]">FAQ</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {LAW_FIRM_PRICING_DATA.faq.map((item, qIdx) => {
+              const isOpen = openFaqIndex === qIdx;
+              return (
+                <div 
+                  key={qIdx}
+                  className="rounded-md border border-[#d0d7de] bg-white overflow-hidden shadow-2xs transition-colors"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(qIdx)}
+                    className="w-full text-left p-3.5 flex items-center justify-between gap-2 hover:bg-[#f6f8fa] transition-colors cursor-pointer"
+                  >
+                    <span className="text-xs font-bold text-[#1f2328] wiki-serif">
+                      {item.question}
+                    </span>
+                    {isOpen ? (
+                      <ChevronUp className="w-4 h-4 text-[#0969da] shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4 text-[#656d76] shrink-0" />
+                    )}
+                  </button>
+
+                  {isOpen && (
+                    <div className="p-3.5 pt-0 border-t border-[#eaeef2] bg-[#f6f8fa]/50 text-xs text-[#57606a] leading-relaxed">
+                      {item.answer}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+      </section>
+
+      {/* 9. CTA Final Premium */}
       <section className="rounded-md border border-[#0969da]/40 bg-gradient-to-br from-[#ffffff] via-[#f6f8fa] to-[#ddf4ff]/50 p-6 sm:p-8 shadow-sm space-y-6 text-center">
         <div className="max-w-2xl mx-auto space-y-3">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#0969da] text-white">
@@ -392,35 +652,35 @@ export const LawFirmProductPage: React.FC<LawFirmProductPageProps> = ({ onBackTo
           </span>
 
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1f2328] wiki-serif tracking-tight">
-            TRANSFORME A GESTÃO DO SEU ESCRITÓRIO
+            {LAW_FIRM_PRICING_DATA.finalCta.title}
           </h2>
 
           <p className="text-xs sm:text-sm text-[#57606a] leading-relaxed wiki-serif">
-            Agende uma demonstração prática ou acesse a versão interativa para conhecer como a tecnologia pode elevar a produtividade, a organização e os resultados da sua banca de advocacia.
+            {LAW_FIRM_PRICING_DATA.finalCta.description}
           </p>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <a
-            href={LAW_FIRM_PRODUCT_DATA.demoUrl}
+            href={LAW_FIRM_PRICING_DATA.finalCta.primaryUrl}
             target="_blank"
             rel="noopener noreferrer"
-            id="cta-btn-quero-conhecer"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-[#0969da] hover:bg-[#085cc0] text-white text-sm font-semibold shadow-2xs transition-colors"
+            id="cta-btn-comecar-agora"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-[#1f883d] hover:bg-[#1a7f37] text-white text-sm font-semibold shadow-2xs transition-colors"
           >
-            <span>QUERO CONHECER A DEMONSTRAÇÃO</span>
-            <ExternalLink className="w-4 h-4" />
+            <span>{LAW_FIRM_PRICING_DATA.finalCta.btnPrimaryText}</span>
+            <ArrowRight className="w-4 h-4" />
           </a>
 
           <a
-            href={LAW_FIRM_PRODUCT_DATA.whatsappContactUrl}
+            href={LAW_FIRM_PRICING_DATA.finalCta.secondaryUrl}
             target="_blank"
             rel="noopener noreferrer"
-            id="cta-btn-falar-especialista"
+            id="cta-btn-falar-especialista-final"
             className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md border border-[#d0d7de] bg-[#ffffff] hover:bg-[#f6f8fa] text-[#1f2328] text-sm font-semibold shadow-2xs transition-colors"
           >
             <MessageCircle className="w-4 h-4 text-[#1a7f37]" />
-            <span>FALE COM UM ESPECIALISTA</span>
+            <span>{LAW_FIRM_PRICING_DATA.finalCta.btnSecondaryText}</span>
           </a>
 
           <button

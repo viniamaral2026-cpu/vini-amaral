@@ -5,7 +5,6 @@ import {
   Linkedin, 
   Mail, 
   Github, 
-  ExternalLink, 
   CheckCircle2, 
   Briefcase, 
   Building,
@@ -52,25 +51,6 @@ export const WikipediaInfobox: React.FC = () => {
         <p className="text-[10.5px] text-[#656d76] text-center mt-1.5 italic font-medium">
           Vini Amaral — Suporte Operacional, Controladoria &amp; Automação.
         </p>
-        <div className="flex items-center justify-center gap-2 mt-1 text-[10px]">
-          <a 
-            href="/eu.JPG" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-[#0969da] hover:underline inline-flex items-center gap-0.5 font-medium"
-          >
-            <ExternalLink className="w-2.5 h-2.5" />
-            <span>Ver foto original</span>
-          </a>
-          <span className="text-[#d0d7de]">|</span>
-          <a 
-            href="/eu.JPG" 
-            download="Vini-Amaral-Foto.jpg"
-            className="text-[#0969da] hover:underline inline-flex items-center gap-0.5 font-medium"
-          >
-            <span>Download Foto</span>
-          </a>
-        </div>
       </div>
 
       {/* Infobox Key Facts Table */}

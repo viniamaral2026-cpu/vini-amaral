@@ -10,6 +10,7 @@ import { ServicesWiki } from './components/ServicesWiki';
 import { LawFirmProductHighlight } from './components/LawFirmProductHighlight';
 import { LawFirmProductPage } from './components/LawFirmProductPage';
 import { LucenaWebsiteProductPage } from './components/LucenaWebsiteProductPage';
+import { CivicCausePage } from './components/CivicCausePage';
 import { DeevoFinanceirasWiki } from './components/DeevoFinanceirasWiki';
 import { CivicPetitionsWiki } from './components/CivicPetitionsWiki';
 import { ProjectsWiki } from './components/ProjectsWiki';
@@ -23,15 +24,26 @@ import { PetitionModalPopup } from './components/PetitionModalPopup';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('inicio');
-  const [currentRoute, setCurrentRoute] = useState<'home' | 'produto-advocacia' | 'produto-site-lucena'>('home');
+  const [currentRoute, setCurrentRoute] = useState<'home' | 'produto-advocacia' | 'produto-site-lucena' | 'causa-canal-direto'>('home');
 
-  // Handle URL changes, direct routes (/produto/advocacia, /produtos/site-advocacia/lucena-associados) and browser back/forward buttons
+  // Handle URL changes, direct routes and browser back/forward buttons
   useEffect(() => {
     const handleUrlChange = () => {
       const path = window.location.pathname.toLowerCase();
       const hash = window.location.hash.toLowerCase();
 
-      if (path.includes('lucena') || hash.includes('lucena') || path.includes('site-advocacia') || path.includes('site-advogacia') || hash.includes('site-advocacia')) {
+      if (
+        path.includes('causa') || 
+        hash.includes('causa') || 
+        path.includes('lei-canal-direto') || 
+        hash.includes('lei-canal-direto') || 
+        path.includes('abaixo-assinado') || 
+        hash.includes('abaixo-assinado') ||
+        hash.includes('causa-canal-direto')
+      ) {
+        setCurrentRoute('causa-canal-direto');
+        setActiveSection('causa-canal-direto');
+      } else if (path.includes('lucena') || hash.includes('lucena') || path.includes('site-advocacia') || path.includes('site-advogacia') || hash.includes('site-advocacia')) {
         setCurrentRoute('produto-site-lucena');
         setActiveSection('site-advocacia-lucena');
       } else if (path.includes('/produto/advocacia') || hash.includes('produto-advocacia') || path.includes('/advocacia') || hash.includes('advocacia-plataforma')) {
@@ -50,6 +62,17 @@ export function App() {
     window.addEventListener('popstate', handleUrlChange);
     return () => window.removeEventListener('popstate', handleUrlChange);
   }, []);
+
+  const navigateToCivicCause = () => {
+    setCurrentRoute('causa-canal-direto');
+    setActiveSection('causa-canal-direto');
+    try {
+      window.history.pushState({ route: 'causa-canal-direto' }, '', '/causa/lei-canal-direto');
+    } catch {
+      window.location.hash = 'causa-canal-direto';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const navigateToProduct = () => {
     setCurrentRoute('produto-advocacia');
@@ -97,6 +120,11 @@ export function App() {
   };
 
   const handleNavigate = (sectionId: string) => {
+    if (sectionId === 'causa-canal-direto' || sectionId === 'lei-canal-direto' || sectionId === 'abaixo-assinado') {
+      navigateToCivicCause();
+      return;
+    }
+
     if (sectionId === 'site-advocacia-lucena' || sectionId === 'lucena' || sectionId === 'site-advocacia') {
       navigateToLucenaWebsite();
       return;
@@ -138,7 +166,10 @@ export function App() {
           {/* Main Document Body (Left on Desktop) */}
           <article className="grow min-w-0 w-full bg-white p-6 sm:p-8 rounded-md border border-[#d0d7de] shadow-2xs space-y-10">
             
-            {currentRoute === 'produto-site-lucena' ? (
+            {currentRoute === 'causa-canal-direto' ? (
+              /* Dedicated Civic Initiative & Legislative Proposal Page */
+              <CivicCausePage onBackToHome={() => navigateToHome('projetos-lei')} />
+            ) : currentRoute === 'produto-site-lucena' ? (
               /* Dedicated Law Firm Website Sales & Presentation Page (Lucena & Associados) */
               <LucenaWebsiteProductPage onBackToHome={() => navigateToHome('servicos')} />
             ) : currentRoute === 'produto-advocacia' ? (
@@ -169,7 +200,7 @@ export function App() {
                 <DeevoFinanceirasWiki />
 
                 {/* 5. Projetos de Lei, Abaixo-Assinados & Causas Cidadãs */}
-                <CivicPetitionsWiki />
+                <CivicPetitionsWiki onNavigateToCivicCause={navigateToCivicCause} />
 
                 {/* 6. Repositórios e Projetos */}
                 <ProjectsWiki />
@@ -206,7 +237,10 @@ export function App() {
       <WhatsAppFloatingButton />
 
       {/* Closable Civic Petition Popup */}
-      <PetitionModalPopup onNavigateToSection={handleNavigate} />
+      <PetitionModalPopup 
+        onNavigateToSection={handleNavigate} 
+        onNavigateToCivicCause={navigateToCivicCause}
+      />
     </div>
   );
 }

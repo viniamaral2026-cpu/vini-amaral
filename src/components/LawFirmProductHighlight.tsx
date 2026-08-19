@@ -24,12 +24,15 @@ export const LawFirmProductHighlight: React.FC<LawFirmProductHighlightProps> = (
         
         {/* Disambiguation / Badge Header */}
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#d0d7de] pb-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <span className="p-1.5 rounded bg-[#0969da] text-white flex items-center justify-center">
               <Scale className="w-4 h-4" />
             </span>
             <span className="text-[11px] font-bold uppercase tracking-wider text-[#0969da] font-mono">
               Solução Especializada em Legal Tech
+            </span>
+            <span className="text-[11px] font-bold text-[#0969da] bg-[#ddf4ff] px-2 py-0.5 rounded font-mono border border-[#54aeff]/30">
+              A partir de R$ 149/mês
             </span>
           </div>
           <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#1a7f37] bg-[#dafbe1] border border-[#4ac26b]/40 px-2 py-0.5 rounded-full">

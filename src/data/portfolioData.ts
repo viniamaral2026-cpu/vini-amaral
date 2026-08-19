@@ -339,7 +339,7 @@ export const PETITIONS_DATA = [
   {
     id: "reforma-defesa-consumidor",
     title: "Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)",
-    tagline: "Modernização tecnológica, transparência e agilidade na resolução de conflitos de consumo",
+    tagline: "Modernização tecnológica, transparência e agilidade na resolução de conflitos de consumo no Brasil",
     category: "Iniciativa Cidadã / Abaixo-Assinado & Projeto de Lei",
     status: "Petição Pública Ativa",
     signatureUrl: "https://c.org/6j7TF9ktMT",
@@ -348,41 +348,70 @@ export const PETITIONS_DATA = [
       "Ministério da Justiça e Segurança Pública",
       "Secretaria Nacional do Consumidor (Senacon)",
       "Assembleias Legislativas Estaduais",
-      "Câmara dos Deputados e Senado Federal"
+      "Câmara dos Deputados e Senado Federal",
+      "PROCONs e Ministério Público"
     ],
     quickAction: {
       title: "Apoie a Lei da Modernização e Transparência na Proteção ao Consumidor",
-      shortText: "A burocracia não pode impedir a defesa do cidadão. Assine a petição da Lei do Canal Direto e nos ajude a pressionar as autoridades por um sistema mais rápido e eficiente.",
+      shortText: "A burocracia e os canais obsoletos não podem impedir a defesa do cidadão. Com a migração massiva do comércio para a internet, a Lei do Canal Direto é indispensável para combater fraudes, abusos digitais e a lentidão dos órgãos de fiscalização.",
       ctaLabel: "Assinar o Abaixo-Assinado na Change.org"
     },
+    ecommerceImpact: {
+      title: "A Migração Massiva do Comércio para a Internet e a Urgência da Lei",
+      subtitle: "Por que as relações de consumo digitais exigem um novo marco de celeridade e tecnologia",
+      keyPillars: [
+        {
+          title: "Explosão do E-commerce e Transações em Tempo Real",
+          desc: "As compras online, marketplaces, aplicativos de delivery e serviços financeiros digitais ocorrem em frações de segundos, movimentando bilhões de reais diariamente. No entanto, o sistema tradicional de atendimento ao consumidor ainda opera sob lógicas analógicas e prazos incompatíveis com a velocidade da economia digital."
+        },
+        {
+          title: "Atendimento Algorítmico e Desumanização do Suporte",
+          desc: "Consumidores enfrentam 'labirintos de robôs' e chatbots programados para retardar cancelamentos, trocas e estornos. A falta de um canal público direto de notificação imediata permite que fornecedores infratores ignorem reclamações sem qualquer consequência prática imediata."
+        },
+        {
+          title: "Golpes Digitais, Lojas Fantasmas e Publicidade Abusiva",
+          desc: "A proliferação de anúncios fraudulentos em redes sociais, vazamentos de dados, cobranças indevidas automáticas e empresas de fachada exige triagem automatizada com Inteligência Artificial capaz de cruzar dados e acionar órgãos fiscalizadores em até 15 dias úteis."
+        },
+        {
+          title: "Vulnerabilidade Ampliada do Cidadão",
+          desc: "Idosos, famílias e cidadãos comuns perdem recursos essenciais em fraudes eletrônicas e compras não entregues, ficando desamparados diante de órgãos regionais desarticulados e desprovidos de ferramentas tecnológicas centralizadas."
+        }
+      ]
+    },
     problemTitle: "O Problema no Cenário Atual",
-    problemText: `Já passei por situações de desrespeito ao consumidor em que, ao tentar denunciar, não obtive retorno ágil. É frustrante ver empresas descumprindo leis enquanto a burocracia impede que os órgãos de fiscalização ajudem o cidadão no momento em que ele mais precisa. Esta não é apenas a minha realidade, mas a de muitos brasileiros que se veem impotentes diante de abusos de consumo, sem uma resposta eficiente e justa dos órgãos responsáveis.
+    problemText: `Já passei por situações de desrespeito ao consumidor em que, ao tentar denunciar, não obtive retorno ágil. É frustrante ver empresas descumprindo leis enquanto a burocracia impede que os órgãos de fiscalização ajudem o cidadão no momento em que ele mais precisa. Esta não é apenas a minha realidade, mas a de milhões de brasileiros que se veem impotentes diante de abusos de consumo, sem uma resposta eficiente, transparente e justa dos órgãos responsáveis.
 
-A proteção dos direitos do consumidor é garantida pela Constituição Brasileira, mas, na prática, vemos que os processos são frequentemente engessados por burocracia e pela ineficiência dos sistemas de resolução de conflitos. Conforme o Relatório de Atividades do Sistema Nacional de Defesa do Consumidor (SNDC/Senacon), inúmeros casos permanecem sem solução, e os prazos para análise e decisão tornam-se cada vez mais extensos, prejudicando o cidadão e favorecendo o infrator. Precisamos mudar isso urgentemente.`,
+A proteção dos direitos do consumidor é garantida pelo artigo 5º, inciso XXXII, da Constituição Federal, mas, na prática, vemos que os processos são frequentemente engessados por burocracia e pela ineficiência dos sistemas analógicos de resolução de conflitos. 
+
+Com a migração acelerada do varejo e dos serviços para a internet, onde milhões de transações ocorrem instantaneamente a cada segundo, a distância entre a velocidade do comércio eletrônico e a lentidão dos órgãos de defesa do consumidor tornou-se insustentável. Conforme o Relatório de Atividades do Sistema Nacional de Defesa do Consumidor (SNDC/Senacon), milhares de casos permanecem sem solução por meses, gerando sensação de impunidade para grandes conglomerados e plataformas digitais. Precisamos modernizar esse sistema com tecnologia, inteligência de dados e integração nacional com urgência.`,
     proposalTitle: "Propostas de Reforma e Transformação Digital",
     proposalPoints: [
       {
         title: "Cooperação Interinstitucional Integrada",
-        desc: "Cooperação formal entre o Ministério da Justiça e Segurança Pública, a Senacon e as Assembleias Legislativas para reformular, desburocratizar e agilizar os procedimentos de fiscalização e aplicação de penalidades."
+        desc: "Cooperação formal entre o Ministério da Justiça e Segurança Pública, a Senacon, os PROCONs estaduais/municipais e as Assembleias Legislativas para reformular, desburocratizar e agilizar os procedimentos de fiscalização e aplicação de penalidades."
       },
       {
-        title: "Plataforma Digital em Tempo Real com Tecnologia Moderna",
-        desc: "Desenvolvimento de plataforma digital integrada com rastreamento de denúncias em tempo real, inteligência de triagem, transparência pública e canais simplificados e acessíveis para todo cidadão."
+        title: "Canal Único Digital com Triagem por Inteligência Artificial",
+        desc: "Desenvolvimento de plataforma digital pública integrada com rastreamento de denúncias em tempo real, inteligência de triagem automática para categorizar ilícitos digitais e acionamento instantâneo aos órgãos fiscalizadores competentes."
       },
       {
-        title: "Campanhas Educativas Massivas",
-        desc: "Investimento sério em campanhas educativas de alcance nacional para informar a população sobre seus direitos, prevenção contra golpes e os meios corretos de denúncia formal."
+        title: "Prazos Máximos de 15 Dias Úteis para Apuração",
+        desc: "Fixação em lei de prazo improrrogável para início de averiguação formal em casos envolvendo risco à saúde, segurança ou prejuízos patrimoniais coletivos decorrentes do comércio físico ou eletrônico."
       },
       {
-        title: "Formação e Capacitação Contínua",
-        desc: "Capacitação contínua e atualização técnica para os profissionais e servidores dos órgãos de defesa do consumidor, garantindo atendimento humanizado, ágil e especializado."
+        title: "Campanhas Educativas Massivas e Combate a Fraudes Digitais",
+        desc: "Investimento em campanhas educativas de alcance nacional para orientar a população sobre seus direitos nas compras virtuais, prevenção contra golpes digitais e uso correto dos canais públicos de denúncia."
+      },
+      {
+        title: "Formação e Capacitação Tecnológica Contínua",
+        desc: "Capacitação contínua e atualização técnica para servidores e agentes públicos dos órgãos de defesa do consumidor, preparando-os para investigar infrações complexas no ambiente do comércio eletrônico."
       }
     ],
     billDraft: {
       title: "Minuta do Projeto de Lei",
       subtitle: "Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)",
       header: "MINUTA DE PROJETO DE LEI Nº ____, DE 2026",
-      ementa: "Dispõe sobre a modernização e a transparência no Sistema Nacional de Defesa do Consumidor (Lei do Canal Direto), cria o Canal Único Integrado de Denúncias do Consumidor e estabelece diretrizes para o acionamento automático dos órgãos de fiscalização e controle.",
+      ementa: "Dispõe sobre a modernização e a transparência no Sistema Nacional de Defesa do Consumidor (Lei do Canal Direto), cria o Canal Único Integrado de Denúncias do Consumidor, estabelece diretrizes para o acionamento automático e tempestivo dos órgãos de fiscalização e controle no comércio físico e eletrônico, e dá outras providências.",
       decree: "O CONGRESSO NACIONAL decreta:",
       chapters: [
         {
@@ -390,7 +419,7 @@ A proteção dos direitos do consumidor é garantida pela Constituição Brasile
           articles: [
             {
               article: "Art. 1º",
-              text: "Esta Lei altera e complementa a legislação do Sistema Nacional de Defesa do Consumidor (SNDC), com o objetivo de garantir celeridade, eficiência e transparência no atendimento, na triagem e no encaminhamento de denúncias e reclamações de consumidores em todo o território nacional."
+              text: "Esta Lei altera e complementa a legislação do Sistema Nacional de Defesa do Consumidor (SNDC), com o objetivo de garantir celeridade, eficiência, transparência e uso intensivo de tecnologia no atendimento, na triagem e no encaminhamento de denúncias e reclamações de consumidores em todo o território nacional, com especial ênfase nas relações de consumo praticadas no comércio eletrônico e nas plataformas digitais."
             }
           ]
         },
@@ -399,16 +428,16 @@ A proteção dos direitos do consumidor é garantida pela Constituição Brasile
           articles: [
             {
               article: "Art. 2º",
-              text: "Fica instituído o Canal Único Integrado de Denúncias do Consumidor, plataforma digital pública centralizada, sob a coordenação da Secretaria Nacional do Consumidor (Senacon)."
+              text: "Fica instituído o Canal Único Integrado de Denúncias do Consumidor, plataforma digital pública centralizada, sob a coordenação da Secretaria Nacional do Consumidor (Senacon), integrada aos PROCONs estaduais e municipais, Ministério Público e Agências Reguladoras."
             },
             {
               article: "Art. 3º",
               text: "A plataforma terá as seguintes funcionalidades obrigatórias:",
               items: [
-                "I – Registro simplificado e acompanhamento em tempo real das denúncias pelos cidadãos;",
-                "II – Triagem automatizada por inteligência artificial e categorização de ilícitos de consumo;",
-                "III – Envio imediato e simultâneo das denúncias aos órgãos competentes (PROCONs regionais, Vigilância Sanitária, Agências Reguladoras e Ministério Público);",
-                "IV – Painel público de transparência, exibindo indicadores de tempo de resposta das empresas e dos órgãos públicos."
+                "I – Registro simplificado, intuitivo e acompanhamento em tempo real das denúncias pelos cidadãos através de protocolo único nacional;",
+                "II – Triagem automatizada por inteligência artificial e categorização ágil de ilícitos de consumo, detectando reincidências e fraudes sistemáticas em plataformas de e-commerce e marketplaces;",
+                "III – Envio imediato e simultâneo das denúncias aos órgãos competentes (PROCONs regionais, Vigilância Sanitária, Agências Reguladoras, Defensoria Pública e Ministério Público);",
+                "IV – Painel público de transparência (Dashboard Aberto), exibindo indicadores de tempo de resposta das empresas fornecedoras e dos órgãos fiscalizadores públicos."
               ]
             }
           ]
@@ -418,24 +447,24 @@ A proteção dos direitos do consumidor é garantida pela Constituição Brasile
           articles: [
             {
               article: "Art. 4º",
-              text: "O recebimento da denúncia pelo Canal Único implicará o acionamento direto do PROCON e demais órgãos competentes da jurisdição onde ocorreu o fato."
+              text: "O recebimento da denúncia pelo Canal Único implicará o acionamento direto do PROCON e demais órgãos fiscalizadores da jurisdição onde ocorreu o fato ou do domicílio do consumidor lesado."
             },
             {
               article: "Art. 5º",
-              text: "Fica estabelecido o prazo máximo de 15 (quinze) dias úteis para que os órgãos fiscalizadores emitam parecer inicial ou iniciem a apuração sobre denúncias que configurem risco iminente à saúde, à segurança ou ao patrimônio coletivo dos consumidores."
+              text: "Fica estabelecido o prazo máximo de 15 (quinze) dias úteis para que os órgãos fiscalizadores emitam parecer inicial ou iniciem formalmente a apuração sobre denúncias que configurem risco iminente à saúde, à segurança ou ao patrimônio individual e coletivo dos consumidores no comércio tradicional ou digital."
             }
           ]
         },
         {
-          chapter: "CAPÍTULO IV – DA CAPACITAÇÃO E EDUCAÇÃO AO CONSUMIDOR",
+          chapter: "CAPÍTULO IV – DA CAPACITAÇÃO E EDUCAÇÃO AO CONSUMIDOR DIGITAL",
           articles: [
             {
               article: "Art. 6º",
-              text: "O Poder Público promoverá campanhas permanentes de conscientização sobre os direitos do consumidor e o uso correto dos meios de denúncia digital."
+              text: "O Poder Público promoverá campanhas permanentes de conscientização sobre os direitos do consumidor, prevenção contra golpes virtuais, boas práticas no comércio eletrônico e uso correto dos meios de denúncia digital."
             },
             {
               article: "Art. 7º",
-              text: "Fica instituído o Programa de Capacitação Contínua para servidores e agentes que atuam na defesa e fiscalização dos direitos do consumidor."
+              text: "Fica instituído o Programa de Capacitação Contínua para servidores, conciliadores e agentes que atuam na fiscalização e proteção dos direitos do consumidor, com ênfase em crimes cibernéticos e direito do consumidor digital."
             }
           ]
         },
@@ -444,7 +473,7 @@ A proteção dos direitos do consumidor é garantida pela Constituição Brasile
           articles: [
             {
               article: "Art. 8º",
-              text: "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
+              text: "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário, incentivando-se o aproveitamento e integração dos sistemas digitais já existentes."
             },
             {
               article: "Art. 9º",
@@ -453,15 +482,23 @@ A proteção dos direitos do consumidor é garantida pela Constituição Brasile
           ]
         }
       ],
-      justificativa: `O presente Projeto de Lei atende a uma demanda urgente da sociedade brasileira por um sistema de defesa do consumidor moderno e eficiente. Atualmente, os processos burocráticos e a falta de integração entre os órgãos de fiscalização geram morosidade, deixando o cidadão sem respostas ágeis diante de abusos cometidos por fornecedores de produtos e serviços.
+      justificativa: `O presente Projeto de Lei atende a uma demanda urgente e inadiável da sociedade brasileira por um sistema de defesa do consumidor moderno, ágil, interoperável e dotado de tecnologia de ponta. 
 
-Com o avanço das tecnologias de informação, é indispensável a criação de um canal digital integrado que permita ao cidadão registrar sua denúncia e acionar automaticamente os órgãos competentes. A medida garante maior transparência, otimiza o uso dos recursos públicos e fortalece a proteção ao consumidor garantida no artigo 5º, XXXII, da Constituição Federal.
+Historicamente, os processos administrativos e a falta de integração em tempo real entre os órgãos de fiscalização geram morosidade extrema, deixando o cidadão sem respostas tempestivas diante de abusos cometidos por fornecedores de produtos e prestadores de serviços.
 
-Pelas razões expostas, contamos com o apoio dos ilustres pares e da sociedade civil para a aprovação e tramitação desta importante proposta.`
+Esse cenário tornou-se crítico com a migração massiva do comércio e dos serviços para o ambiente da internet (e-commerce, plataformas de intermediação, redes sociais, aplicativos de delivery e bancos digitais). Hoje, transações financeiras e contratações de serviços ocorrem em segundos, enquanto a resposta dos órgãos fiscalizadores consome semanas ou meses. Essa assimetria temporal alimenta o sentimento de impunidade dos maus fornecedores e deixa milhões de consumidores lesados por cancelamentos unilaterais, recusas de estorno, publicidades enganosas e golpes virtuais.
+
+Com o avanço das tecnologias de informação, inteligência artificial e interoperabilidade de dados, é indispensável a criação de um canal digital único e integrado que permita ao cidadão registrar sua denúncia de forma simplificada e acionar automaticamente os órgãos competentes com protocolo nacional unificado.
+
+A medida garante transparência pública absoluta, otimiza o emprego dos recursos estatais e confere eficácia prática ao mandamento constitucional estabelecido no artigo 5º, inciso XXXII, e no artigo 170, inciso V, da Constituição Federal.
+
+Pelas razões expostas, contamos com a mobilização da sociedade civil e com o apoio dos ilustres parlamentares para a aprovação e célere tramitação desta indispensável proposta legislativa.`
     },
-    closingMessage: `Esta reforma não é apenas necessária, é possível. Ao unir esforços entre governo e sociedade, podemos construir um sistema de proteção ao consumidor que funcione para todos, promovendo a justiça e cumprindo o direito do cidadão ao acesso a serviços de qualidade e a uma proteção eficaz contra abusos.
+    closingMessage: `Esta reforma não é apenas necessária, é um direito de todos nós. Com o crescimento veloz do comércio eletrônico e das transações digitais, a proteção do consumidor não pode mais depender de processos morosos e desconectados.
 
-É hora de exigir mudanças concretas para aprimorar nosso sistema. Assine esta petição para juntos pressionarmos as autoridades competentes a transformar a defesa do consumidor no Brasil, assegurando um sistema justo e eficiente. Sua assinatura é essencial para essa transformação.`
+Ao unir esforços entre a sociedade civil organizada, cidadãos conscientes e o poder público, podemos construir uma proteção ao consumidor verdadeiramente moderna, célere e acessível para todos os brasileiros.
+
+Assine este abaixo-assinado na Change.org, compartilhe com seus amigos e familiares no WhatsApp e ajude a transformar a defesa do consumidor no Brasil!`
   }
 ];
 
@@ -606,6 +643,233 @@ export const LAW_FIRM_PRODUCT_DATA = {
       image: "/src/assets/images/law_firm_finance_1787133958765.jpg"
     }
   ]
+};
+
+export const LAW_FIRM_PRICING_DATA = {
+  sectionTitle: "ESCOLHA A ESTRUTURA IDEAL PARA O SEU ESCRITÓRIO",
+  sectionSubtitle: "Planos desenvolvidos para acompanhar o crescimento da sua operação jurídica, do profissional autônomo às grandes bancas e departamentos jurídicos.",
+  
+  billingCycles: {
+    monthly: {
+      id: "mensal",
+      label: "Mensal",
+      badge: "Sem fidelidade"
+    },
+    annual: {
+      id: "anual",
+      label: "Anual",
+      badge: "Economia no pagamento anual"
+    }
+  },
+
+  plans: [
+    {
+      id: "essencial",
+      name: "Plano Essencial",
+      shortName: "Essencial",
+      isPopular: false,
+      recommendedBadge: null,
+      targetAudience: "Advogados autônomos e pequenos escritórios.",
+      usersLimit: "1 usuário",
+      monthlyPrice: {
+        value: 149,
+        formatted: "R$ 149",
+        period: "/mês",
+        note: "Cobrança mensal recorrente"
+      },
+      annualPrice: {
+        value: 1490,
+        formatted: "R$ 1.490",
+        period: "/ano",
+        equivalentMonthly: "R$ 124,16/mês",
+        savingsText: "Economize em relação ao pagamento mensal."
+      },
+      ctaText: "COMEÇAR AGORA",
+      ctaUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20tenho%20interesse%20em%20come%C3%A7ar%20no%20Plano%20Essencial%20da%20Plataforma%20Jur%C3%ADdica%20(R$%20149/m%C3%AAs)!",
+      features: [
+        "Gestão de clientes",
+        "CRM básico",
+        "Processos",
+        "Prazos",
+        "Tarefas",
+        "Agenda",
+        "Documentos",
+        "Notificações",
+        "Dashboard",
+        "Controle de acesso"
+      ]
+    },
+    {
+      id: "profissional",
+      name: "Plano Profissional",
+      shortName: "Profissional",
+      isPopular: true,
+      recommendedBadge: "MAIS ESCOLHIDO",
+      targetAudience: "Escritórios pequenos e médios que precisam centralizar sua operação.",
+      usersLimit: "Até 5 usuários",
+      monthlyPrice: {
+        value: 299,
+        formatted: "R$ 299",
+        period: "/mês",
+        note: "Cobrança mensal recorrente"
+      },
+      annualPrice: {
+        value: 2990,
+        formatted: "R$ 2.990",
+        period: "/ano",
+        equivalentMonthly: "R$ 249,16/mês",
+        savingsText: "Economize em relação ao pagamento mensal."
+      },
+      ctaText: "ESCOLHER PROFISSIONAL",
+      ctaUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20quero%20contratar%20o%20Plano%20Profissional%20da%20Plataforma%20Jur%C3%ADdica%20(Mais%20Escolhido)!",
+      features: [
+        "Tudo do Plano Essencial",
+        "CRM jurídico completo",
+        "Gestão completa de processos",
+        "Gestão de partes",
+        "Gestão de documentos",
+        "Contratos",
+        "Honorários",
+        "Financeiro",
+        "Relatórios",
+        "Auditoria",
+        "LGPD",
+        "Automações",
+        "Recursos de Inteligência Artificial",
+        "Até 5 usuários"
+      ]
+    },
+    {
+      id: "premium",
+      name: "Plano Premium",
+      shortName: "Premium",
+      isPopular: false,
+      recommendedBadge: null,
+      targetAudience: "Escritórios estruturados que precisam de maior controle, automação e inteligência.",
+      usersLimit: "Até 15 usuários",
+      monthlyPrice: {
+        value: 599,
+        formatted: "R$ 599",
+        period: "/mês",
+        note: "Cobrança mensal recorrente"
+      },
+      annualPrice: {
+        value: 5990,
+        formatted: "R$ 5.990",
+        period: "/ano",
+        equivalentMonthly: "R$ 499,16/mês",
+        savingsText: "Economize em relação ao pagamento mensal."
+      },
+      ctaText: "ESCOLHER PREMIUM",
+      ctaUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20quero%20conhecer%20e%20contratar%20o%20Plano%20Premium%20da%20Plataforma%20Jur%C3%ADdica!",
+      features: [
+        "Tudo do Plano Profissional",
+        "Até 15 usuários",
+        "IA avançada",
+        "Automações avançadas",
+        "Relatórios avançados",
+        "Maior armazenamento",
+        "Maior volume de documentos",
+        "Comunicação integrada",
+        "Integrações",
+        "Recursos avançados de gestão",
+        "Suporte prioritário"
+      ]
+    },
+    {
+      id: "enterprise",
+      name: "Plano Enterprise",
+      shortName: "Enterprise",
+      isPopular: false,
+      recommendedBadge: "CORPORATIVO",
+      targetAudience: "Grandes escritórios e departamentos jurídicos.",
+      usersLimit: "20+ usuários",
+      monthlyPrice: {
+        value: 1490,
+        formatted: "A partir de R$ 1.490",
+        period: "/mês",
+        note: "Proposta sob medida"
+      },
+      annualPrice: {
+        value: null,
+        formatted: "A partir de R$ 1.490",
+        period: "/mês (Sob Consulta)",
+        equivalentMonthly: "Condições corporativas exclusivas",
+        savingsText: "Economize em relação ao pagamento mensal."
+      },
+      ctaText: "FALAR COM ESPECIALISTA",
+      ctaUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20gostaria%20de%20uma%20proposta%20Enterprise%20personalizada%20para%20nosso%20departamento%20jur%C3%ADdico/escrit%C3%B3rio!",
+      features: [
+        "Tudo do Plano Premium",
+        "20+ usuários",
+        "Múltiplas unidades",
+        "Integrações personalizadas",
+        "Implantação dedicada",
+        "Suporte prioritário",
+        "SLA",
+        "Customizações",
+        "Maior capacidade operacional",
+        "Arquitetura preparada para grandes operações"
+      ]
+    }
+  ],
+
+  setup: {
+    title: "IMPLANTAÇÃO",
+    startingPrice: "A partir de R$ 997",
+    badge: "Serviço Inicial Avulso",
+    description: "Configuração inicial da plataforma, parametrização do escritório, criação de usuários, configuração de permissões e orientação inicial para utilização do sistema.",
+    clarification: "A implantação é um serviço de setup técnico cobrado separadamente da assinatura (pagamento único), garantindo que sua equipe comece a operar com processos ajustados desde o primeiro dia."
+  },
+
+  commercialHighlight: {
+    title: "COMECE PELO PLANO QUE FAZ SENTIDO PARA SUA OPERAÇÃO",
+    description: "Você pode começar com uma estrutura enxuta e evoluir conforme o crescimento do escritório. Faça upgrade do plano quando sua operação precisar de mais usuários, recursos, automações ou inteligência."
+  },
+
+  faq: [
+    {
+      question: "Posso mudar de plano depois?",
+      answer: "Sim. Você pode fazer upgrade ou downgrade de plano a qualquer momento conforme o tamanho da equipe e o volume de processos do escritório aumentarem."
+    },
+    {
+      question: "Existe fidelidade?",
+      answer: "Nos planos com cobrança mensal não há contrato de fidelidade nem multa por cancelamento. Nos planos anuais você garante economia contratando o período de 12 meses."
+    },
+    {
+      question: "A implantação está incluída na mensalidade?",
+      answer: "Não. A implantação é uma etapa inicial separada (a partir de R$ 997, taxa única) para parametrização de fluxos, cadastro de usuários e orientação técnica da equipe."
+    },
+    {
+      question: "Posso contratar recursos adicionais?",
+      answer: "Sim. Usuários adicionais, maior espaço de armazenamento na nuvem e módulos customizados podem ser contratados sob demanda a qualquer momento."
+    },
+    {
+      question: "Os planos possuem limite de usuários?",
+      answer: "Sim: Plano Essencial (1 usuário), Plano Profissional (até 5 usuários), Plano Premium (até 15 usuários) e Plano Enterprise (20+ usuários sob medida)."
+    },
+    {
+      question: "A Inteligência Artificial possui limite de utilização?",
+      answer: "Os planos com recursos de IA incluem franquia mensal balanceada para o fluxo diário de pesquisas, triagens e elaboração de rascunhos de peças."
+    },
+    {
+      question: "Existe plano para grandes escritórios?",
+      answer: "Sim. O Plano Enterprise foi desenvolvido especificamente para grandes bancas e departamentos jurídicos com múltiplas unidades, SLA de suporte e integrações dedicadas."
+    },
+    {
+      question: "Posso contratar a plataforma anualmente?",
+      answer: "Sim. A modalidade anual oferece condições com desconto expressivo, reduzindo os custos operacionais do escritório em relação à cobrança mensal."
+    }
+  ],
+
+  finalCta: {
+    title: "PRONTO PARA MODERNIZAR A GESTÃO DO SEU ESCRITÓRIO?",
+    description: "Centralize sua operação jurídica, reduza tarefas manuais e tenha mais controle sobre clientes, processos, documentos, prazos e financeiro.",
+    btnPrimaryText: "COMEÇAR AGORA",
+    btnSecondaryText: "FALAR COM UM ESPECIALISTA",
+    primaryUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20quero%20modernizar%20a%20gest%C3%A3o%20do%20meu%20escrit%C3%B3rio%20com%20a%20Plataforma%20Jur%C3%ADdica!",
+    secondaryUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20a%20Plataforma%20Jur%C3%ADdica!"
+  }
 };
 
 export const LUCENA_WEBSITE_PRODUCT_DATA = {

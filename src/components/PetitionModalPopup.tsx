@@ -14,9 +14,13 @@ import { PETITIONS_DATA } from '../data/portfolioData';
 
 interface PetitionModalPopupProps {
   onNavigateToSection?: (sectionId: string) => void;
+  onNavigateToCivicCause?: () => void;
 }
 
-export const PetitionModalPopup: React.FC<PetitionModalPopupProps> = ({ onNavigateToSection }) => {
+export const PetitionModalPopup: React.FC<PetitionModalPopupProps> = ({ 
+  onNavigateToSection,
+  onNavigateToCivicCause 
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
 
@@ -48,8 +52,10 @@ export const PetitionModalPopup: React.FC<PetitionModalPopupProps> = ({ onNaviga
 
   const handleGoToSection = () => {
     handleClose();
-    if (onNavigateToSection) {
-      onNavigateToSection('projetos-lei');
+    if (onNavigateToCivicCause) {
+      onNavigateToCivicCause();
+    } else if (onNavigateToSection) {
+      onNavigateToSection('causa-canal-direto');
     } else {
       const el = document.getElementById('projetos-lei');
       if (el) {
