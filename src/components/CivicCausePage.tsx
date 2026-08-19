@@ -24,13 +24,16 @@ import {
   Download,
   Newspaper,
   Mail,
-  Send,
-  Globe,
   ShoppingCart,
   Bot,
   AlertTriangle,
   Clock,
-  ShieldCheck
+  ShieldCheck,
+  FileCode,
+  Globe,
+  Lock,
+  Zap,
+  TrendingUp
 } from 'lucide-react';
 import { PETITIONS_DATA, PERSONAL_DATA } from '../data/portfolioData';
 
@@ -41,6 +44,7 @@ interface CivicCausePageProps {
 export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) => {
   const [copiedLink, setCopiedLink] = useState<string | null>(null);
   const [copiedMinuta, setCopiedMinuta] = useState(false);
+  const [copiedPetitionText, setCopiedPetitionText] = useState(false);
   const [isMinutaOpen, setIsMinutaOpen] = useState(true);
 
   const petition = PETITIONS_DATA[0];
@@ -53,7 +57,8 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
 
   const generateFullMinutaText = () => {
     const draft = petition.billDraft;
-    let fullText = `${draft.header}\n\n`;
+    let fullText = `${draft.header}\n`;
+    fullText += `TÍTULO: ${draft.title}\n\n`;
     fullText += `Ementa: ${draft.ementa}\n\n`;
     fullText += `${draft.decree}\n\n`;
 
@@ -61,6 +66,9 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
       fullText += `${chap.chapter}\n`;
       chap.articles.forEach((art) => {
         fullText += `${art.article} ${art.text}\n`;
+        if (art.paragrafoUnico) {
+          fullText += `${art.paragrafoUnico}\n`;
+        }
         if (art.items) {
           art.items.forEach((item) => {
             fullText += `  ${item}\n`;
@@ -81,6 +89,18 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
     setTimeout(() => setCopiedMinuta(false), 2500);
   };
 
+  const handleCopyPetitionText = () => {
+    const p = petition.changeOrgPetition;
+    let fullText = `TÍTULO:\n${p.title}\n\nDESCRIÇÃO:\n${p.descriptionText}\n\n`;
+    p.demands.forEach((d) => {
+      fullText += `• ${d.title}: ${d.desc}\n`;
+    });
+    fullText += `\nAssine o abaixo-assinado: ${petition.signatureUrl}`;
+    navigator.clipboard.writeText(fullText);
+    setCopiedPetitionText(true);
+    setTimeout(() => setCopiedPetitionText(false), 2500);
+  };
+
   const handlePrintMinuta = () => {
     const printWindow = window.open('', '_blank');
     if (!printWindow) return;
@@ -90,28 +110,32 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
       <!DOCTYPE html>
       <html>
         <head>
-          <title>${draft.header} - Minuta de Projeto de Lei</title>
+          <title>${draft.header} - ${draft.title}</title>
           <style>
-            body { font-family: 'Times New Roman', serif; line-height: 1.6; margin: 40px; color: #111; font-size: 14pt; }
-            .header { text-align: center; font-weight: bold; margin-bottom: 20px; font-size: 16pt; }
-            .ementa { text-align: justify; margin-left: 40%; font-style: italic; margin-bottom: 30px; font-size: 12pt; }
-            .decree { font-weight: bold; margin-bottom: 20px; }
-            .chapter { font-weight: bold; margin-top: 25px; margin-bottom: 10px; text-transform: uppercase; }
+            body { font-family: 'Times New Roman', serif; line-height: 1.6; margin: 40px; color: #111; font-size: 13pt; }
+            .header { text-align: center; font-weight: bold; margin-bottom: 8px; font-size: 15pt; }
+            .title { text-align: center; font-weight: bold; margin-bottom: 20px; font-size: 12pt; text-transform: uppercase; }
+            .ementa { text-align: justify; margin-left: 35%; font-style: italic; margin-bottom: 30px; font-size: 11pt; border-left: 2px solid #ccc; padding-left: 12px; }
+            .decree { font-weight: bold; margin-bottom: 20px; text-align: center; }
+            .chapter { font-weight: bold; margin-top: 25px; margin-bottom: 10px; text-transform: uppercase; font-size: 12pt; }
             .article { margin-bottom: 12px; text-align: justify; text-indent: 2em; }
-            .item { margin-left: 3em; margin-bottom: 6px; }
+            .paragrafo { margin-bottom: 12px; text-align: justify; text-indent: 2em; }
+            .item { margin-left: 3em; margin-bottom: 6px; text-align: justify; }
             .justificativa { margin-top: 40px; border-top: 1px solid #999; padding-top: 20px; }
-            .justificativa h3 { text-align: center; font-size: 15pt; }
-            .justificativa p { text-indent: 2em; text-align: justify; }
+            .justificativa h3 { text-align: center; font-size: 14pt; }
+            .justificativa p { text-indent: 2em; text-align: justify; margin-bottom: 12px; }
           </style>
         </head>
         <body>
           <div class="header">${draft.header}</div>
-          <div class="ementa">${draft.ementa}</div>
+          <div class="title">TÍTULO: ${draft.title}</div>
+          <div class="ementa"><strong>Ementa:</strong> ${draft.ementa}</div>
           <div class="decree">${draft.decree}</div>
           ${draft.chapters.map(chap => `
             <div class="chapter">${chap.chapter}</div>
             ${chap.articles.map(art => `
               <div class="article"><strong>${art.article}</strong> ${art.text}</div>
+              ${art.paragrafoUnico ? `<div class="paragrafo">${art.paragrafoUnico}</div>` : ''}
               ${art.items ? art.items.map(it => `<div class="item">${it}</div>`).join('') : ''}
             `).join('')}
           `).join('')}
@@ -129,7 +153,7 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
   };
 
   // Social share URLs
-  const shareText = encodeURIComponent("Apoie a Lei do Canal Direto! Modernização da Defesa do Consumidor contra abusos no e-commerce e no comércio físico. Assine o abaixo-assinado:");
+  const shareText = encodeURIComponent("Apoie a Lei do Canal Direto e a Modernização do Consumidor.gov.br! Assine o abaixo-assinado contra desertos de atendimento e fraudes digitais:");
   const petitionUrl = encodeURIComponent(petition.signatureUrl);
   const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${petitionUrl}`;
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${petitionUrl}`;
@@ -166,7 +190,7 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
 
           <span className="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-[#dafbe1] text-[#1a7f37] border border-[#4ac26b]/30 font-mono flex items-center gap-1">
             <CheckCircle2 className="w-3 h-3" />
-            Abaixo-Assinado Ativo
+            Abaixo-Assinado Oficial Ativo
           </span>
 
           <span className="text-xs text-[#57606a] font-mono">
@@ -174,14 +198,19 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
           </span>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1f2328] wiki-serif tracking-tight leading-tight">
-          {petition.title}
-        </h1>
+        <div className="space-y-1.5">
+          <div className="text-xs sm:text-sm font-bold font-mono tracking-wider text-[#0969da] uppercase">
+            {petition.movementTitle}
+          </div>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#1f2328] wiki-serif tracking-tight leading-tight">
+            {petition.movementSubtitle}
+          </h1>
+        </div>
 
         <p className="text-sm sm:text-base text-[#424a53] leading-relaxed wiki-serif max-w-4xl">
-          Proposta legislativa e mobilização popular para a criação do <strong>Canal Único Integrado de Denúncias do Consumidor</strong>, 
-          estabelecendo triagem automatizada com Inteligência Artificial, prazo máximo improrrogável de 15 dias úteis para fiscalização e 
-          notificação imediata aos órgãos competentes (Senacon, PROCONs e Ministério Público).
+          Proposta legislativa de iniciativa popular e mobilização cidadã para a <strong>modernização estrutural do Consumidor.gov.br</strong> e 
+          criação da <strong>Lei do Canal Direto</strong>, unificando denúncias com autenticação Gov.br, combate cautelar a fraudes via Pix, 
+          eliminação de desertos de atendimento do PROCON e encaminhamento obrigatório ao Ministério Público e Defensoria/OAB.
         </p>
 
         {/* Autor e Órgãos Alvo */}
@@ -192,248 +221,92 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
           </div>
           <span className="hidden sm:inline text-[#d0d7de]">•</span>
           <div>
-            <strong className="text-[#1f2328]">Fundamentação: </strong>
+            <strong className="text-[#1f2328]">Fundamentação Constitucional: </strong>
             <span>Art. 5º, XXXII e Art. 170, V da CF/88</span>
+          </div>
+          <span className="hidden sm:inline text-[#d0d7de]">•</span>
+          <div>
+            <strong className="text-[#1f2328]">Ambiente: </strong>
+            <span>Consumidor.gov.br &amp; SNDC</span>
           </div>
         </div>
       </header>
 
       {/* ========================================================================= */}
-      {/* BLOCO 1: O ABAIXO-ASSINADO (AÇÃO RÁPIDA - DESTAQUE CHAMATIVO) */}
+      {/* SEÇÃO 1: MENSAGEM DO MOVIMENTO & A CAUSA */}
       {/* ========================================================================= */}
-      <section 
-        id="abaixo-assinado-destaque"
-        className="p-5 sm:p-7 rounded-lg bg-gradient-to-r from-[#0969da]/10 via-[#ffffff] to-[#dafbe1]/40 border-2 border-[#0969da]/40 shadow-sm space-y-5"
-      >
-        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#0969da]/20 pb-3">
+      <section id="mensagem-movimento" className="space-y-5">
+        <div className="border-b border-[#d0d7de] pb-2 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="p-1.5 rounded-full bg-[#0969da] text-white">
-              <Vote className="w-4 h-4" />
-            </span>
-            <span className="text-xs font-mono font-bold text-[#0969da] uppercase tracking-wider">
-              Ação Rápida de Cidadania • Apoie com sua Assinatura
-            </span>
+            <ShieldAlert className="w-5 h-5 text-[#cf222e]" />
+            <h2 className="text-xl sm:text-2xl font-bold text-[#1f2328] wiki-serif tracking-tight">
+              {petition.movementMessage.title}
+            </h2>
           </div>
-
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#dafbe1] text-[#1a7f37] border border-[#4ac26b]">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Petição Pública Oficial</span>
-          </span>
+          <span className="text-xs font-mono text-[#656d76]">[diagnóstico de urgência]</span>
         </div>
 
-        <div className="space-y-2">
-          <h2 className="text-xl sm:text-2xl font-bold text-[#1f2328] wiki-serif">
-            {petition.quickAction.title}
-          </h2>
+        {/* Por que precisamos dessa mudança urgente? */}
+        <div className="p-5 rounded-lg bg-[#ffffff] border border-[#d0d7de] shadow-2xs space-y-3">
+          <div className="flex items-center gap-2">
+            <ShoppingCart className="w-4 h-4 text-[#0969da]" />
+            <h3 className="text-base sm:text-lg font-bold text-[#1f2328] wiki-serif">
+              {petition.movementMessage.urgentQuestion}
+            </h3>
+          </div>
           <p className="text-xs sm:text-sm text-[#424a53] leading-relaxed wiki-serif">
-            "{petition.quickAction.shortText}"
+            {petition.movementMessage.urgentText}
           </p>
         </div>
 
-        {/* CTA Button & Social Share Toolbar */}
-        <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href={petition.signatureUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="btn-assinar-change-org"
-              className="grow sm:grow-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md text-sm font-bold text-white bg-[#1f883d] hover:bg-[#1a7f37] border border-[rgba(31,35,40,0.15)] shadow-sm transition-all hover:scale-[1.01]"
-            >
-              <FileText className="w-4 h-4" />
-              <span>Assinar o Abaixo-Assinado na Change.org</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-80" />
-            </a>
+        {/* 4 Gargalos Históricos */}
+        <div className="space-y-3">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-[#cf222e] flex items-center gap-1.5 font-mono">
+            <AlertTriangle className="w-3.5 h-3.5" />
+            <span>{petition.movementMessage.bottlenecksTitle}</span>
+          </h4>
 
-            <a
-              href={petition.whatsappShareUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="btn-apoiar-whatsapp"
-              className="grow sm:grow-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md text-xs sm:text-sm font-semibold text-white bg-[#0969da] hover:bg-[#085cc0] transition-colors shadow-2xs"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span>Apoiar no WhatsApp</span>
-            </a>
-          </div>
-
-          {/* Share Buttons */}
-          <div className="flex items-center gap-2 self-start sm:self-auto text-xs text-[#57606a]">
-            <span className="font-semibold text-[11px] hidden md:inline">Compartilhar:</span>
-            <a
-              href={twitterUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-[#1f2328] transition-colors"
-              title="Compartilhar no X (Twitter)"
-              aria-label="Compartilhar no X"
-            >
-              <span className="font-bold text-xs">𝕏</span>
-            </a>
-            <a
-              href={facebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-2 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-[#1f2328] font-bold text-xs transition-colors"
-              title="Compartilhar no Facebook"
-              aria-label="Compartilhar no Facebook"
-            >
-              f
-            </a>
-            <a
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-2 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-[#0969da] font-bold text-xs transition-colors"
-              title="Compartilhar no LinkedIn"
-              aria-label="Compartilhar no LinkedIn"
-            >
-              in
-            </a>
-            <button
-              type="button"
-              onClick={() => handleCopyLink(petition.signatureUrl, 'quick-action')}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-xs font-semibold text-[#1f2328] transition-colors cursor-pointer"
-              title="Copiar Link da Petição"
-            >
-              {copiedLink === 'quick-action' ? (
-                <Check className="w-3.5 h-3.5 text-[#1a7f37]" />
-              ) : (
-                <Copy className="w-3.5 h-3.5 text-[#656d76]" />
-              )}
-              <span>{copiedLink === 'quick-action' ? 'Copiado!' : 'Copiar Link'}</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* NOVO BLOCO CRUCIAL: A MIGRAÇÃO DO COMÉRCIO PARA A INTERNET E A URGÊNCIA */}
-      {/* ========================================================================= */}
-      <section id="impacto-ecommerce" className="space-y-4">
-        <div className="border-b border-[#d0d7de] pb-2 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <ShoppingCart className="w-5 h-5 text-[#0969da]" />
-            <h2 className="text-xl sm:text-2xl font-bold text-[#1f2328] wiki-serif tracking-tight">
-              {petition.ecommerceImpact.title}
-            </h2>
-          </div>
-          <span className="text-xs font-mono text-[#656d76]">[contexto digital]</span>
-        </div>
-
-        <p className="text-xs sm:text-sm text-[#424a53] leading-relaxed wiki-serif">
-          {petition.ecommerceImpact.subtitle}: A transição acelerada dos hábitos de consumo para o comércio eletrônico, 
-          marketplaces, redes sociais e bancos digitais transformou profundamente a natureza dos conflitos. Enquanto as transações 
-          são instantâneas, a resposta estatal permanece lenta e fragmentada.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-          {petition.ecommerceImpact.keyPillars.map((pillar, idx) => (
-            <div 
-              key={idx}
-              className="p-4 rounded-lg bg-[#ffffff] border border-[#d0d7de] hover:border-[#0969da]/50 shadow-2xs space-y-2 transition-all"
-            >
-              <div className="flex items-start gap-2.5">
-                <div className="p-2 rounded bg-[#ddf4ff] text-[#0969da] shrink-0 mt-0.5">
-                  {idx === 0 && <Globe className="w-4 h-4" />}
-                  {idx === 1 && <Bot className="w-4 h-4" />}
-                  {idx === 2 && <AlertTriangle className="w-4 h-4 text-[#cf222e]" />}
-                  {idx === 3 && <ShieldAlert className="w-4 h-4" />}
-                </div>
-                <div>
-                  <h3 className="font-bold text-xs sm:text-sm text-[#1f2328] leading-tight">
-                    {pillar.title}
-                  </h3>
-                </div>
-              </div>
-              <p className="text-xs text-[#57606a] leading-relaxed pl-9 wiki-serif">
-                {pillar.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* DETALHAMENTO DO PROBLEMA E DA JUSTIFICATIVA SOCIAL */}
-      {/* ========================================================================= */}
-      <section id="diagnostico-cenario" className="github-box overflow-hidden shadow-2xs border border-[#d0d7de] rounded-lg">
-        <div className="p-4 sm:p-5 github-header-bg border-b border-[#d0d7de] flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <ShieldAlert className="w-4 h-4 text-[#cf222e]" />
-            <h3 className="font-bold text-sm sm:text-base text-[#1f2328] wiki-serif">
-              Diagnóstico do Cenário e Ineficiências da Proteção ao Consumidor
-            </h3>
-          </div>
-          <span className="text-[11px] font-mono text-[#57606a]">
-            Art. 5º, XXXII da CF/88 &amp; SNDC/Senacon
-          </span>
-        </div>
-
-        <div className="p-4 sm:p-6 bg-white space-y-6 text-sm">
-          {/* Relato do Problema */}
-          <div className="space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#cf222e]">
-              O Problema Enfrentado pelo Cidadão
-            </h4>
-            <div className="p-4 rounded-md bg-[#fff8f8] border border-[#ffc1c0] text-[#1f2328] text-xs sm:text-sm leading-relaxed space-y-3">
-              {petition.problemText.split('\n\n').map((paragraph, pIdx) => (
-                <p key={pIdx} className="wiki-serif">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </div>
-
-          {/* 5 Eixos da Proposta */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0969da] flex items-center gap-1.5">
-              <Lightbulb className="w-3.5 h-3.5" />
-              <span>Eixos Estratégicos de Modernização Propostos</span>
-            </h4>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {petition.proposalPoints.map((point, ptIdx) => (
-                <div 
-                  key={ptIdx}
-                  className="p-3.5 rounded-md bg-[#f6f8fa] border border-[#d0d7de] space-y-1.5 hover:border-[#0969da]/40 transition-colors"
-                >
-                  <div className="flex items-start gap-2">
-                    <span className="w-5 h-5 rounded-full bg-[#ddf4ff] text-[#0969da] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
-                      {ptIdx + 1}
-                    </span>
-                    <h5 className="font-semibold text-xs sm:text-[13px] text-[#1f2328] leading-tight">
-                      {point.title}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {petition.movementMessage.bottlenecks.map((item, idx) => (
+              <div 
+                key={item.id}
+                className="p-4 rounded-lg bg-[#ffffff] border border-[#d0d7de] hover:border-[#cf222e]/40 shadow-2xs space-y-2 transition-all"
+              >
+                <div className="flex items-start gap-2.5">
+                  <div className="w-6 h-6 rounded-full bg-[#ffebe9] text-[#cf222e] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                    {idx + 1}
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-xs sm:text-sm text-[#1f2328] leading-tight">
+                      {item.title}
                     </h5>
                   </div>
-                  <p className="text-xs text-[#57606a] leading-relaxed pl-7">
-                    {point.desc}
-                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Chamamento */}
-          <div className="p-4 rounded-md bg-[#f0f9ff] border border-[#bae6fd] text-[#0c4a6e] text-xs sm:text-sm leading-relaxed space-y-2">
-            <div className="flex items-center gap-2 font-bold text-xs sm:text-sm text-[#0369a1]">
-              <Users className="w-4 h-4 shrink-0" />
-              <span>Construindo um Sistema Justo, Rápido e Transparente:</span>
-            </div>
-            {petition.closingMessage.split('\n\n').map((msg, mIdx) => (
-              <p key={mIdx} className="wiki-serif">
-                {msg}
-              </p>
+                <p className="text-xs text-[#57606a] leading-relaxed pl-8 wiki-serif">
+                  {item.desc}
+                </p>
+              </div>
             ))}
           </div>
         </div>
+
+        {/* Callout de Evolução do Consumidor.gov.br */}
+        <div className="p-4 sm:p-5 rounded-lg bg-gradient-to-r from-[#ddf4ff] via-[#f0f9ff] to-[#ffffff] border-l-4 border-l-[#0969da] border border-[#bae6fd] shadow-2xs space-y-2">
+          <div className="flex items-center gap-2 font-bold text-xs sm:text-sm text-[#0969da]">
+            <Sparkles className="w-4 h-4" />
+            <span>A Transformação do Consumidor.gov.br:</span>
+          </div>
+          <p className="text-xs sm:text-sm text-[#1f2328] leading-relaxed wiki-serif font-medium">
+            "{petition.movementMessage.evolutionCallout}"
+          </p>
+        </div>
       </section>
 
       {/* ========================================================================= */}
-      {/* BLOCO 2: A PROPOSTA LEGISLATIVA (A SOLUÇÃO - MINUTA DO PROJETO DE LEI) */}
+      {/* SEÇÃO 2: MINUTA COMPLETA DO PROJETO DE LEI */}
       {/* ========================================================================= */}
       <section 
-        id="minuta-projeto-de-lei"
+        id="minuta-completa-projeto-de-lei"
         className="github-box overflow-hidden shadow-2xs border border-[#d0d7de] rounded-lg"
       >
         {/* Accordion / Visualizer Header */}
@@ -445,7 +318,7 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-[10.5px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#ddf4ff] text-[#0969da] border border-[#54aeff]">
-                  Texto Legislativo Completo
+                  {petition.billDraft.sectionTitle}
                 </span>
                 <span className="text-xs text-[#57606a] font-mono">
                   Ano 2026
@@ -455,7 +328,7 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
                 {petition.billDraft.title}
               </h3>
               <p className="text-xs text-[#57606a] font-medium">
-                {petition.billDraft.subtitle}
+                {petition.billDraft.header}
               </p>
             </div>
           </div>
@@ -513,12 +386,16 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
                 {petition.billDraft.header}
               </h4>
               
-              <div className="max-w-xl ml-auto text-xs sm:text-sm italic text-[#424a53] text-justify leading-relaxed bg-[#f6f8fa] p-3 rounded border border-[#eaeef2]">
+              <div className="text-xs font-bold uppercase tracking-wider text-[#57606a] font-mono">
+                TÍTULO: {petition.billDraft.title}
+              </div>
+
+              <div className="max-w-2xl ml-auto text-xs sm:text-sm italic text-[#424a53] text-justify leading-relaxed bg-[#f6f8fa] p-3.5 rounded border border-[#eaeef2] mt-3">
                 <strong className="not-italic text-[#1f2328]">Ementa: </strong>
                 {petition.billDraft.ementa}
               </div>
 
-              <div className="pt-2 font-bold text-xs uppercase tracking-widest text-[#57606a]">
+              <div className="pt-3 font-bold text-xs uppercase tracking-widest text-[#1f2328]">
                 {petition.billDraft.decree}
               </div>
             </div>
@@ -531,7 +408,7 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
                     {chap.chapter}
                   </h5>
 
-                  <div className="space-y-2.5 pl-2 sm:pl-4">
+                  <div className="space-y-3 pl-2 sm:pl-4">
                     {chap.articles.map((art, aIdx) => (
                       <div key={aIdx} className="space-y-1.5">
                         <p className="leading-relaxed text-justify wiki-serif">
@@ -539,10 +416,17 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
                           {art.text}
                         </p>
 
+                        {art.paragrafoUnico && (
+                          <p className="leading-relaxed text-justify wiki-serif pl-4 text-[#424a53] italic">
+                            <strong className="not-italic font-mono text-[#1f2328]">Parágrafo único. </strong>
+                            {art.paragrafoUnico.replace('Parágrafo único. ', '')}
+                          </p>
+                        )}
+
                         {art.items && (
-                          <ul className="pl-4 sm:pl-6 space-y-1 text-xs text-[#424a53]">
+                          <ul className="pl-4 sm:pl-6 space-y-1.5 text-xs text-[#424a53]">
                             {art.items.map((it, itIdx) => (
-                              <li key={itIdx} className="leading-relaxed">
+                              <li key={itIdx} className="leading-relaxed text-justify wiki-serif">
                                 {it}
                               </li>
                             ))}
@@ -608,6 +492,166 @@ export const CivicCausePage: React.FC<CivicCausePageProps> = ({ onBackToHome }) 
 
           </div>
         )}
+      </section>
+
+      {/* ========================================================================= */}
+      {/* SEÇÃO 3: TEXTO PARA O ABAIXO-ASSINADO (CHANGE.ORG) */}
+      {/* ========================================================================= */}
+      <section 
+        id="texto-abaixo-assinado-change"
+        className="p-5 sm:p-7 rounded-lg bg-gradient-to-r from-[#0969da]/10 via-[#ffffff] to-[#dafbe1]/40 border-2 border-[#0969da]/40 shadow-sm space-y-6"
+      >
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#0969da]/20 pb-3">
+          <div className="flex items-center gap-2">
+            <span className="p-1.5 rounded-full bg-[#0969da] text-white">
+              <Vote className="w-4 h-4" />
+            </span>
+            <span className="text-xs font-mono font-bold text-[#0969da] uppercase tracking-wider">
+              {petition.changeOrgPetition.sectionTitle}
+            </span>
+          </div>
+
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#dafbe1] text-[#1a7f37] border border-[#4ac26b]">
+            <CheckCircle2 className="w-3.5 h-3.5" />
+            <span>Petição Pública Oficial</span>
+          </span>
+        </div>
+
+        {/* Título e Descrição da Petição */}
+        <div className="space-y-3">
+          <div>
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#57606a]">Título na Change.org:</span>
+            <h2 className="text-xl sm:text-2xl font-bold text-[#1f2328] wiki-serif mt-0.5">
+              {petition.changeOrgPetition.title}
+            </h2>
+          </div>
+
+          <div className="p-4 sm:p-5 rounded-lg bg-white border border-[#d0d7de] space-y-3">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#57606a]">Descrição do Abaixo-Assinado:</span>
+            <div className="text-xs sm:text-sm text-[#24292f] leading-relaxed space-y-3 wiki-serif">
+              {petition.changeOrgPetition.descriptionText.split('\n\n').map((par, pIdx) => (
+                <p key={pIdx}>
+                  {par}
+                </p>
+              ))}
+            </div>
+
+            {/* As 5 Exigências Estruturadas */}
+            <div className="pt-2 space-y-2">
+              <div className="font-bold text-xs uppercase text-[#0969da] font-mono">
+                Pilares Exigidos ao Ministério da Justiça, Senacon e Congresso Nacional:
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1">
+                {petition.changeOrgPetition.demands.map((dem, dIdx) => (
+                  <div key={dIdx} className="p-3 rounded-md bg-[#f6f8fa] border border-[#d0d7de] space-y-1">
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-[#1f2328]">
+                      <Check className="w-3.5 h-3.5 text-[#1a7f37] shrink-0" />
+                      <span>{dem.title}</span>
+                    </div>
+                    <p className="text-xs text-[#57606a] leading-relaxed pl-5 wiki-serif">
+                      {dem.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Button & Social Share Toolbar */}
+        <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href={petition.signatureUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              id="btn-assinar-change-org"
+              className="grow sm:grow-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md text-sm font-bold text-white bg-[#1f883d] hover:bg-[#1a7f37] border border-[rgba(31,35,40,0.15)] shadow-sm transition-all hover:scale-[1.01]"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Assinar Agora na Change.org</span>
+              <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+            </a>
+
+            <a
+              href={petition.whatsappShareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              id="btn-apoiar-whatsapp"
+              className="grow sm:grow-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md text-xs sm:text-sm font-semibold text-white bg-[#0969da] hover:bg-[#085cc0] transition-colors shadow-2xs"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Apoiar no WhatsApp</span>
+            </a>
+
+            <button
+              type="button"
+              onClick={handleCopyPetitionText}
+              className="grow sm:grow-0 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-md bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-xs font-semibold text-[#1f2328] transition-colors cursor-pointer"
+              title="Copiar texto da petição para compartilhar"
+            >
+              {copiedPetitionText ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-[#1a7f37]" />
+                  <span className="text-[#1a7f37]">Texto Copiado!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5 text-[#656d76]" />
+                  <span>Copiar Texto da Petição</span>
+                </>
+              )}
+            </button>
+          </div>
+
+          {/* Share Buttons */}
+          <div className="flex items-center gap-2 self-start sm:self-auto text-xs text-[#57606a]">
+            <span className="font-semibold text-[11px] hidden md:inline">Compartilhar:</span>
+            <a
+              href={twitterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-[#1f2328] transition-colors"
+              title="Compartilhar no X (Twitter)"
+              aria-label="Compartilhar no X"
+            >
+              <span className="font-bold text-xs">𝕏</span>
+            </a>
+            <a
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-[#1f2328] font-bold text-xs transition-colors"
+              title="Compartilhar no Facebook"
+              aria-label="Compartilhar no Facebook"
+            >
+              f
+            </a>
+            <a
+              href={linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-[#0969da] font-bold text-xs transition-colors"
+              title="Compartilhar no LinkedIn"
+              aria-label="Compartilhar no LinkedIn"
+            >
+              in
+            </a>
+            <button
+              type="button"
+              onClick={() => handleCopyLink(petition.signatureUrl, 'quick-action')}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-[#eaeef2] border border-[#d0d7de] text-xs font-semibold text-[#1f2328] transition-colors cursor-pointer"
+              title="Copiar Link da Petição"
+            >
+              {copiedLink === 'quick-action' ? (
+                <Check className="w-3.5 h-3.5 text-[#1a7f37]" />
+              ) : (
+                <Copy className="w-3.5 h-3.5 text-[#656d76]" />
+              )}
+              <span>{copiedLink === 'quick-action' ? 'Copiado!' : 'Copiar Link'}</span>
+            </button>
+          </div>
+        </div>
       </section>
 
       {/* ========================================================================= */}

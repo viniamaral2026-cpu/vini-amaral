@@ -132,18 +132,18 @@ export const PetitionModalPopup: React.FC<PetitionModalPopupProps> = ({
               </h3>
 
               <p className="text-xs sm:text-[13px] text-[#424a53] leading-relaxed wiki-serif bg-[#f6f8fa] p-3 rounded border border-[#eaeef2]">
-                "É frustrante ver empresas descumprindo leis enquanto a burocracia impede que os órgãos ajudem o cidadão. 
-                Propomos integração digital em tempo real, cooperação interinstitucional e capacitação para transformar a proteção ao consumidor no Brasil."
+                "Com a migração massiva do comércio para a internet, mais de 80% das cidades não têm PROCON e fraudes digitais se multiplicam. 
+                Exigimos a modernização do Consumidor.gov.br e a aprovação da Lei do Canal Direto."
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-[#57606a]">
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#1a7f37]" />
-                  <span>Plataforma digital em tempo real</span>
+                  <span>Acesso Gov.br &amp; Fim dos desertos PROCON</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#0969da]" />
-                  <span>Fim da burocracia e morosidade</span>
+                  <span>Combate a Golpes Pix &amp; Apoio OAB/Defensoria</span>
                 </div>
               </div>
 

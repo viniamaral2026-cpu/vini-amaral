@@ -5,14 +5,17 @@ import {
   MessageCircle, 
   Copy, 
   Check, 
-  ShieldAlert, 
   Scale, 
   FileText, 
   CheckCircle2, 
   ArrowRight,
   ShoppingCart,
-  Lightbulb,
-  FileCheck
+  FileCheck,
+  ShieldCheck,
+  Building,
+  Lock,
+  Cpu,
+  Share2
 } from 'lucide-react';
 import { PETITIONS_DATA } from '../data/portfolioData';
 
@@ -25,6 +28,7 @@ export const CivicPetitionsWiki: React.FC<CivicPetitionsWikiProps> = ({
 }) => {
   const [copiedLink, setCopiedLink] = useState(false);
   const petition = PETITIONS_DATA[0];
+  const hp = petition.homePetition;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(petition.signatureUrl);
@@ -56,20 +60,18 @@ export const CivicPetitionsWiki: React.FC<CivicPetitionsWikiProps> = ({
       </p>
 
       {/* ========================================================================= */}
-      {/* DESTAQUE PRINCIPAL: LEI DO CANAL DIRETO (AÇÃO RÁPIDA & ENCAMINHAMENTO) */}
+      {/* DESTAQUE PRINCIPAL: TEXTO DO ABAIXO-ASSINADO NA HOME */}
       {/* ========================================================================= */}
-      <div className="p-5 sm:p-6 rounded-lg bg-gradient-to-r from-[#0969da]/5 via-[#f6f8fa] to-[#dafbe1]/30 border-2 border-[#0969da]/30 shadow-xs space-y-4">
+      <div className="p-5 sm:p-7 rounded-lg bg-gradient-to-r from-[#0969da]/5 via-[#ffffff] to-[#dafbe1]/30 border-2 border-[#0969da]/30 shadow-xs space-y-6">
         
+        {/* Top Badges */}
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#d0d7de] pb-3">
           <div className="flex items-center gap-2 flex-wrap">
             <span className="p-1.5 rounded-full bg-[#0969da] text-white">
               <Vote className="w-4 h-4" />
             </span>
             <span className="text-xs font-mono font-bold text-[#0969da] uppercase tracking-wider">
-              Ação Rápida de Cidadania • Abaixo-Assinado
-            </span>
-            <span className="text-[11px] font-bold text-[#0969da] bg-[#ddf4ff] px-2 py-0.5 rounded font-mono border border-[#54aeff]/30">
-              Lei do Canal Direto
+              Ação Rápida de Cidadania • Abaixo-Assinado Oficial
             </span>
           </div>
 
@@ -79,57 +81,84 @@ export const CivicPetitionsWiki: React.FC<CivicPetitionsWikiProps> = ({
           </span>
         </div>
 
-        <div className="space-y-2">
-          <h3 className="text-lg sm:text-xl font-bold text-[#1f2328] wiki-serif">
-            {petition.quickAction.title}
+        {/* Título do Abaixo-Assinado */}
+        <div className="space-y-1">
+          <span className="text-xs font-mono font-bold text-[#57606a] uppercase tracking-wider">
+            Título do Abaixo-Assinado:
+          </span>
+          <h3 className="text-xl sm:text-2xl font-bold text-[#1f2328] wiki-serif leading-tight">
+            {hp.title}
           </h3>
-          <p className="text-xs sm:text-sm text-[#424a53] leading-relaxed wiki-serif">
-            "{petition.quickAction.shortText}"
-          </p>
         </div>
 
-        {/* Motivação Central: A Migração para a Internet */}
-        <div className="p-3.5 rounded-md bg-white border border-[#d0d7de] text-xs text-[#1f2328] space-y-1.5">
-          <div className="flex items-center gap-1.5 font-bold text-[#0969da]">
-            <ShoppingCart className="w-4 h-4" />
-            <span>A Urgência no Comércio Eletrônico &amp; Relações Digitais:</span>
+        {/* O problema */}
+        <div className="space-y-3">
+          <h4 className="text-sm sm:text-base font-bold text-[#cf222e] flex items-center gap-2 font-mono uppercase tracking-wider">
+            <span>{hp.problemHeading}</span>
+          </h4>
+
+          <div className="space-y-3 text-xs sm:text-sm text-[#24292f] leading-relaxed wiki-serif">
+            {hp.paragraphs.map((paragraph, pIdx) => (
+              <p key={pIdx} className="text-justify">
+                {paragraph}
+              </p>
+            ))}
           </div>
-          <p className="text-[#57606a] leading-relaxed wiki-serif">
-            Com a migração massiva do comércio para a internet (e-commerce, marketplaces, bancos digitais e aplicativos), as transações 
-            ocorrem em segundos, mas a resposta dos órgãos de defesa do consumidor ainda opera em prazos analógicos. A proposta institui 
-            o <strong>Canal Único Integrado</strong> com triagem por <strong>Inteligência Artificial</strong> e prazo de <strong>15 dias úteis</strong> para fiscalização.
-          </p>
         </div>
 
-        {/* 4 Eixos Resumidos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#1f2328] pt-1">
-          <div className="flex items-start gap-1.5 p-2 rounded bg-white/70 border border-[#eaeef2]">
-            <Check className="w-3.5 h-3.5 text-[#0969da] shrink-0 mt-0.5" />
-            <span>Canal Único Digital com Protocolo Nacional</span>
+        {/* Os 4 Pontos da Proposta */}
+        <div className="space-y-3 pt-1">
+          <div className="grid grid-cols-1 gap-3">
+            {hp.points.map((point) => (
+              <div 
+                key={point.num}
+                className="p-3.5 sm:p-4 rounded-lg bg-white border border-[#d0d7de] hover:border-[#0969da]/40 shadow-2xs space-y-1 transition-all"
+              >
+                <div className="flex items-start gap-2.5">
+                  <div className="w-6 h-6 rounded-full bg-[#ddf4ff] text-[#0969da] border border-[#54aeff]/30 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                    {point.num}
+                  </div>
+                  <div className="text-xs sm:text-sm leading-relaxed wiki-serif">
+                    <strong className="text-[#1f2328] font-bold">{point.bold}</strong>, {point.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="flex items-start gap-1.5 p-2 rounded bg-white/70 border border-[#eaeef2]">
-            <Check className="w-3.5 h-3.5 text-[#0969da] shrink-0 mt-0.5" />
-            <span>Triagem e Categorização Automatizada por IA</span>
-          </div>
-          <div className="flex items-start gap-1.5 p-2 rounded bg-white/70 border border-[#eaeef2]">
-            <Check className="w-3.5 h-3.5 text-[#0969da] shrink-0 mt-0.5" />
-            <span>Prazo de 15 Dias Úteis para Início de Apuração</span>
-          </div>
-          <div className="flex items-start gap-1.5 p-2 rounded bg-white/70 border border-[#eaeef2]">
-            <Check className="w-3.5 h-3.5 text-[#0969da] shrink-0 mt-0.5" />
-            <span>Combate a Fraudes Digitais &amp; Educação ao Consumidor</span>
+        </div>
+
+        {/* Objetivo & Call to Action */}
+        <div className="space-y-3 pt-2">
+          <p className="text-xs sm:text-sm text-[#24292f] leading-relaxed wiki-serif text-justify font-medium">
+            {hp.objective}
+          </p>
+
+          <div className="p-4 rounded-lg bg-[#ddf4ff]/50 border-l-4 border-l-[#0969da] border border-[#bae6fd] text-xs sm:text-sm text-[#1f2328] leading-relaxed wiki-serif">
+            <strong>Participe: </strong>{hp.callToAction}
           </div>
         </div>
 
         {/* Action Buttons Toolbar */}
-        <div className="pt-3 border-t border-[#d0d7de] flex flex-wrap items-center justify-between gap-3">
+        <div className="pt-4 border-t border-[#d0d7de] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2.5">
+            <a
+              href={petition.signatureUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              id="btn-assinar-home"
+              className="grow sm:grow-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md bg-[#1f883d] hover:bg-[#1a7f37] text-white text-xs sm:text-sm font-bold shadow-2xs transition-colors"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Assinar no Change.org</span>
+              <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+            </a>
+
             {onNavigateToCivicCause && (
               <button
                 type="button"
                 onClick={onNavigateToCivicCause}
                 id="btn-ver-minuta-completa"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-[#0969da] hover:bg-[#085cc0] text-white text-xs sm:text-sm font-semibold shadow-2xs transition-colors cursor-pointer"
+                className="grow sm:grow-0 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-[#0969da] hover:bg-[#085cc0] text-white text-xs sm:text-sm font-semibold shadow-2xs transition-colors cursor-pointer"
               >
                 <FileCheck className="w-4 h-4" />
                 <span>Ver Minuta Completa &amp; Proposta Legislativa</span>
@@ -138,22 +167,10 @@ export const CivicPetitionsWiki: React.FC<CivicPetitionsWikiProps> = ({
             )}
 
             <a
-              href={petition.signatureUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              id="btn-assinar-home"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-md bg-[#1f883d] hover:bg-[#1a7f37] text-white text-xs sm:text-sm font-bold shadow-2xs transition-colors"
-            >
-              <FileText className="w-3.5 h-3.5" />
-              <span>Assinar no Change.org</span>
-              <ExternalLink className="w-3 h-3 opacity-80" />
-            </a>
-
-            <a
               href={petition.whatsappShareUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-md border border-[#d0d7de] bg-white hover:bg-[#f6f8fa] text-[#1f2328] text-xs font-semibold shadow-2xs transition-colors"
+              className="grow sm:grow-0 inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-md border border-[#d0d7de] bg-white hover:bg-[#f6f8fa] text-[#1f2328] text-xs font-semibold shadow-2xs transition-colors"
             >
               <MessageCircle className="w-3.5 h-3.5 text-[#1a7f37]" />
               <span>Apoiar no WhatsApp</span>
@@ -163,7 +180,7 @@ export const CivicPetitionsWiki: React.FC<CivicPetitionsWikiProps> = ({
           <button
             type="button"
             onClick={handleCopyLink}
-            className="inline-flex items-center gap-1 text-xs text-[#57606a] hover:text-[#0969da] px-2.5 py-1.5 rounded hover:bg-white transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-1.5 text-xs text-[#57606a] hover:text-[#0969da] px-3 py-2 rounded bg-white hover:bg-[#f6f8fa] border border-[#d0d7de] transition-colors cursor-pointer"
             title="Copiar link do abaixo-assinado"
           >
             {copiedLink ? (
@@ -174,7 +191,7 @@ export const CivicPetitionsWiki: React.FC<CivicPetitionsWikiProps> = ({
             ) : (
               <>
                 <Copy className="w-3.5 h-3.5 text-[#656d76]" />
-                <span>Copiar Link da Petição</span>
+                <span>Copiar Link (c.org)</span>
               </>
             )}
           </button>

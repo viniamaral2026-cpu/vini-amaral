@@ -338,167 +338,198 @@ export const PROJECTS_DATA: ProjectItem[] = [
 export const PETITIONS_DATA = [
   {
     id: "reforma-defesa-consumidor",
-    title: "Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)",
-    tagline: "Modernização tecnológica, transparência e agilidade na resolução de conflitos de consumo no Brasil",
+    movementTitle: "MOVIMENTO PELA REFORMA DA PROTEÇÃO AO CONSUMIDOR",
+    movementSubtitle: "Pela Modernização do Consumidor.gov.br e Criação da Lei do Canal Direto",
+    title: "Reformule a proteção ao consumidor com a Lei do Canal Direto",
+    tagline: "Modernização do Consumidor.gov.br, canal único integrado, combate a golpes digitais e acionamento automático de órgãos fiscalizadores",
     category: "Iniciativa Cidadã / Abaixo-Assinado & Projeto de Lei",
     status: "Petição Pública Ativa",
-    signatureUrl: "https://c.org/6j7TF9ktMT",
+    signatureUrl: "https://c.org/msCH4p6sSH",
     whatsappShareUrl: "https://c.org/hMV6T2Q8DH",
     targetEntities: [
       "Ministério da Justiça e Segurança Pública",
       "Secretaria Nacional do Consumidor (Senacon)",
-      "Assembleias Legislativas Estaduais",
-      "Câmara dos Deputados e Senado Federal",
-      "PROCONs e Ministério Público"
+      "Congresso Nacional (Câmara dos Deputados e Senado Federal)",
+      "PROCONs Estaduais e Municipais",
+      "Ministério Público Estadual e Federal",
+      "Banco Central do Brasil e Forças de Segurança"
     ],
+    homePetition: {
+      title: "Reformule a proteção ao consumidor com a Lei do Canal Direto",
+      problemHeading: "O problema",
+      paragraphs: [
+        "Por anos, trabalhei como profissional de tecnologia da informação e soluções financeiras, acompanhando as profundas transformações no comércio brasileiro. O que presenciei foi uma mudança irreversível: milhares de lojas físicas fecharam suas portas, e o comércio digital se tornou a nova norma. No entanto, juntamente com essa modernização veio uma preocupação crescente com a segurança e a proteção dos consumidores no ambiente online.",
+        "A realidade é alarmante e deveria merecer atenção urgente: mais de 80% dos municípios brasileiros carecem de PROCONs, deixando milhões de consumidores sem acesso a um sistema eficaz de defesa contra cobranças indevidas, fraudes via Pix e falhas em entregas de compras online. Hoje, como muitos outros brasileiros, sinto de perto a frustração e impotência de não ter a quem recorrer quando os problemas surgem.",
+        "Portanto, proponho a criação da \"Lei do Canal Direto\", uma lei que visa modernizar a proteção ao consumidor brasileiro e adaptá-la aos novos tempos. Esta legislação deve contemplar a criação de canais digitais eficazes e acessíveis, onde os consumidores possam relatar problemas e obter soluções rápidas e eficientes. A Lei do Canal Direto idealmente incluirá:"
+      ],
+      points: [
+        {
+          num: 1,
+          bold: "Estabelecimento de um sistema de reclamação e resolução digital",
+          desc: "onde consumidores possam registrar queixas rapidamente e acompanhar seu andamento de maneira transparente."
+        },
+        {
+          num: 2,
+          bold: "Fortalecimento e ampliação da rede de PROCONs",
+          desc: "Cada município deve ter estabelecimentos especializados onde os cidadãos possam buscar apoio, seja presencial ou virtualmente."
+        },
+        {
+          num: 3,
+          bold: "Implementação de medidas rigorosas de segurança nas transações online e fiscalização contínua",
+          desc: "para proteger os dados sensíveis dos consumidores e garantir a integridade das transações econômicas."
+        },
+        {
+          num: 4,
+          bold: "Parcerias com empresas de tecnologia",
+          desc: "para desenvolver ferramentas de monitoramento e proteção que ajudem na identificação e mitigação de práticas fraudulentas em tempo real."
+        }
+      ],
+      objective: "Nosso objetivo com essa legislação é assegurar que nenhum brasileiro sinta-se desamparado ou impotente frente aos desafios do comércio digital. É fundamental que o Estado acompanhe a evolução tecnológica e assegure que os direitos dos consumidores não sejam violados.",
+      callToAction: "Junte-se a nós nesta luta por uma proteção ao consumidor moderna, eficaz e inclusiva, que reflita as necessidades da sociedade atual. Assine e compartilhe esta petição para que possamos levar nossa voz às instâncias necessárias e fazer a diferença."
+    },
     quickAction: {
-      title: "Apoie a Lei da Modernização e Transparência na Proteção ao Consumidor",
-      shortText: "A burocracia e os canais obsoletos não podem impedir a defesa do cidadão. Com a migração massiva do comércio para a internet, a Lei do Canal Direto é indispensável para combater fraudes, abusos digitais e a lentidão dos órgãos de fiscalização.",
+      title: "Reformule a proteção ao consumidor com a Lei do Canal Direto",
+      shortText: "Mais de 80% dos municípios carecem de PROCONs e golpes digitais se multiplicam. A Lei do Canal Direto moderniza a defesa do consumidor com resolução digital rápida, fiscalização contínua e combate a fraudes.",
       ctaLabel: "Assinar o Abaixo-Assinado na Change.org"
     },
-    ecommerceImpact: {
-      title: "A Migração Massiva do Comércio para a Internet e a Urgência da Lei",
-      subtitle: "Por que as relações de consumo digitais exigem um novo marco de celeridade e tecnologia",
-      keyPillars: [
+    movementMessage: {
+      title: "1. MENSAGEM DO MOVIMENTO & A CAUSA",
+      urgentQuestion: "Por que precisamos dessa mudança urgente?",
+      urgentText: "Com a migração massiva do comércio brasileiro para o ambiente digital, presenciamos o fechamento de diversas lojas físicas e a explosão de compras via internet. No entanto, o atendimento ao consumidor e os mecanismos de fiscalização ficaram parados no tempo.",
+      bottlenecksTitle: "Hoje, o Código de Defesa do Consumidor enfrenta gargalos históricos na sua aplicação prática:",
+      bottlenecks: [
         {
-          title: "Explosão do E-commerce e Transações em Tempo Real",
-          desc: "As compras online, marketplaces, aplicativos de delivery e serviços financeiros digitais ocorrem em frações de segundos, movimentando bilhões de reais diariamente. No entanto, o sistema tradicional de atendimento ao consumidor ainda opera sob lógicas analógicas e prazos incompatíveis com a velocidade da economia digital."
+          id: "desertos",
+          title: "Desertos de Atendimento",
+          desc: "Mais de 80% dos municípios brasileiros não possuem unidades físicas do PROCON."
         },
         {
-          title: "Atendimento Algorítmico e Desumanização do Suporte",
-          desc: "Consumidores enfrentam 'labirintos de robôs' e chatbots programados para retardar cancelamentos, trocas e estornos. A falta de um canal público direto de notificação imediata permite que fornecedores infratores ignorem reclamações sem qualquer consequência prática imediata."
+          id: "criterio",
+          title: "Critério Subjetivo de Mérito",
+          desc: "Diante da falta de estrutura, órgãos locais priorizam determinados casos, deixando pequenos abusos e prejuízos diários do cidadão sem a devida apuração."
         },
         {
-          title: "Golpes Digitais, Lojas Fantasmas e Publicidade Abusiva",
-          desc: "A proliferação de anúncios fraudulentos em redes sociais, vazamentos de dados, cobranças indevidas automáticas e empresas de fachada exige triagem automatizada com Inteligência Artificial capaz de cruzar dados e acionar órgãos fiscalizadores em até 15 dias úteis."
+          id: "golpes",
+          title: "Aumento de Golpes Financeiros",
+          desc: "Fraudes via Pix, compras em sites falsos e clonagens dependem de investigações policiais que priorizam crimes graves, deixando fraudes em massa sem resolução ou bloqueio cautelar ágil."
         },
         {
-          title: "Vulnerabilidade Ampliada do Cidadão",
-          desc: "Idosos, famílias e cidadãos comuns perdem recursos essenciais em fraudes eletrônicas e compras não entregues, ficando desamparados diante de órgãos regionais desarticulados e desprovidos de ferramentas tecnológicas centralizadas."
+          id: "integracao",
+          title: "Ausência de Integração Reais",
+          desc: "O cidadão precisa pular de órgão em órgão (PROCON, Polícia, Banco Central, Justiça) sem que os sistemas conversem entre si."
+        }
+      ],
+      evolutionCallout: "O Consumidor.gov.br precisa evoluir. A plataforma não pode ser apenas um canal de mediação voluntária entre empresas e clientes: ela precisa se tornar a central pública unificada de denúncias, fiscalização e reparação ao cidadão."
+    },
+    changeOrgPetition: {
+      sectionTitle: "3. TEXTO PARA O ABAIXO-ASSINADO (CHANGE.ORG)",
+      title: "Reformar o Consumidor.gov.br e criar a Lei do Canal Direto para proteção do consumidor",
+      descriptionText: `O comércio migrou para a internet, mas a proteção ao consumidor continua presa à burocracia do papel. Lojas físicas estão fechando, o e-commerce cresce diariamente e os golpes digitais via Pix e sites falsos se multiplicam sem que o cidadão tenha um atendimento ágil e eficiente.
+
+Atualmente, mais de 80% das cidades brasileiras nem sequer possuem uma unidade física do PROCON. Quando o cidadão tenta denunciar, enfrenta um labirinto burocrático e prazos longos, enquanto abusos continuam impunes.
+
+Precisamos mudar essa realidade!
+
+Exigimos que o Ministério da Justiça, a Senacon e o Congresso Nacional aprovem a Lei do Canal Direto para reformar e expandir o Consumidor.gov.br:`,
+      demands: [
+        {
+          title: "Acesso Unificado via Gov.br",
+          desc: "Validação segura, sem cadastros falsos e com consentimento da Lei Geral de Proteção de Dados (LGPD)."
+        },
+        {
+          title: "Combate Imediato a Golpes via Pix",
+          desc: "Integração direta com bancos, Polícia e Banco Central para bloqueio de contas e devolução de valores."
+        },
+        {
+          title: "Acionamento Automático do PROCON e Ministério Público",
+          desc: "O fim da triagem por 'conveniência', garantindo o mesmo direito ao morador da grande capital e do pequeno município."
+        },
+        {
+          title: "Encaminhamento para OAB e Defensoria Pública",
+          desc: "Suporte jurídico ao cidadão para buscar a reparação justa por danos materiais e morais."
+        },
+        {
+          title: "Transparência Obrigatória",
+          desc: "Divulgação mensal do índice de solução e do tempo de resposta de cada órgão público."
         }
       ]
     },
-    problemTitle: "O Problema no Cenário Atual",
-    problemText: `Já passei por situações de desrespeito ao consumidor em que, ao tentar denunciar, não obtive retorno ágil. É frustrante ver empresas descumprindo leis enquanto a burocracia impede que os órgãos de fiscalização ajudem o cidadão no momento em que ele mais precisa. Esta não é apenas a minha realidade, mas a de milhões de brasileiros que se veem impotentes diante de abusos de consumo, sem uma resposta eficiente, transparente e justa dos órgãos responsáveis.
-
-A proteção dos direitos do consumidor é garantida pelo artigo 5º, inciso XXXII, da Constituição Federal, mas, na prática, vemos que os processos são frequentemente engessados por burocracia e pela ineficiência dos sistemas analógicos de resolução de conflitos. 
-
-Com a migração acelerada do varejo e dos serviços para a internet, onde milhões de transações ocorrem instantaneamente a cada segundo, a distância entre a velocidade do comércio eletrônico e a lentidão dos órgãos de defesa do consumidor tornou-se insustentável. Conforme o Relatório de Atividades do Sistema Nacional de Defesa do Consumidor (SNDC/Senacon), milhares de casos permanecem sem solução por meses, gerando sensação de impunidade para grandes conglomerados e plataformas digitais. Precisamos modernizar esse sistema com tecnologia, inteligência de dados e integração nacional com urgência.`,
-    proposalTitle: "Propostas de Reforma e Transformação Digital",
-    proposalPoints: [
-      {
-        title: "Cooperação Interinstitucional Integrada",
-        desc: "Cooperação formal entre o Ministério da Justiça e Segurança Pública, a Senacon, os PROCONs estaduais/municipais e as Assembleias Legislativas para reformular, desburocratizar e agilizar os procedimentos de fiscalização e aplicação de penalidades."
-      },
-      {
-        title: "Canal Único Digital com Triagem por Inteligência Artificial",
-        desc: "Desenvolvimento de plataforma digital pública integrada com rastreamento de denúncias em tempo real, inteligência de triagem automática para categorizar ilícitos digitais e acionamento instantâneo aos órgãos fiscalizadores competentes."
-      },
-      {
-        title: "Prazos Máximos de 15 Dias Úteis para Apuração",
-        desc: "Fixação em lei de prazo improrrogável para início de averiguação formal em casos envolvendo risco à saúde, segurança ou prejuízos patrimoniais coletivos decorrentes do comércio físico ou eletrônico."
-      },
-      {
-        title: "Campanhas Educativas Massivas e Combate a Fraudes Digitais",
-        desc: "Investimento em campanhas educativas de alcance nacional para orientar a população sobre seus direitos nas compras virtuais, prevenção contra golpes digitais e uso correto dos canais públicos de denúncia."
-      },
-      {
-        title: "Formação e Capacitação Tecnológica Contínua",
-        desc: "Capacitação contínua e atualização técnica para servidores e agentes públicos dos órgãos de defesa do consumidor, preparando-os para investigar infrações complexas no ambiente do comércio eletrônico."
-      }
-    ],
     billDraft: {
-      title: "Minuta do Projeto de Lei",
-      subtitle: "Lei da Modernização e Transparência na Proteção ao Consumidor (Lei do Canal Direto)",
+      sectionTitle: "2. MINUTA COMPLETA DO PROJETO DE LEI",
       header: "MINUTA DE PROJETO DE LEI Nº ____, DE 2026",
-      ementa: "Dispõe sobre a modernização e a transparência no Sistema Nacional de Defesa do Consumidor (Lei do Canal Direto), cria o Canal Único Integrado de Denúncias do Consumidor, estabelece diretrizes para o acionamento automático e tempestivo dos órgãos de fiscalização e controle no comércio físico e eletrônico, e dá outras providências.",
+      title: "Lei da Modernização da Proteção ao Consumidor e Expansão do Consumidor.gov.br (Lei do Canal Direto)",
+      subtitle: "Lei da Modernização da Proteção ao Consumidor e Expansão do Consumidor.gov.br (Lei do Canal Direto)",
+      ementa: "Reformula o Sistema Nacional de Defesa do Consumidor (SNDC), expande as atribuições e funcionalidades da plataforma Consumidor.gov.br, institui o acionamento automático de órgãos fiscalizadores, estabelece o módulo de combate a fraudes digitais e dá outras providências.",
       decree: "O CONGRESSO NACIONAL decreta:",
       chapters: [
         {
-          chapter: "CAPÍTULO I – DAS DISPOSIÇÕES PRELIMINARES",
+          chapter: "CAPÍTULO I – DAS DISPOSIÇÕES PRELIMINARES E AUTENTICAÇÃO",
           articles: [
             {
               article: "Art. 1º",
-              text: "Esta Lei altera e complementa a legislação do Sistema Nacional de Defesa do Consumidor (SNDC), com o objetivo de garantir celeridade, eficiência, transparência e uso intensivo de tecnologia no atendimento, na triagem e no encaminhamento de denúncias e reclamações de consumidores em todo o território nacional, com especial ênfase nas relações de consumo praticadas no comércio eletrônico e nas plataformas digitais."
+              text: "Esta Lei reformula o Sistema Nacional de Defesa do Consumidor (SNDC) e estabelece a obrigatoriedade do aprimoramento e expansão da plataforma pública Consumidor.gov.br como o Canal Único Integrado de Atendimento, Denúncias, Fiscalização e Encaminhamento de Relações de Consumo no Brasil."
+            },
+            {
+              article: "Art. 2º",
+              text: "O acesso e a validação de identidade dos usuários na plataforma serão realizados exclusivamente mediante autenticação unificada pela Plataforma Gov.br, nos termos da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018).",
+              paragrafoUnico: "Parágrafo único. Mediante o consentimento expresso do consumidor, a plataforma utilizará a assinatura eletrônica avançada do Gov.br para a validação automática de termos de denúncia, autorizações de compartilhamento de provas e instrução de processos."
             }
           ]
         },
         {
-          chapter: "CAPÍTULO II – DO CANAL ÚNICO INTEGRADO DE DENÚNCIAS",
+          chapter: "CAPÍTULO II – DAS NOVAS FUNCIONALIDADES OBRIGATÓRIAS DO CONSUMIDOR.GOV.BR",
           articles: [
             {
-              article: "Art. 2º",
-              text: "Fica instituído o Canal Único Integrado de Denúncias do Consumidor, plataforma digital pública centralizada, sob a coordenação da Secretaria Nacional do Consumidor (Senacon), integrada aos PROCONs estaduais e municipais, Ministério Público e Agências Reguladoras."
-            },
-            {
               article: "Art. 3º",
-              text: "A plataforma terá as seguintes funcionalidades obrigatórias:",
+              text: "A plataforma Consumidor.gov.br passa a integrar obrigatoriamente os seguintes módulos e protocolos operacionais:",
               items: [
-                "I – Registro simplificado, intuitivo e acompanhamento em tempo real das denúncias pelos cidadãos através de protocolo único nacional;",
-                "II – Triagem automatizada por inteligência artificial e categorização ágil de ilícitos de consumo, detectando reincidências e fraudes sistemáticas em plataformas de e-commerce e marketplaces;",
-                "III – Envio imediato e simultâneo das denúncias aos órgãos competentes (PROCONs regionais, Vigilância Sanitária, Agências Reguladoras, Defensoria Pública e Ministério Público);",
-                "IV – Painel público de transparência (Dashboard Aberto), exibindo indicadores de tempo de resposta das empresas fornecedoras e dos órgãos fiscalizadores públicos."
+                "I – Triagem Automatizada por Inteligência Artificial: Análise inicial, classificação de infrações e identificação imediata de práticas abusivas e fraudes em massa recorrentes;",
+                "II – Módulo de Emergência para Golpes e Fraudes Financeiras Digitais: Integração automatizada com o Banco Central do Brasil, instituições financeiras e delegacias especializadas para fins de acionamento do Mecanismo Especial de Devolução (MED do Pix), bloqueio cautelar e registro de ocorrência em golpes bancários;",
+                "III – Acionamento Direto e Simultâneo de Órgãos de Fiscalização: O registro da denúncia munido de provas preliminares gerará notificação fiscalizatória automática ao PROCON da jurisdição, à Vigilância Sanitária ou às Agências Reguladoras pertinentes;",
+                "IV – Encaminhamento Automatizado ao Ministério Público: Notificação direta aos Ministérios Públicos Estaduais e Federal em casos de reincidência sistêmica, prejuízos coletivos ou crimes de estelionato digital em escala;",
+                "V – Orientação e Encaminhamento para Assistência Jurídica: Nos casos de infrutífera conciliação ou de alta complexidade, o sistema oferecerá ao usuário o direcionamento direto para a Defensoria Pública, Juizados Especiais Cíveis ou cadastros de assistência mantidos via convênio com a Ordem dos Advogados do Brasil (OAB);",
+                "VI – Pleito de Reparação Integral: Os canais de atendimento orientarão o consumidor sobre a reparação integral dos danos sofridos, englobando a restituição de valores, substituição de produtos e o direito à indenização por danos materiais e morais."
               ]
             }
           ]
         },
         {
-          chapter: "CAPÍTULO III – DA INTEGRAÇÃO E AGILIDADE NAS FISCALIZAÇÕES",
+          chapter: "CAPÍTULO III – DA TRANSPARÊNCIA E PRESTAÇÃO DE CONTAS PÚBLICAS",
           articles: [
             {
               article: "Art. 4º",
-              text: "O recebimento da denúncia pelo Canal Único implicará o acionamento direto do PROCON e demais órgãos fiscalizadores da jurisdição onde ocorreu o fato ou do domicílio do consumidor lesado."
-            },
+              text: "Fica instituída a obrigatoriedade de publicação mensal de relatórios em formato de dados abertos por parte dos órgãos integrados à plataforma, contendo obrigatoriamente:",
+              items: [
+                "a) Quantidade de denúncias recebidas por setor econômico, empresa e região;",
+                "b) Índice percentual de resolutividade efetiva;",
+                "c) Tempo médio de resposta e fiscalização;",
+                "d) Avaliação do nível de satisfação do atendimento, preenchida diretamente pelo consumidor após o encerramento da demanda."
+              ]
+            }
+          ]
+        },
+        {
+          chapter: "CAPÍTULO IV – DAS DISPOSIÇÕES FINAIS",
+          articles: [
             {
               article: "Art. 5º",
-              text: "Fica estabelecido o prazo máximo de 15 (quinze) dias úteis para que os órgãos fiscalizadores emitam parecer inicial ou iniciem formalmente a apuração sobre denúncias que configurem risco iminente à saúde, à segurança ou ao patrimônio individual e coletivo dos consumidores no comércio tradicional ou digital."
-            }
-          ]
-        },
-        {
-          chapter: "CAPÍTULO IV – DA CAPACITAÇÃO E EDUCAÇÃO AO CONSUMIDOR DIGITAL",
-          articles: [
+              text: "O Poder Executivo regulamentará os protocolos de integração técnica entre a plataforma Consumidor.gov.br, as instituições financeiras, as forças de segurança pública e os órgãos do SNDC no prazo de 120 (cento e vinte) dias."
+            },
             {
               article: "Art. 6º",
-              text: "O Poder Público promoverá campanhas permanentes de conscientização sobre os direitos do consumidor, prevenção contra golpes virtuais, boas práticas no comércio eletrônico e uso correto dos meios de denúncia digital."
-            },
-            {
-              article: "Art. 7º",
-              text: "Fica instituído o Programa de Capacitação Contínua para servidores, conciliadores e agentes que atuam na fiscalização e proteção dos direitos do consumidor, com ênfase em crimes cibernéticos e direito do consumidor digital."
-            }
-          ]
-        },
-        {
-          chapter: "CAPÍTULO V – DAS DISPOSIÇÕES FINAIS",
-          articles: [
-            {
-              article: "Art. 8º",
-              text: "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário, incentivando-se o aproveitamento e integração dos sistemas digitais já existentes."
-            },
-            {
-              article: "Art. 9º",
               text: "Esta Lei entra em vigor após decorridos 180 (cento e oitenta) dias de sua publicação oficial."
             }
           ]
         }
       ],
-      justificativa: `O presente Projeto de Lei atende a uma demanda urgente e inadiável da sociedade brasileira por um sistema de defesa do consumidor moderno, ágil, interoperável e dotado de tecnologia de ponta. 
+      justificativa: `O presente Projeto de Lei atende a uma demanda urgente e inadiável da sociedade brasileira pela modernização estrutural da plataforma pública Consumidor.gov.br e do Sistema Nacional de Defesa do Consumidor (SNDC).
 
-Historicamente, os processos administrativos e a falta de integração em tempo real entre os órgãos de fiscalização geram morosidade extrema, deixando o cidadão sem respostas tempestivas diante de abusos cometidos por fornecedores de produtos e prestadores de serviços.
+Com a migração massiva do comércio brasileiro para o ambiente digital, presenciamos o fechamento de diversas lojas físicas e a explosão de compras via internet. No entanto, o atendimento ao consumidor e os mecanismos de fiscalização ficaram parados no tempo.
 
-Esse cenário tornou-se crítico com a migração massiva do comércio e dos serviços para o ambiente da internet (e-commerce, plataformas de intermediação, redes sociais, aplicativos de delivery e bancos digitais). Hoje, transações financeiras e contratações de serviços ocorrem em segundos, enquanto a resposta dos órgãos fiscalizadores consome semanas ou meses. Essa assimetria temporal alimenta o sentimento de impunidade dos maus fornecedores e deixa milhões de consumidores lesados por cancelamentos unilaterais, recusas de estorno, publicidades enganosas e golpes virtuais.
+Hoje, o Código de Defesa do Consumidor enfrenta gargalos históricos na sua aplicação prática: mais de 80% dos municípios brasileiros não possuem unidades físicas do PROCON; órgãos locais operam sob critérios subjetivos de mérito devido à falta de estrutura; e fraudes digitais em massa via Pix e compras em sites falsos carecem de respostas cautelares imediatas.
 
-Com o avanço das tecnologias de informação, inteligência artificial e interoperabilidade de dados, é indispensável a criação de um canal digital único e integrado que permita ao cidadão registrar sua denúncia de forma simplificada e acionar automaticamente os órgãos competentes com protocolo nacional unificado.
-
-A medida garante transparência pública absoluta, otimiza o emprego dos recursos estatais e confere eficácia prática ao mandamento constitucional estabelecido no artigo 5º, inciso XXXII, e no artigo 170, inciso V, da Constituição Federal.
-
-Pelas razões expostas, contamos com a mobilização da sociedade civil e com o apoio dos ilustres parlamentares para a aprovação e célere tramitação desta indispensável proposta legislativa.`
-    },
-    closingMessage: `Esta reforma não é apenas necessária, é um direito de todos nós. Com o crescimento veloz do comércio eletrônico e das transações digitais, a proteção do consumidor não pode mais depender de processos morosos e desconectados.
-
-Ao unir esforços entre a sociedade civil organizada, cidadãos conscientes e o poder público, podemos construir uma proteção ao consumidor verdadeiramente moderna, célere e acessível para todos os brasileiros.
-
-Assine este abaixo-assinado na Change.org, compartilhe com seus amigos e familiares no WhatsApp e ajude a transformar a defesa do consumidor no Brasil!`
+A plataforma Consumidor.gov.br não pode ser apenas um canal de mediação voluntária entre empresas e clientes: ela precisa se tornar a central pública unificada de denúncias, fiscalização e reparação ao cidadão, dotada de autenticação unificada via Gov.br, triagem inteligente com IA, acionamento direto de órgãos fiscalizadores, integração com o Banco Central e Ministério Público, e garantia de transparência pública em formato de dados abertos.`
+    }
   }
 ];
 
