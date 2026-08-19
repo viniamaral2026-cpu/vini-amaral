@@ -43,6 +43,7 @@ export const Header: React.FC<HeaderWikiProps> = ({ activeSection, onNavigate })
     { id: 'sobre', label: '1. Resumo', icon: BookOpen },
     { id: 'experiencia', label: '2. Experiência', icon: Briefcase },
     { id: 'servicos', label: '3. Serviços', icon: Layers },
+    { id: 'advocacia-plataforma', label: '⚖️ Plataforma Advocacia', icon: Scale },
     { id: 'deevo-financeiras', label: '4. DEEVO Financeiras', icon: Building2 },
     { id: 'projetos-lei', label: '5. Projetos de Lei & Petições', icon: Scale },
     { id: 'projetos', label: '6. Projetos & Repos', icon: FolderGit2 },

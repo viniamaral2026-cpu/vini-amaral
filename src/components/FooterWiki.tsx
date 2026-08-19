@@ -85,6 +85,16 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
                 </a>
               </li>
               <li>
+                <a href="#advocacia-plataforma" onClick={() => onNavigate('advocacia-plataforma')} className="text-[#0969da] font-medium hover:underline flex items-center gap-1">
+                  <span>⚖️ Plataforma Jurídica</span>
+                </a>
+              </li>
+              <li>
+                <a href="#site-advocacia-lucena" onClick={() => onNavigate('site-advocacia-lucena')} className="text-[#0969da] font-medium hover:underline flex items-center gap-1">
+                  <span>🌐 Sites Advocacia (Lucena)</span>
+                </a>
+              </li>
+              <li>
                 <a href="#deevo-financeiras" onClick={() => onNavigate('deevo-financeiras')} className="text-[#0969da] font-semibold hover:underline flex items-center gap-1">
                   <span>4. DEEVO Soluções Financeiras</span>
                 </a>

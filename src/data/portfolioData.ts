@@ -465,3 +465,247 @@ Pelas razões expostas, contamos com o apoio dos ilustres pares e da sociedade c
   }
 ];
 
+export const LAW_FIRM_PRODUCT_DATA = {
+  title: "TECNOLOGIA PARA UMA NOVA GERAÇÃO DA ADVOCACIA",
+  subtitle: "PLATAFORMA JURÍDICA INTELIGENTE",
+  tagline: "Mais organização. Mais controle. Mais eficiência para o seu escritório.",
+  homeSummary: "Uma plataforma desenvolvida para modernizar a gestão de escritórios de advocacia, centralizando informações, processos, clientes e operações em um único ambiente.",
+  demoUrl: "https://arriving-rattler.monstersites.io/",
+  whatsappContactUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20gostaria%20de%20saber%20mais%20sobre%20a%20Plataforma%20Jur%C3%ADdica%20para%20Escrit%C3%B3rios%20de%20Advocacia!",
+  heroDescription: "Desenvolvida sob medida para bancas de advocacia e departamentos jurídicos que buscam eliminar gargalos operacionais, blindar prazos processuais e oferecer um atendimento de alto padrão para seus clientes com o suporte de automação e Inteligência Artificial.",
+  features: [
+    {
+      id: "clientes",
+      title: "Gestão de Clientes (CRM 360°)",
+      description: "Cadastro completo com qualificação das partes, histórico de atendimentos, dossiê documental, canais de contato rápido e registro de procurações.",
+      category: "Atendimento & CRM"
+    },
+    {
+      id: "processos",
+      title: "Gestão de Processos & Andamentos",
+      description: "Acompanhamento unificado de processos judiciais e administrativos, numeração CNJ, tribunal, vara, fase processual e distribuição de responsabilidades.",
+      category: "Controladoria Jurídica"
+    },
+    {
+      id: "agenda",
+      title: "Agenda Jurídica & Prazos Fatais",
+      description: "Controle rigoroso de prazos com contagem em dias úteis/corridos, audiências, perícias e reuniões com alertas automáticos e sincronização de calendário.",
+      category: "Operacional & Prazos"
+    },
+    {
+      id: "documentos",
+      title: "GED Inteligente & Modelos",
+      description: "Armazenamento estruturado na nuvem, busca textual por OCR em anexos e geração ágil de petições com modelos pré-formatados.",
+      category: "Documentação"
+    },
+    {
+      id: "financeiro",
+      title: "Financeiro & Honorários",
+      description: "Gestão de honorários contratuais e sucumbenciais, parcelamentos, controle de custas processuais, conciliação bancária e fluxo de caixa.",
+      category: "Financeiro"
+    },
+    {
+      id: "comunicacao",
+      title: "Atendimento & WhatsApp Integrado",
+      description: "Envio de atualizações de andamentos diretamente para o WhatsApp do cliente, reduzindo ligações repetitivas e elevando a satisfação.",
+      category: "Comunicação"
+    },
+    {
+      id: "relatorios",
+      title: "Relatórios & Business Intelligence",
+      description: "Dashboards visuais com taxa de êxito, rentabilidade por área do direito, produtividade da equipe e volume de prazos por período.",
+      category: "Gestão & BI"
+    },
+    {
+      id: "permissoes",
+      title: "Perfis & Níveis de Acesso",
+      description: "Controle hierárquico estrito para advogados sócios, associados, estagiários e financeiro, garantindo sigilo e separação de pastas confidenciais.",
+      category: "Governança"
+    },
+    {
+      id: "ia-automacao",
+      title: "Automação & Inteligência Artificial",
+      description: "Triagem automatizada de publicações, leitura assistida de intimações e geração de rascunhos de peças com prompts jurídicos especializados.",
+      category: "Inovação"
+    },
+    {
+      id: "seguranca-lgpd",
+      title: "Segurança Jurídica & LGPD",
+      description: "Ambiente blindado com criptografia de ponta a ponta, backups automáticos diários, logs de auditoria e total conformidade com as normas da OAB.",
+      category: "Segurança"
+    }
+  ],
+  benefits: [
+    {
+      title: "Centralização Total",
+      desc: "Adeus à dispersão de planilhas e mensagens soltas. Tudo o que o escritório precisa em um único painel integrado."
+    },
+    {
+      title: "Organização Impecável",
+      desc: "Padronização de pastas, dossiês de clientes e modelos de peças para manter a controladoria sempre em dia."
+    },
+    {
+      title: "Produtividade Multiplicada",
+      desc: "Menos tempo gasto com rotinas manuais e mais tempo dedicado às teses jurídicas e ao relacionamento com clientes."
+    },
+    {
+      title: "Segurança & Conformidade",
+      desc: "Proteção rigorosa de dados pessoais e sigilo profissional sob os padrões mais elevados da LGPD."
+    },
+    {
+      title: "Controle & Previsibilidade",
+      desc: "Visão em tempo real de faturamento, prazos iminentes e status de cada caso da banca."
+    },
+    {
+      title: "Automação com IA",
+      desc: "Acelere a triagem de intimações e a revisão de peças com recursos inteligentes prontos para uso."
+    },
+    {
+      title: "Escalabilidade do Negócio",
+      desc: "Cresça sua carteira de clientes mantendo a mesma qualidade, governança e agilidade no atendimento."
+    }
+  ],
+  securityPillars: [
+    {
+      title: "Controle de Acesso Granular",
+      desc: "Definição minuciosa de quem pode ver, editar ou exportar cada processo, documento ou relatório financeiro."
+    },
+    {
+      title: "Trilha de Auditoria Completa",
+      desc: "Histórico detalhado de acessos, downloads e alterações para auditoria interna e compliance."
+    },
+    {
+      title: "Proteção & Criptografia",
+      desc: "Comunicação criptografada com certificados SSL/TLS de alta segurança e custódia segura de dados na nuvem."
+    },
+    {
+      title: "Adequação Estrita à LGPD",
+      desc: "Processos alinhados à Lei Geral de Proteção de Dados (Lei nº 13.709/2018) e ao Código de Ética da OAB."
+    }
+  ],
+  demoScreens: [
+    {
+      id: "dashboard",
+      label: "1. Dashboard Geral",
+      title: "Visão Executiva & Painel de Controle",
+      desc: "Acompanhe prazos urgentes do dia, audiências agendadas, novos clientes e o resumo financeiro em tempo real.",
+      image: "/src/assets/images/law_firm_dashboard_1787133908200.jpg"
+    },
+    {
+      id: "processos",
+      label: "2. Processos & Prazos",
+      title: "Gestão Processual & Linha do Tempo",
+      desc: "Organização visual por fases, varas, alertas de prazos fatais e controle de intimações judiciais.",
+      image: "/src/assets/images/law_firm_cases_1787133935650.jpg"
+    },
+    {
+      id: "financeiro",
+      label: "3. Financeiro & Honorários",
+      title: "Controle de Caixa & Faturamento",
+      desc: "Acompanhamento de parcelas, emissão de cobranças, custas antecipadas e divisão de honorários da equipe.",
+      image: "/src/assets/images/law_firm_finance_1787133958765.jpg"
+    }
+  ]
+};
+
+export const LUCENA_WEBSITE_PRODUCT_DATA = {
+  title: "SITE PROFISSIONAL PARA ADVOCACIA",
+  modelName: "Lucena & Associados Advogados",
+  categoryBadge: "Desenvolvimento Web • Modelo Comercial Exclusivo",
+  tagline: "Autoridade, Elegância e Captação Ativa de Clientes em Total Conformidade com a OAB",
+  demoUrl: "https://arriving-rattler.monstersites.io/",
+  whatsappContactUrl: "https://wa.me/5551981446019?text=Ol%C3%A1%20Vini,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20o%20Site%20de%20Advocacia%20(Modelo%20Lucena%20%26%20Associados%20Advogados)!",
+  heroDescription: "Um site institucional de alto padrão desenvolvido especialmente para advogados autônomos, sócios e bancas de advocacia que desejam transmitir credibilidade imediata, ranquear no Google e transformar visitantes em consultas pelo WhatsApp.",
+  oabCompliance: "Desenvolvido em estrita conformidade com o Provimento nº 205/2021 do CFOAB sobre publicidade e marketing jurídico ético.",
+  features: [
+    {
+      id: "autoridade",
+      title: "Design de Alto Padrão & Credibilidade",
+      description: "Paleta sóbria, tipografia clássica e diagramação editorial que transmitem solidez institucional desde o primeiro segundo de navegação.",
+      category: "Posicionamento"
+    },
+    {
+      id: "whatsapp",
+      title: "Botão Flutuante & Captação via WhatsApp",
+      description: "Gatilho de contato com mensagens pré-formatadas por área de interesse (Direito de Família, Trabalhista, Civil, etc.), acelerando o atendimento.",
+      category: "Conversão"
+    },
+    {
+      id: "areas-atuacao",
+      title: "Páginas & Seções de Áreas de Atuação",
+      description: "Módulos dedicados para detalhar especialidades jurídicas, esclarecer dúvidas frequentes dos clientes e valorizar o know-how da banca.",
+      category: "Estrutura"
+    },
+    {
+      id: "seo-google",
+      title: "Otimização para Busca Local (SEO Google)",
+      description: "Estrutura técnica com meta tags semânticas, schema markup para escritórios de advocacia e indexação ágil nos motores de busca.",
+      category: "Visibilidade"
+    },
+    {
+      id: "mobile-first",
+      title: "100% Responsivo & Ultrarrápido",
+      description: "Visual perfeito e carregamento instantâneo em smartphones, tablets e notebooks, garantindo que nenhum cliente desista por lentidão.",
+      category: "Performance"
+    },
+    {
+      id: "lgpd-contato",
+      title: "Formulários Seguros & Conformidade LGPD",
+      description: "Canal de consulta com aviso de privacidade e aceite de termos, protegendo o escritório e os dados sensíveis dos clientes.",
+      category: "Segurança"
+    },
+    {
+      id: "blog-artigos",
+      title: "Módulo de Notícias & Artigos Jurídicos",
+      description: "Área para publicação de conteúdos informativos, jurisprudências comentadas e posicionamentos éticos para fortalecimento de marca.",
+      category: "Marketing de Conteúdo"
+    },
+    {
+      id: "equipe-socios",
+      title: "Apresentação dos Sócios & Advogados",
+      description: "Cards detalhados com foto profissional, número de inscrição na OAB, titulação acadêmica, áreas de foco e link para o LinkedIn/Lattes.",
+      category: "Institucional"
+    }
+  ],
+  includedServices: [
+    {
+      title: "Personalização Completa",
+      desc: "Adaptação de cores, logomarca, textos, fotos da equipe e áreas de atuação de acordo com a identidade do seu escritório."
+    },
+    {
+      title: "Hospedagem Rápida & Certificado SSL",
+      desc: "Servidor estável com conexão criptografada (cadeado de segurança HTTPS) e carregamento otimizado."
+    },
+    {
+      title: "Configuração de Domínio & E-mails",
+      desc: "Integração do domínio oficial (ex: seuescritorio.adv.br) e criação de e-mails corporativos profissionais."
+    },
+    {
+      title: "Total Liberdade & Autonomia",
+      desc: "Sem mensalidades abusivas ou dependência técnica para edições simples de conteúdo e postagens."
+    },
+    {
+      title: "Suporte e Treinamento",
+      desc: "Acompanhamento no lançamento do site e orientações práticas para atendimento das consultas recebidas."
+    }
+  ],
+  demoScreens: [
+    {
+      id: "homepage",
+      label: "1. Página Inicial (Hero & Apresentação)",
+      title: "Home Institucional & Autoridade",
+      desc: "Apresentação de impacto com chamada para consulta, slogan da banca e botão de contato imediato.",
+      image: "/src/assets/images/lucena_advogados_website_1787134706248.jpg"
+    },
+    {
+      id: "areas",
+      label: "2. Áreas de Atuação & Equipe",
+      title: "Especialidades & Apresentação dos Advogados",
+      desc: "Demonstração clara das frentes de atuação, bio dos sócios, formulário de contato e integração com WhatsApp.",
+      image: "/src/assets/images/lucena_mobile_preview_1787134734085.jpg"
+    }
+  ]
+};
+
+
+

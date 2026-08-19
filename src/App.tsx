@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { PWAInstallBanner } from './components/PWAInstallBanner';
 import { WikipediaInfobox } from './components/WikipediaInfobox';
@@ -7,6 +7,9 @@ import { ArticleHero } from './components/ArticleHero';
 import { AboutWiki } from './components/AboutWiki';
 import { ExperienceWiki } from './components/ExperienceWiki';
 import { ServicesWiki } from './components/ServicesWiki';
+import { LawFirmProductHighlight } from './components/LawFirmProductHighlight';
+import { LawFirmProductPage } from './components/LawFirmProductPage';
+import { LucenaWebsiteProductPage } from './components/LucenaWebsiteProductPage';
 import { DeevoFinanceirasWiki } from './components/DeevoFinanceirasWiki';
 import { CivicPetitionsWiki } from './components/CivicPetitionsWiki';
 import { ProjectsWiki } from './components/ProjectsWiki';
@@ -20,8 +23,95 @@ import { PetitionModalPopup } from './components/PetitionModalPopup';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('inicio');
+  const [currentRoute, setCurrentRoute] = useState<'home' | 'produto-advocacia' | 'produto-site-lucena'>('home');
+
+  // Handle URL changes, direct routes (/produto/advocacia, /produtos/site-advocacia/lucena-associados) and browser back/forward buttons
+  useEffect(() => {
+    const handleUrlChange = () => {
+      const path = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+
+      if (path.includes('lucena') || hash.includes('lucena') || path.includes('site-advocacia') || path.includes('site-advogacia') || hash.includes('site-advocacia')) {
+        setCurrentRoute('produto-site-lucena');
+        setActiveSection('site-advocacia-lucena');
+      } else if (path.includes('/produto/advocacia') || hash.includes('produto-advocacia') || path.includes('/advocacia') || hash.includes('advocacia-plataforma')) {
+        setCurrentRoute('produto-advocacia');
+        setActiveSection('advocacia-plataforma');
+      } else {
+        setCurrentRoute('home');
+        if (hash) {
+          const cleanHash = hash.replace('#', '');
+          setActiveSection(cleanHash || 'inicio');
+        }
+      }
+    };
+
+    handleUrlChange();
+    window.addEventListener('popstate', handleUrlChange);
+    return () => window.removeEventListener('popstate', handleUrlChange);
+  }, []);
+
+  const navigateToProduct = () => {
+    setCurrentRoute('produto-advocacia');
+    setActiveSection('advocacia-plataforma');
+    try {
+      window.history.pushState({ route: 'produto-advocacia' }, '', '/produto/advocacia');
+    } catch {
+      window.location.hash = 'produto-advocacia';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const navigateToLucenaWebsite = () => {
+    setCurrentRoute('produto-site-lucena');
+    setActiveSection('site-advocacia-lucena');
+    try {
+      window.history.pushState({ route: 'produto-site-lucena' }, '', '/produtos/site-advocacia/lucena-associados');
+    } catch {
+      window.location.hash = 'site-advocacia-lucena';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const navigateToHome = (sectionId: string = 'inicio') => {
+    setCurrentRoute('home');
+    setActiveSection(sectionId);
+    try {
+      window.history.pushState({ route: 'home' }, '', '/');
+    } catch {
+      window.location.hash = sectionId;
+    }
+
+    if (sectionId && sectionId !== 'inicio') {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const yOffset = -70;
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 50);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const handleNavigate = (sectionId: string) => {
+    if (sectionId === 'site-advocacia-lucena' || sectionId === 'lucena' || sectionId === 'site-advocacia') {
+      navigateToLucenaWebsite();
+      return;
+    }
+
+    if (sectionId === 'advocacia-plataforma' || sectionId === 'produto-advocacia') {
+      navigateToProduct();
+      return;
+    }
+
+    if (currentRoute !== 'home') {
+      navigateToHome(sectionId);
+      return;
+    }
+
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
@@ -48,41 +138,55 @@ export function App() {
           {/* Main Document Body (Left on Desktop) */}
           <article className="grow min-w-0 w-full bg-white p-6 sm:p-8 rounded-md border border-[#d0d7de] shadow-2xs space-y-10">
             
-            {/* Lead & README Header */}
-            <ArticleHero onNavigate={handleNavigate} />
+            {currentRoute === 'produto-site-lucena' ? (
+              /* Dedicated Law Firm Website Sales & Presentation Page (Lucena & Associados) */
+              <LucenaWebsiteProductPage onBackToHome={() => navigateToHome('servicos')} />
+            ) : currentRoute === 'produto-advocacia' ? (
+              /* Dedicated Law Firm Legal Tech Product Page */
+              <LawFirmProductPage onBackToHome={() => navigateToHome('advocacia-plataforma')} />
+            ) : (
+              /* Standard Home Article Content */
+              <>
+                {/* Lead & README Header */}
+                <ArticleHero onNavigate={handleNavigate} />
 
-            {/* Wikipedia Table of Contents */}
-            <TableOfContents onNavigate={handleNavigate} />
+                {/* Wikipedia Table of Contents */}
+                <TableOfContents onNavigate={handleNavigate} />
 
-            {/* 1. Resumo Profissional e Biografia */}
-            <AboutWiki />
+                {/* 1. Resumo Profissional e Biografia */}
+                <AboutWiki />
 
-            {/* 2. Experiência Profissional & Formação */}
-            <ExperienceWiki />
+                {/* 2. Experiência Profissional & Formação */}
+                <ExperienceWiki />
 
-            {/* 3. Serviços e Soluções */}
-            <ServicesWiki />
+                {/* 3. Serviços e Soluções */}
+                <ServicesWiki onNavigateToLucenaWebsite={navigateToLucenaWebsite} />
 
-            {/* 4. DEEVO Soluções Financeiras (Atuação PJ) */}
-            <DeevoFinanceirasWiki />
+                {/* 3.5 Destaque Comercial/Institucional: Plataforma para Escritórios de Advocacia */}
+                <LawFirmProductHighlight onOpenProductPage={navigateToProduct} />
 
-            {/* 5. Projetos de Lei, Abaixo-Assinados & Causas Cidadãs */}
-            <CivicPetitionsWiki />
+                {/* 4. DEEVO Soluções Financeiras (Atuação PJ) */}
+                <DeevoFinanceirasWiki />
 
-            {/* 6. Repositórios e Projetos */}
-            <ProjectsWiki />
+                {/* 5. Projetos de Lei, Abaixo-Assinados & Causas Cidadãs */}
+                <CivicPetitionsWiki />
 
-            {/* 5. Competências & Matriz Técnica */}
-            <SkillsWikiTable />
+                {/* 6. Repositórios e Projetos */}
+                <ProjectsWiki />
 
-            {/* 6. Simulador Interativo */}
-            <DiagnosticSimulatorWiki />
+                {/* 7. Competências & Matriz Técnica */}
+                <SkillsWikiTable />
 
-            {/* 7. Diferenciais & Metodologia */}
-            <DifferentialsWiki />
+                {/* 8. Simulador Interativo */}
+                <DiagnosticSimulatorWiki />
 
-            {/* 8. Contato e Conexões */}
-            <ContactWiki />
+                {/* 9. Diferenciais & Metodologia */}
+                <DifferentialsWiki />
+
+                {/* 10. Contato e Conexões */}
+                <ContactWiki />
+              </>
+            )}
 
           </article>
 
@@ -108,3 +212,5 @@ export function App() {
 }
 
 export default App;
+
+

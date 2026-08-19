@@ -61,17 +61,24 @@ Inspirado na precisão e clareza visual dos artigos enciclopédicos da **Wikiped
 - Lista rápida de canais de contato direto (WhatsApp, E-mail, LinkedIn, GitHub).
 - Botão de download rápido do arquivo PDF do currículo.
 
-### 3. Minuta de Projeto de Lei & Abaixo-Assinado Cívico (`CivicPetitionsWiki`)
+### 3. Destaque Comercial na Home & Página Exclusiva da Plataforma Jurídica (`/produto/advocacia`)
+- **Seção na Home (`LawFirmProductHighlight`):** Chamada institucional elegante com título *"TECNOLOGIA PARA UMA NOVA GERAÇÃO DA ADVOCACIA"*, resumo das capacidades de centralização e botão *"CONHEÇA A PLATAFORMA"*.
+- **Página Dedicada (`LawFirmProductPage`):** Apresentação completa da **Plataforma Jurídica Inteligente**, visualizador com abas interativas de telas reais (Dashboard, Processos e Financeiro), detalhamento de 10 módulos funcionais, benefícios, segurança/LGPD e botões diretos para a demonstração online ([arriving-rattler.monstersites.io](https://arriving-rattler.monstersites.io/)) e atendimento no WhatsApp.
+
+### 4. Página Comercial de Sites para Advocacia (`/produtos/site-advocacia/lucena-associados`)
+- **Página de Vendas do Modelo Lucena & Associados (`LucenaWebsiteProductPage`):** Solução completa para advogados e bancas jurídicas com posicionamento de autoridade, conformidade com o Provimento nº 205/2021 da OAB, estrutura para áreas de atuação, captação ativa via WhatsApp, SEO local para o Google e link direto para a demonstração online ([arriving-rattler.monstersites.io](https://arriving-rattler.monstersites.io/)).
+
+### 5. Minuta de Projeto de Lei & Abaixo-Assinado Cívico (`CivicPetitionsWiki`)
 - **Ação Rápida:** Destaque para apoio ao abaixo-assinado no Change.org e mobilização no WhatsApp.
 - **Visualizador Jurídico:** Minuta estruturada (Capítulos I a V, Artigos 1º a 9º e Justificativa) com botão para copiar texto integral e versão para impressão/PDF.
 - **Área para Imprensa & Parlamentares:** Canais de atendimento para mandatos legislativos e veículos de comunicação.
 - **Compartilhamento Social:** Botões integrados para WhatsApp, X (Twitter), Facebook e LinkedIn.
 
-### 4. Modal / Pop-up de Apoio Cidadão (`PetitionModalPopup`)
+### 5. Modal / Pop-up de Apoio Cidadão (`PetitionModalPopup`)
 - Notificação não-intrusiva convidando o visitante a apoiar a petição pública ou navegar diretamente até a minuta legislativa.
 - Gatilho flutuante minimizado no rodapé inferior para reabertura a qualquer momento.
 
-### 5. Simulador Interativo de Diagnóstico Operacional e de TI
+### 6. Simulador Interativo de Diagnóstico Operacional e de TI
 - Ferramenta interativa onde recrutadores e clientes podem selecionar cenários reais de problemas:
   - *Dossiês e PDFs desorganizados ou pesados para tribunais*
   - *Lentidão em estações de trabalho, conflitos de software ou certificados digitais*
@@ -79,7 +86,7 @@ Inspirado na precisão e clareza visual dos artigos enciclopédicos da **Wikiped
   - *Criação de páginas web, formulários ou portfólios sob medida*
 - O simulador gera na hora o **diagnóstico preliminar**, as **etapas de solução recomendadas**, o **tempo médio estimado** e um botão com mensagem pré-formatada para o WhatsApp.
 
-### 6. Botão Flutuante de WhatsApp
+### 7. Botão Flutuante de WhatsApp
 - Fixado no canto inferior com indicador de disponibilidade online.
 - Ao clicar, abre conversa direta no WhatsApp já com mensagem contextualizada.
 
@@ -177,6 +184,9 @@ A plataforma está totalmente configurada com metadados para indexação e compa
 │   │   ├── PetitionModalPopup.tsx     # Pop-up de engajamento e apoio cidadão
 │   │   ├── AboutWiki.tsx              # Resumo profissional e trajetória
 │   │   ├── ServicesWiki.tsx           # Seção de áreas de atuação e serviços
+│   │   ├── LawFirmProductHighlight.tsx# Destaque da Plataforma Jurídica na Home
+│   │   ├── LawFirmProductPage.tsx     # Página exclusiva da Plataforma Jurídica
+│   │   ├── LucenaWebsiteProductPage.tsx# Página comercial de Sites para Advocacia (Lucena)
 │   │   ├── ProjectsWiki.tsx           # Seção de projetos e iniciativas técnicas
 │   │   ├── SkillsWikiTable.tsx        # Matriz de habilidades em formato de tabela
 │   │   ├── DiagnosticSimulatorWiki.tsx# Simulador interativo de triagem e soluções

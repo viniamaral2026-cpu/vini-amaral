@@ -37,6 +37,8 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ onNavigate }) 
         { id: 'servico-suporte', number: '3.2', title: 'Suporte Operacional & Diagnóstico de TI' },
         { id: 'servico-automacao', number: '3.3', title: 'Automação com IA & Otimização' },
         { id: 'servico-dev', number: '3.4', title: 'Desenvolvimento Web & Soluções' },
+        { id: 'advocacia-plataforma', number: '3.5', title: 'Plataforma para Escritórios de Advocacia (Legal Tech)' },
+        { id: 'site-advocacia-lucena', number: '3.6', title: 'Sites para Advocacia (Modelo Lucena & Associados)' },
       ],
     },
     {
