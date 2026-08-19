@@ -11,6 +11,7 @@ import { LawFirmProductHighlight } from './components/LawFirmProductHighlight';
 import { LawFirmProductPage } from './components/LawFirmProductPage';
 import { LucenaWebsiteProductPage } from './components/LucenaWebsiteProductPage';
 import { CivicCausePage } from './components/CivicCausePage';
+import { TudoFacilTaquaraPage } from './components/TudoFacilTaquaraPage';
 import { DeevoFinanceirasWiki } from './components/DeevoFinanceirasWiki';
 import { CivicPetitionsWiki } from './components/CivicPetitionsWiki';
 import { ProjectsWiki } from './components/ProjectsWiki';
@@ -24,7 +25,7 @@ import { PetitionModalPopup } from './components/PetitionModalPopup';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('inicio');
-  const [currentRoute, setCurrentRoute] = useState<'home' | 'produto-advocacia' | 'produto-site-lucena' | 'causa-canal-direto'>('home');
+  const [currentRoute, setCurrentRoute] = useState<'home' | 'produto-advocacia' | 'produto-site-lucena' | 'causa-canal-direto' | 'tudo-facil-taquara'>('home');
 
   // Handle URL changes, direct routes and browser back/forward buttons
   useEffect(() => {
@@ -33,6 +34,15 @@ export function App() {
       const hash = window.location.hash.toLowerCase();
 
       if (
+        path.includes('tudo-facil') ||
+        hash.includes('tudo-facil') ||
+        path.includes('taquara') ||
+        hash.includes('taquara') ||
+        hash.includes('tudo-facil-taquara')
+      ) {
+        setCurrentRoute('tudo-facil-taquara');
+        setActiveSection('tudo-facil-taquara');
+      } else if (
         path.includes('causa') || 
         hash.includes('causa') || 
         path.includes('lei-canal-direto') || 
@@ -62,6 +72,17 @@ export function App() {
     window.addEventListener('popstate', handleUrlChange);
     return () => window.removeEventListener('popstate', handleUrlChange);
   }, []);
+
+  const navigateToTudoFacil = () => {
+    setCurrentRoute('tudo-facil-taquara');
+    setActiveSection('tudo-facil-taquara');
+    try {
+      window.history.pushState({ route: 'tudo-facil-taquara' }, '', '/projeto/tudo-facil-taquara');
+    } catch {
+      window.location.hash = 'tudo-facil-taquara';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const navigateToCivicCause = () => {
     setCurrentRoute('causa-canal-direto');
@@ -120,6 +141,11 @@ export function App() {
   };
 
   const handleNavigate = (sectionId: string) => {
+    if (sectionId === 'tudo-facil-taquara' || sectionId === 'tudo-facil' || sectionId === 'taquara' || sectionId === 'projeto-taquara') {
+      navigateToTudoFacil();
+      return;
+    }
+
     if (sectionId === 'causa-canal-direto' || sectionId === 'lei-canal-direto' || sectionId === 'abaixo-assinado') {
       navigateToCivicCause();
       return;
@@ -166,7 +192,10 @@ export function App() {
           {/* Main Document Body (Left on Desktop) */}
           <article className="grow min-w-0 w-full bg-white p-6 sm:p-8 rounded-md border border-[#d0d7de] shadow-2xs space-y-10">
             
-            {currentRoute === 'causa-canal-direto' ? (
+            {currentRoute === 'tudo-facil-taquara' ? (
+              /* Dedicated Tudo Fácil Taquara Project & Bill Draft Page */
+              <TudoFacilTaquaraPage onBackToHome={() => navigateToHome('projetos-lei')} />
+            ) : currentRoute === 'causa-canal-direto' ? (
               /* Dedicated Civic Initiative & Legislative Proposal Page */
               <CivicCausePage onBackToHome={() => navigateToHome('projetos-lei')} />
             ) : currentRoute === 'produto-site-lucena' ? (
@@ -200,7 +229,10 @@ export function App() {
                 <DeevoFinanceirasWiki />
 
                 {/* 5. Projetos de Lei, Abaixo-Assinados & Causas Cidadãs */}
-                <CivicPetitionsWiki onNavigateToCivicCause={navigateToCivicCause} />
+                <CivicPetitionsWiki 
+                  onNavigateToCivicCause={navigateToCivicCause}
+                  onNavigateToTudoFacil={navigateToTudoFacil}
+                />
 
                 {/* 6. Repositórios e Projetos */}
                 <ProjectsWiki />

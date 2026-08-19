@@ -56,8 +56,9 @@ export const TableOfContents: React.FC<TableOfContentsProps> = ({ onNavigate }) 
       number: '5',
       title: 'Projetos de Lei, Abaixo-Assinados & Causas Cidadãs',
       subsections: [
-        { id: 'projetos-lei', number: '5.1', title: 'Ação Rápida: Abaixo-Assinado (Lei do Canal Direto)' },
-        { id: 'causa-canal-direto', number: '5.2', title: 'Página Completa: Minuta do Projeto de Lei & Impacto Digital' },
+        { id: 'tudo-facil-taquara', number: '5.1', title: 'Projeto de Lei: Instalação do Tudo Fácil em Taquara/RS' },
+        { id: 'projetos-lei', number: '5.2', title: 'Ação Rápida: Abaixo-Assinado (Lei do Canal Direto)' },
+        { id: 'causa-canal-direto', number: '5.3', title: 'Página Completa: Minuta da Lei do Canal Direto' },
       ],
     },
     {

@@ -105,6 +105,11 @@ export const FooterWiki: React.FC<FooterWikiProps> = ({ onNavigate }) => {
                 </a>
               </li>
               <li>
+                <a href="#tudo-facil-taquara" onClick={() => onNavigate('tudo-facil-taquara')} className="text-[#0969da] font-medium hover:underline flex items-center gap-1">
+                  <span>🏛️ Tudo Fácil Taquara/RS</span>
+                </a>
+              </li>
+              <li>
                 <a href="#causa-canal-direto" onClick={() => onNavigate('causa-canal-direto')} className="text-[#0969da] font-medium hover:underline flex items-center gap-1">
                   <span>📜 Minuta da Lei (Canal Direto)</span>
                 </a>

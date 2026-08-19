@@ -533,6 +533,97 @@ A plataforma Consumidor.gov.br não pode ser apenas um canal de mediação volun
   }
 ];
 
+export const TUDO_FACIL_TAQUARA_DATA = {
+  id: "tudo-facil-taquara",
+  title: "Projeto de Lei: Instalação da Unidade do Tudo Fácil em Taquara/RS",
+  shortTitle: "Tudo Fácil Taquara/RS",
+  badge: "Projeto de Lei Municipal & Abaixo-Assinado",
+  status: "Mobilização Cidadã & Petição Ativa",
+  signatureUrl: "https://www.change.org/p/instalar-unidade-tudo-f%C3%A1cil-em-taquara-rs",
+  whatsappShareUrl: "https://api.whatsapp.com/send?text=Apoie%20o%20Projeto%20de%20Instala%C3%A7%C3%A3o%20do%20Tudo%20F%C3%A1cil%20em%20Taquara/RS!%20Assine%20aqui:%20https://www.change.org/p/instalar-unidade-tudo-f%C3%A1cil-em-taquara-rs",
+  docxUrl: "/Projeto_Unidade_Tudo_Facil_Taquara.docx",
+  image: "/tudo-facil-taquara.png",
+  proponent: "Vini Amaral (Proponente Cidadão)",
+  city: "Taquara / RS (Vale do Paranhana)",
+  beneficiaries: "Taquara (~60 mil hab.), Igrejinha, Parobé, Três Coroas e Rolante",
+  targetEntities: [
+    "Prefeitura Municipal de Taquara/RS (Gabinete da Prefeita Sirlei Silveira)",
+    "Câmara Municipal de Vereadores de Taquara",
+    "Governo do Estado do Rio Grande do Sul (SPGG)",
+    "Instituto-Geral de Perícias (IGP / CIN / RG)",
+    "Departamento Estadual de Trânsito (DetranRS)",
+    "IPE Prev e IPE Saúde",
+    "FADERS (Acessibilidade, CIPTEA e Passe Livre)",
+    "CORSAN & RGE Sul Distribuidora"
+  ],
+  homeSummary: {
+    title: "Projeto de Lei: Instalação da Unidade do Tudo Fácil em Taquara/RS",
+    description: "Proposta de Lei Municipal autorizando o Poder Executivo de Taquara a celebrar convênio de cooperação com o Governo do Estado do RS (SPGG) para instalar uma unidade presencial do Programa Tudo Fácil no centro de Taquara, polo do Vale do Paranhana.",
+    keyBenefits: [
+      "Centralização de serviços essenciais do IGP (CIN/RG), DetranRS, Balcão Gov.br, IPE e FADERS",
+      "Fim da necessidade de deslocamentos caros e demorados até Porto Alegre ou Novo Hamburgo",
+      "Atendimento regional integrado para Taquara (~60 mil hab.), Igrejinha, Parobé, Três Coroas e Rolante",
+      "Balcões presenciais integrados da CORSAN, RGE Sul e arrecadação/serviços da Prefeitura"
+    ]
+  },
+  billDraft: {
+    number: "PROJETO DE LEI Nº _____, DE _____ DE __________________ DE 2026",
+    ementa: "Dispõe sobre a autorização ao Poder Executivo Municipal para firmar convênio com o Governo do Estado do Rio Grande do Sul, visando à instalação de uma unidade do Programa Tudo Fácil no Município de Taquara, e dá outras providências.",
+    preamble: "A PREFEITA MUNICIPAL DE TAQUARA, no uso de suas atribuições legais que lhe confere a Lei Orgânica do Município, faz saber que a Câmara Municipal de Vereadores aprovou e ela sanciona e promulga a seguinte Lei:",
+    articles: [
+      {
+        article: "Art. 1º",
+        text: "Fica o Poder Executivo Municipal autorizado a adotar todas as medidas administrativas, jurídicas e operacionais necessárias para celebrar convênio de cooperação institucional com o Governo do Estado do Rio Grande do Sul, por intermédio da Secretaria de Planejamento, Governança e Gestão (SPGG), visando à implantação e ao funcionamento de uma unidade de atendimento presencial do Programa Tudo Fácil no Município de Taquara."
+      },
+      {
+        article: "Art. 2º",
+        text: "A unidade do Tudo Fácil Taquara terá como objetivo centralizar e descentralizar a prestação de serviços públicos essenciais para a população local e dos municípios integrantes da Região do Vale do Paranhana."
+      },
+      {
+        article: "Art. 3º",
+        text: "O rol de serviços prestados na unidade contemplará, prioritariamente:",
+        items: [
+          "I – Documentação e Identificação: Emissão de 1ª e 2ª vias da Carteira de Identidade Nacional (CIN), sob responsabilidade do Instituto-Geral de Perícias (IGP);",
+          "II – Trânsito e Mobilidade: Atendimento institucional do Departamento Estadual de Trânsito do Rio Grande do Sul (DetranRS) para requerimentos, defesa de autuações, recursos de infrações e serviços de condutores;",
+          "III – Cidadania e Inclusão Digital: Atendimento do Balcão Gov.br para suporte, criação, recuperação de contas e elevação de nível de acesso do cidadão;",
+          "IV – Previdência e Assistência Social: Atendimento do IPE Prev, IPE Saúde e da Fundação de Articulação e Desenvolvimento de Políticas Públicas para Pessoas com Deficiência e com Altas Habilidades no RS (FADERS), incluindo a solicitação da Carteira de Identificação da Pessoa com Transtorno do Espectro do Autismo (CIPTEA) e Passe Livre Intermunicipal;",
+          "V – Concessionárias de Serviços Públicos: Balcão presencial de atendimento da Companhia Riograndense de Saneamento (CORSAN) e da RGE Sul Distribuidora de Energia S.A. (RGE);",
+          "VI – Serviços Municipais: Atendimento integrado da Prefeitura Municipal para emissão de certidões, taxas municipais, suporte ao microempreendedor e arrecadação."
+        ]
+      },
+      {
+        article: "Art. 4º",
+        text: "Para a viabilização da unidade, o Poder Executivo Municipal poderá:",
+        items: [
+          "I – Ceder imóvel público municipal adequado ou arcar com os custos de locação de espaço físico central e acessível;",
+          "II – Ceder servidores públicos municipais ou contratar pessoal via processo seletivo para atuar na recepção, triagem e atendimento técnico;",
+          "III – Arcar com custos de adaptação, infraestrutura tecnológica e manutenção predial, conforme especificado no termo de convênio e no plano de trabalho ajustado entre os entes."
+        ]
+      },
+      {
+        article: "Art. 5º",
+        text: "As despesas decorrentes da execução desta Lei correrão por conta de dotações orçamentárias próprias, suplementadas se necessário."
+      },
+      {
+        article: "Art. 6º",
+        text: "Esta Lei entra em vigor na data de sua publicação."
+      }
+    ],
+    closingOffice: "Gabinete da Prefeita Municipal de Taquara, _____ de __________________ de 2026.",
+    mayorSignature: "Sirlei Silveira\nPrefeita Municipal de Taquara/RS",
+    justificativaHeader: "JUSTIFICATIVA",
+    justificativaSalutation: "Senhor Presidente, Senhoras e Senhores Vereadores:",
+    justificativaParagraphs: [
+      "Submetemos à apreciação desta Egrégia Casa Legislativa o presente Projeto de Lei, que autoriza o Poder Executivo Municipal a articular junto ao Governo do Estado do Rio Grande do Sul a instalação de uma unidade do Tudo Fácil em Taquara.",
+      "Taquara possui cerca de 60 mil habitantes e atua historicamente como cidade-mãe e polo geográfico do Vale do Paranhana. Atualmente, centenas de moradores de Taquara, Igrejinha, Parobé, Três Coroas e Rolante precisam se deslocar até Porto Alegre ou Novo Hamburgo para encaminhar ou resolver exigências documentais, previdenciárias e de trânsito. Esse deslocamento gera custos elevados de transporte, perda de dias de trabalho e transtornos significativos à população de baixa renda.",
+      "A instalação de um posto do Tudo Fácil em nosso município reunirá em um único espaço físico serviços do IGP (CIN/RG), DetranRS, Gov.br, IPE, FADERS, CORSAN, RGE e da própria Prefeitura. Além da óbvia economia de tempo e dinheiro para o cidadão, a medida movimentará o comércio local e consolidará Taquara como o centro administrativo de serviços de toda a nossa região.",
+      "Trata-se de uma demanda respaldada pelo desejo da comunidade e fundamental para a promoção da cidadania, eficiência pública e qualidade de vida. Diante da relevância da matéria, contamos com o apoio dos nobres Edis para a aprovação deste Projeto de Lei."
+    ],
+    closingPlaceDate: "Taquara/RS, _____ de __________________ de 2026.",
+    proponentSignature: "Vini Amaral\nProponente"
+  }
+};
+
 export const LAW_FIRM_PRODUCT_DATA = {
   title: "TECNOLOGIA PARA UMA NOVA GERAÇÃO DA ADVOCACIA",
   subtitle: "PLATAFORMA JURÍDICA INTELIGENTE",
